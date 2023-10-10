@@ -9,8 +9,8 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DIX31",
-  description: "Developpeur Independant Xavier",
+  title: "Activ Savoirs",
+  description: "Centre de formations sur mesure",
 };
 
 export default function RootLayout({
