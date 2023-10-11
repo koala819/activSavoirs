@@ -22,10 +22,7 @@ export default async function Page() {
           </ul>
         </div>
         {page && page.results && page.results.length > 0 ? (
-          <div
-            className='grid grid-cols-1 xl:grid-cols-2 gap-4
-          bg-blue-400 sm:bg-red-400 md:bg-green-300 lg:bg-yellow-300 xl:bg-orange-500'
-          >
+          <div className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
             {page.results.map((item) => {
               return (
                 <div

@@ -69,9 +69,9 @@ export function Top() {
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex ' justify='center'>
-        <NavbarItem isActive={path.includes("#")}>
-          <Link href='#' aria-current='page' color='foreground'>
-            Item_1
+        <NavbarItem isActive={path.includes("/equipe")}>
+          <Link href='/equipe' aria-current='page' color='foreground'>
+            Equipe
           </Link>
         </NavbarItem>
         <Dropdown>
