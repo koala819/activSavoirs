@@ -114,17 +114,6 @@ interface EquipeDocumentData {
   photo: prismic.ImageField<never>;
 
   /**
-   * Nom field in *Equipe*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: equipe.nom
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  nom: prismic.KeyTextField;
-
-  /**
    * Prenom field in *Equipe*
    *
    * - **Field Type**: Text
@@ -134,6 +123,17 @@ interface EquipeDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   prenom: prismic.KeyTextField;
+
+  /**
+   * Nom field in *Equipe*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: equipe.nom
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nom: prismic.KeyTextField;
 
   /**
    * Titre field in *Equipe*
@@ -216,17 +216,13 @@ interface EquipeDocumentData {
  * Equipe document from Prismic
  *
  * - **API ID**: `equipe`
- * - **Repeatable**: `false`
+ * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
 export type EquipeDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<EquipeDocumentData>,
-    "equipe",
-    Lang
-  >;
+  prismic.PrismicDocumentWithUID<Simplify<EquipeDocumentData>, "equipe", Lang>;
 
 export type AllDocumentTypes = AccueilDocument | EquipeDocument;
 

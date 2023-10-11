@@ -7,4 +7,8 @@ export interface TeamProp {
   photo: ImageField;
   prenom: KeyTextField;
   titre: KeyTextField;
+  [key: string]: any;
 }
+[];
+
+export type Params = { uid: string };

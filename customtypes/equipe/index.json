@@ -2,10 +2,16 @@
   "id": "equipe",
   "label": "Equipe",
   "format": "page",
-  "repeatable": false,
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
       "photo": {
         "type": "Image",
         "config": {
@@ -14,17 +20,17 @@
           "thumbnails": []
         }
       },
-      "nom": {
-        "type": "Text",
-        "config": {
-          "label": "Nom",
-          "placeholder": ""
-        }
-      },
       "prenom": {
         "type": "Text",
         "config": {
           "label": "Prenom",
+          "placeholder": ""
+        }
+      },
+      "nom": {
+        "type": "Text",
+        "config": {
+          "label": "Nom",
           "placeholder": ""
         }
       },
