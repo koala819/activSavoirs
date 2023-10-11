@@ -1,10 +1,10 @@
+// page.tsx
 import { createClient } from "@/prismicio";
 import { Team } from "@/components/Team";
 import { notFound } from "next/navigation";
 
 export default async function Page() {
   const client = createClient();
-  //   const page = await client.getSingle("equipe").catch(() => notFound());
   const page = await client.getByType("equipe").catch(() => notFound());
 
   return (
@@ -21,10 +21,17 @@ export default async function Page() {
             <li>Une dynamique pédagogique plébiscitée</li>
           </ul>
         </div>
-        {page && page.results && page.results.length > 0
-          ? page.results.map((item) => {
+        {page && page.results && page.results.length > 0 ? (
+          <div
+            className='grid grid-cols-1 xl:grid-cols-2 gap-4
+          bg-blue-400 sm:bg-red-400 md:bg-green-300 lg:bg-yellow-300 xl:bg-orange-500'
+          >
+            {page.results.map((item) => {
               return (
-                <div key={item.id}>
+                <div
+                  key={item.id}
+                  className='flex items-center justify-center m-1'
+                >
                   <title>{item.data.meta_title}</title>
                   <meta
                     name='description'
@@ -33,8 +40,11 @@ export default async function Page() {
                   <Team team={[item.data]} />
                 </div>
               );
-            })
-          : notFound()}
+            })}
+          </div>
+        ) : (
+          notFound()
+        )}
       </div>
     </div>
   );
