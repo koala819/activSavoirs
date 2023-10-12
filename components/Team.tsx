@@ -8,7 +8,7 @@ import { BsFillSunFill } from "react-icons/bs";
 
 export function Team({ team }: { team: TeamProp[] }) {
   return (
-    <div className=''>
+    <div className='w-full'>
       {team.map((member: any, key: any) => {
         return (
           <section key={key} className='p-4 rounded-lg bg-white shadow-md'>
