@@ -224,7 +224,120 @@ interface EquipeDocumentData {
 export type EquipeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<EquipeDocumentData>, "equipe", Lang>;
 
-export type AllDocumentTypes = AccueilDocument | EquipeDocument;
+type ReferencesDocumentDataSlicesSlice = never;
+
+/**
+ * Content for References documents
+ */
+interface ReferencesDocumentData {
+  /**
+   * Logo field in *References*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: references.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Titre field in *References*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: references.titre
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titre: prismic.KeyTextField;
+
+  /**
+   * Description field in *References*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: references.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Website field in *References*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: references.website
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  website: prismic.LinkField;
+
+  /**
+   * Slice Zone field in *References*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: references.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ReferencesDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *References*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: references.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *References*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: references.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *References*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: references.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * References document from Prismic
+ *
+ * - **API ID**: `references`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ReferencesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ReferencesDocumentData>,
+    "references",
+    Lang
+  >;
+
+export type AllDocumentTypes =
+  | AccueilDocument
+  | EquipeDocument
+  | ReferencesDocument;
 
 /**
  * Primary content in *AlternateGrid → Primary*
@@ -842,6 +955,9 @@ declare module "@prismicio/client" {
       EquipeDocument,
       EquipeDocumentData,
       EquipeDocumentDataSlicesSlice,
+      ReferencesDocument,
+      ReferencesDocumentData,
+      ReferencesDocumentDataSlicesSlice,
       AllDocumentTypes,
       AlternateGridSlice,
       AlternateGridSliceDefaultPrimary,

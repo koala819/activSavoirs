@@ -9,23 +9,23 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
   Link,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
-  Button,
+  // DropdownItem,
+  // DropdownTrigger,
+  // Dropdown,
+  // DropdownMenu,
+  // Button,
 } from "@nextui-org/react";
-import { FiChevronDown } from "react-icons/fi";
+// import { FiChevronDown } from "react-icons/fi";
 import { AiFillChrome } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+// import Image from "next/image";
+// import { useRouter } from "next/navigation";
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
-  const router = useRouter();
+  // const router = useRouter();
 
   const menuItems = [
     { name: "Item_1", path: "/" },
@@ -74,7 +74,7 @@ export function Top() {
             Equipe
           </Link>
         </NavbarItem>
-        <Dropdown>
+        {/* <Dropdown>
           <NavbarItem isActive={path.includes("#")}>
             <DropdownTrigger>
               <Button
@@ -133,10 +133,10 @@ export function Top() {
               Link_2
             </DropdownItem>
           </DropdownMenu>
-        </Dropdown>
-        <NavbarItem isActive={path.includes("#")}>
-          <Link href='#' aria-current='page' color='foreground'>
-            Item_3
+        </Dropdown> */}
+        <NavbarItem isActive={path.includes("/references")}>
+          <Link href='/references' aria-current='page' color='foreground'>
+            Références
           </Link>
         </NavbarItem>
         <NavbarItem isActive={path.includes("/contact")}>
