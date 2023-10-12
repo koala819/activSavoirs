@@ -7,10 +7,10 @@ export default async function Page() {
   const page = await client.getByType("equipe").catch(() => notFound());
 
   return (
-    <div className='text-gray-600 body-font'>
+    <div className='text-gray-600 dark:text-gray-100 body-font'>
       <div className='container px-5 py-24 mx-auto'>
         <div className='flex flex-col text-center w-full mb-20'>
-          <h1 className='text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest'>
+          <h1 className='text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest dark:text-gray-100'>
             L’équipe pédagogique de ACTIV&apos;SAVOIRS c’est :
           </h1>
           <div className='flex items-center justify-center'>

@@ -11,7 +11,10 @@ export function Team({ team }: { team: TeamProp[] }) {
     <div className='w-full'>
       {team.map((member: any, key: any) => {
         return (
-          <section key={key} className='p-4 rounded-lg bg-white shadow-md'>
+          <section
+            key={key}
+            className='p-4 rounded-lg bg-white dark:bg-gray-900 shadow-md'
+          >
             <div className='w-full sm:flex items-center justify-center'>
               <div className='sm:w-1/2 flex items-center justify-center'>
                 <Image
@@ -22,10 +25,12 @@ export function Team({ team }: { team: TeamProp[] }) {
               </div>
               <div className='sm:w-1/2'>
                 <div className='flex-grow sm:pl-8'>
-                  <h2 className='title-font font-medium text-lg text-gray-900'>
+                  <h2 className='title-font font-medium text-lg text-gray-900 dark:text-gray-100'>
                     {member.prenom} {member.nom}
                   </h2>
-                  <h3 className='text-gray-500 mb-3'>{member.titre}</h3>
+                  <h3 className='text-gray-500 mb-3 dark:text-gray-300'>
+                    {member.titre}
+                  </h3>
                   <div className='text-md mb-3'>
                     <Accordion>
                       <AccordionItem
