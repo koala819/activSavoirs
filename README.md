@@ -167,7 +167,7 @@ Distribué sous la licence MIT. Voir `LICENSE.txt` pour plus d'informations.
 
 ## Contact
 
-Xavier Genolhac - [@Linkedin](https://twitter.com/your_username)
+Xavier Genolhac - [@Linkedin][linkedin-url]
 
 Lien du Projet: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
