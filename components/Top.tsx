@@ -25,7 +25,6 @@ import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
-  // const router = useRouter();
 
   const menuItems = [
     { name: "Item_1", path: "/" },

@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 
 export default async function Page() {
   const client = createClient();
-  const page = await client.getByType("references").catch(() => notFound());
+  const page = await client
+    .getByType("references", { pageSize: 1000, page: 1 })
+    .catch(() => notFound());
 
   return (
     <div className='text-gray-600 dark:text-gray-100 body-font'>
@@ -15,25 +17,7 @@ export default async function Page() {
           </h1>
         </div>
         {page && page.results && page.results.length > 0 ? (
-          <div className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
-            <References references={page.results} />
-            {/* {page.results.map((item) => {
-              return (
-                <div
-                  key={item.id}
-                  className='flex items-center justify-center m-1'
-                >
-                  <title>{item.data.meta_title}</title>
-                  <meta
-                    name='description'
-                    content={item.data.meta_description || ""}
-                  />
-                  <Team team={[item.data]} />
-                  DISPLAY REFS
-                </div>
-              );
-            })} */}
-          </div>
+          <References references={page.results} />
         ) : (
           notFound()
         )}
