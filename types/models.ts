@@ -1,5 +1,15 @@
 import { ImageField, KeyTextField, RichTextField } from "@prismicio/types";
 
+export interface RefProp {
+  data: {
+    website: any;
+    logo: ImageField;
+    description: KeyTextField;
+    titre: KeyTextField;
+  };
+}
+[];
+
 export interface TeamProp {
   domaines_de_competences: RichTextField;
   nom: KeyTextField;
