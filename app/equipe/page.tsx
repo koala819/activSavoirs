@@ -1,4 +1,3 @@
-// page.tsx
 import { createClient } from "@/prismicio";
 import { Team } from "@/components/Team";
 import { notFound } from "next/navigation";
@@ -40,7 +39,8 @@ export default async function Page() {
             })}
           </div>
         ) : (
-          notFound()
+          // notFound()
+          <div>soucis avec le getByType(equipe)</div>
         )}
       </div>
     </div>
