@@ -1,10 +1,10 @@
-import "@/styles/globals.css";
+import "@/src/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Top } from "@/components/Top";
-import { Footer } from "@/components/Footer";
+import { Top } from "@/src/components/Top";
+import { Footer } from "@/src/components/Footer";
 import { Providers } from "./providers";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleAnalytics from "@/src/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 

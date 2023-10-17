@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import { mailContact } from "@/lib/mail";
+import { mailContact } from "@/src/lib/mail";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request): Promise<Response> {

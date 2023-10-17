@@ -1,7 +1,7 @@
 "use client";
 import { Image } from "@nextui-org/react";
-import { TeamProp } from "@/types/models";
-import { PrismicFormat } from "@/components/PrismicFormat";
+import { TeamProp } from "@/src/types/models";
+import { PrismicFormat } from "@/src/components/PrismicFormat";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { GiMoebiusStar } from "react-icons/gi";
 import { BsFillSunFill } from "react-icons/bs";

@@ -1,7 +1,7 @@
 "use client";
 import { FiPlay } from "react-icons/fi";
 import Image from "next/image";
-import femme from "../public/images/Femme.png";
+import femme from "../../public/images/Femme.png";
 import {
   Modal,
   ModalContent,

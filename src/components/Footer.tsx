@@ -3,7 +3,7 @@ import { LuCopyleft } from "react-icons/lu";
 import { BsYoutube } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-import logo from "../public/images/logoFooter.png";
+import logo from "../../public/images/logoFooter.png";
 import Image from "next/image";
 
 export function Footer() {

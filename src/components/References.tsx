@@ -1,6 +1,6 @@
 "use client";
 import { Card, CardHeader, CardFooter, Image } from "@nextui-org/react";
-import { RefProp } from "@/types/models";
+import { RefProp } from "@/src/types/models";
 
 export function References({ references }: { references: RefProp[] }) {
   references.sort((a, b) => {

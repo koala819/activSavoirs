@@ -19,10 +19,10 @@ import {
 import { FiChevronDown } from "react-icons/fi";
 // import { AiFillChrome } from "react-icons/ai";
 import { usePathname } from "next/navigation";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { ThemeSwitcher } from "@/src/components/ThemeSwitcher";
 import Image from "next/image";
-import whitelogo from "../public/images/logo.png";
-import blackLogo from "../public/images/Blacklogo.png";
+import whitelogo from "../../public/images/logo.png";
+import blackLogo from "../../public/images/Blacklogo.png";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {

@@ -1,6 +1,6 @@
 "use client";
-import { RefProp } from "@/types/models";
-import styles from "@/styles/Caroussel.module.css";
+import { RefProp } from "@/src/types/models";
+import styles from "@/src/styles/Caroussel.module.css";
 import { useEffect } from "react";
 
 export const CarouselRef = ({ references }: { references: RefProp[] }) => {

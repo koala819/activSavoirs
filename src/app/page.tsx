@@ -1,7 +1,7 @@
 import { createClient } from "@/prismicio";
-import { Homepage } from "@/components/Homepage";
+import { Homepage } from "@/src/components/Homepage";
 import { notFound } from "next/navigation";
-import { CarouselRef } from "@/components/Caroussel";
+import { CarouselRef } from "@/src/components/Caroussel";
 
 export default async function Page() {
   const client = createClient();
