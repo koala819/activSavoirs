@@ -1,6 +1,6 @@
 .sliderContainer {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   height: 300px;
 }
 
@@ -12,14 +12,20 @@
 
 .logoSlider {
   display: flex;
-  animation: slideshow 72s infinite linear;
+  animation: slideshow 35s infinite linear;
 }
 
 @keyframes slideshow {
-  from {
-    transform: translate(800px);
+  0% {
+    transform: translate(0);
   }
-  to {
-    transform: translate(-1800px);
+  100% {
+    transform: translate(-8448px);
+    /*    
+    Largeur de chaque élément = 100px
+    Marge (margin-right) = 2rem soit 32px
+    Nombre d'éléments = 64
+    Largeur totale = (100px + 32px) * 64 = 132px * 64 = 8 448px 
+    */
   }
 }
