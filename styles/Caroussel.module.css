@@ -1,0 +1,25 @@
+.sliderContainer {
+  overflow: hidden;
+  width: 100vw;
+  height: 300px;
+}
+
+.logoSlider > img {
+  width: 100px;
+  height: 100px;
+  margin-right: 2rem;
+}
+
+.logoSlider {
+  display: flex;
+  animation: slideshow 72s infinite linear;
+}
+
+@keyframes slideshow {
+  from {
+    transform: translate(800px);
+  }
+  to {
+    transform: translate(-1800px);
+  }
+}

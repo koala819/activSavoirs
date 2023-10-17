@@ -3,7 +3,7 @@ import { ImageField, KeyTextField, RichTextField } from "@prismicio/types";
 export interface RefProp {
   data: {
     website: any;
-    logo: ImageField;
+    logo: any;
     description: KeyTextField;
     titre: KeyTextField;
   };
