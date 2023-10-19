@@ -11,7 +11,7 @@ const nextConfig = {
     MAIL_SERVER: process.env.MAIL_SERVER,
   },
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["images.unsplash.com", "images.prismic.io"],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   reactStrictMode: true,
