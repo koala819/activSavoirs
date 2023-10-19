@@ -3,8 +3,14 @@ import { Chip, Image } from "@nextui-org/react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { useState } from "react";
-import { FaStar, FaShoppingCart } from "react-icons/fa";
-import { GiIronCross } from "react-icons/gi";
+import {
+  FaCubes,
+  FaFileContract,
+  FaHome,
+  FaPhone,
+  FaStar,
+  FaShoppingCart,
+} from "react-icons/fa";
 
 export function Evals({ evals }: { evals: any }) {
   const [selectedTag, setSelectedTag] = useState<any | null>(null);
@@ -19,19 +25,28 @@ export function Evals({ evals }: { evals: any }) {
 
   const tags = [
     { name: "Développer ses compétences achat", icon: FaShoppingCart },
-    { name: "Développer ses compétences accaht", icon: GiIronCross },
+    {
+      name: "Maîtriser la prospection immobilière de terrain",
+      icon: FaHome,
+    },
+    { name: "Piges et prospection téléphonique", icon: FaPhone },
+    {
+      name: "Savoir vendre avec efficacité le mandat exclusif",
+      icon: FaFileContract,
+    },
   ];
 
   return (
     <>
-      <header className='flex  p-8 w-full space-y-4 flex-col xl:space-x-4 xl:space-y-0 xl:flex-row'>
+      <header className='bg-red-500 w-full space-y-4 xl:space-y-2 mb-8'>
         {uniqueTags.map((ref: any, index: number) => {
           const tag = tags.find((tag) => tag.name === ref.tags[0]);
-
           const Icon = tag?.icon;
+
           const tagClickHandler = () => {
             setSelectedTag(ref);
           };
+
           return (
             <Chip
               key={index}
@@ -39,21 +54,24 @@ export function Evals({ evals }: { evals: any }) {
               variant='faded'
               color='primary'
               onClick={tagClickHandler}
-              className='hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-blue-500 text-xs sm:text-none'
+              className='hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-blue-500 text-xs sm:text-sm mr-4'
             >
               {ref.tags[0]}
             </Chip>
           );
         })}
+
         <Chip
           onClick={() => setSelectedTag(null)}
-          className='hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-blue-500'
+          startContent={<FaCubes size={18} />}
           color='primary'
           variant='faded'
+          className='hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-blue-500 text-xs sm:text-sm'
         >
           Tous les modules
         </Chip>
       </header>
+
       <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4'>
         {evals.map((evaluation: any, index: number) => {
           if (
