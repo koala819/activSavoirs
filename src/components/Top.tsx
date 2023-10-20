@@ -59,6 +59,7 @@ export function Top() {
     { name: "Marketing Digital", path: "#", icon: <FaGlobe /> },
     { name: "Qualité et environnement", path: "#", icon: <FaLeaf /> },
     { name: "Soft Kills", path: "#", icon: <FaHandshake /> },
+    { name: "Equipe pédagogique", path: "/equipe" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -201,24 +202,25 @@ export function Top() {
         </NavbarBrand>
       </NavbarContent>
 
-      {/* <NavbarContent className='hidden sm:flex' justify='start'>
-        <NavbarItem isActive={path.includes("/equipe")}>
-          <Link href='/equipe' aria-current='page' color='foreground'>
-            Equipe
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem isActive={path.includes("/references")}>
-          <Link href='/references' aria-current='page' color='foreground'>
-            Références
-          </Link>
-        </NavbarItem>
-      </NavbarContent> */}
-
       <NavbarContent className='hidden sm:flex' justify='end'>
         <NavbarItem isActive={path.includes("/contact")}>
-          <Link href='/contact' aria-current='page' color='foreground'>
-            Contact
+          <Link
+            href='/equipe'
+            aria-current='page'
+            color='foreground'
+            className='hover:text-gray-600'
+          >
+            Equipe pédagogique
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive={path.includes("/contact")}>
+          <Link
+            href='/contact'
+            aria-current='page'
+            color='foreground'
+            className='px-8 border rounded-l-full rounded-r-full border-gray-950 py-2 hover:text-gray-600 hover:border-gray-600'
+          >
+            Nous contacter
           </Link>
         </NavbarItem>
       </NavbarContent>
