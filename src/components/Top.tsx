@@ -17,7 +17,7 @@ import {
 } from "@nextui-org/react";
 import { FiChevronDown } from "react-icons/fi";
 import { usePathname } from "next/navigation";
-import { ThemeSwitcher } from "@/src/components/ThemeSwitcher";
+// import { ThemeSwitcher } from "@/src/components/ThemeSwitcher";
 import Image from "next/image";
 import whitelogo from "../../public/images/logo.png";
 import blackLogo from "../../public/images/logoDM.png";
@@ -221,9 +221,6 @@ export function Top() {
             Contact
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <ThemeSwitcher />
-        </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu className='mt-8'>
@@ -261,7 +258,6 @@ export function Top() {
             )}
           </NavbarMenuItem>
         ))}
-        <ThemeSwitcher />
       </NavbarMenu>
     </Navbar>
   );
