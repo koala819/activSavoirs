@@ -9,7 +9,6 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
   Link,
-  // Image,
   DropdownItem,
   DropdownTrigger,
   Dropdown,
@@ -17,12 +16,11 @@ import {
   Button,
 } from "@nextui-org/react";
 import { FiChevronDown } from "react-icons/fi";
-// import { AiFillChrome } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import { ThemeSwitcher } from "@/src/components/ThemeSwitcher";
 import Image from "next/image";
 import whitelogo from "../../public/images/logo.png";
-import blackLogo from "../../public/images/Blacklogo.png";
+import blackLogo from "../../public/images/logoDM.png";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
@@ -46,16 +44,29 @@ export function Top() {
   const logo = resolvedTheme === "dark" ? blackLogo : whitelogo;
 
   const menuItems = [
-    { name: "Item_1", path: "/" },
-    { name: "Item_2", path: "#" },
-    { name: "Item_3", path: "#" },
-    { name: "Contact", path: "#" },
+    { name: "Accueil", path: "/" },
+    { name: "Nos Thématiques" },
+    { name: "Stratégie d'entreprise", path: "#", icon: <FaChessBoard /> },
+    { name: "Intelligence Artificielle", path: "#", icon: <FaRobot /> },
+    { name: "Excellence Industrielle 4.0", path: "#", icon: <FaIndustry /> },
+    {
+      name: "Optimisation des Ressources Humaines",
+      path: "#",
+      icon: <FaUsersCog />,
+    },
+    { name: "Efficacité Manageriale", path: "#", icon: <FaUserTie /> },
+    { name: "Performance Commerciale", path: "#", icon: <FaChartLine /> },
+    { name: "Marketing Digital", path: "#", icon: <FaGlobe /> },
+    { name: "Qualité et environnement", path: "#", icon: <FaLeaf /> },
+    { name: "Soft Kills", path: "#", icon: <FaHandshake /> },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className='pb-4'
+      maxWidth='full'
+      className='pb-4 bg-navbar-bg dark:bg-dark-navbar-bg'
       classNames={{
         item: [
           "flex",
@@ -73,118 +84,124 @@ export function Top() {
         ],
       }}
     >
-      <NavbarContent justify='start'>
+      <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className='sm:hidden'
         />
         <NavbarBrand>
-          <Link href='/' aria-current='page' color='foreground'>
-            <Image src={logo} alt='Some text' height={60} />
+          <Link
+            href='/'
+            aria-current='page'
+            className='pt-2 md:mr-2 lg:mr-4 xl:mr-16'
+          >
+            <Image src={logo} alt='Logo Activ Savoirs' height={80} />
           </Link>
+          <div className='hidden sm:block'>
+            <Dropdown>
+              <NavbarItem isActive={path.includes("#")}>
+                <DropdownTrigger>
+                  <Button
+                    disableRipple
+                    className={` ${
+                      path.includes("#")
+                        ? "font-bold sm:text-xs lg:text-base data-[hover=true]:bg-transparent"
+                        : "p-0 sm:text-xs lg:text-base data-[hover=true]:bg-transparent hover:text-gray-600"
+                    }`}
+                    endContent={<FiChevronDown />}
+                    radius='sm'
+                    variant='light'
+                  >
+                    Nos thématiques
+                  </Button>
+                </DropdownTrigger>
+              </NavbarItem>
+              <DropdownMenu
+                aria-label='Item_3'
+                className='w-[340px]'
+                itemClasses={{
+                  base: "gap-4",
+                }}
+              >
+                <DropdownItem
+                  key='di1'
+                  description='Vision Stratégique'
+                  startContent={<FaChessBoard />}
+                  onClick={() => router.push("#")}
+                >
+                  Stratégie d&apos;entreprise
+                </DropdownItem>
+                <DropdownItem
+                  key='di2'
+                  description='IA Innovante'
+                  startContent={<FaRobot />}
+                  onClick={() => router.push("#")}
+                >
+                  Intelligence Artificielle
+                </DropdownItem>
+                <DropdownItem
+                  key='di3'
+                  description='Manufacture Numérique'
+                  startContent={<FaIndustry />}
+                  onClick={() => router.push("#")}
+                >
+                  Excellence Industrielle 4.0
+                </DropdownItem>
+                <DropdownItem
+                  key='di4'
+                  description='Gestion des Talents'
+                  startContent={<FaUsersCog />}
+                  onClick={() => router.push("#")}
+                >
+                  Optimisation des Ressources Humaines
+                </DropdownItem>
+                <DropdownItem
+                  key='di5'
+                  description='Leadership Performant'
+                  startContent={<FaUserTie />}
+                  onClick={() => router.push("#")}
+                >
+                  Efficacité Manageriale
+                </DropdownItem>
+                <DropdownItem
+                  key='di6'
+                  description='Croissance des Ventes'
+                  startContent={<FaChartLine />}
+                  onClick={() => router.push("#")}
+                >
+                  Performance Commerciale
+                </DropdownItem>
+                <DropdownItem
+                  key='di7'
+                  description='Stratégie en Ligne'
+                  startContent={<FaGlobe />}
+                  onClick={() => router.push("#")}
+                >
+                  Marketing Digital
+                </DropdownItem>
+                <DropdownItem
+                  key='di8'
+                  description='Normes Environnementales'
+                  startContent={<FaLeaf />}
+                  onClick={() => router.push("#")}
+                >
+                  Qualité et environnement
+                </DropdownItem>
+                <DropdownItem
+                  key='di9'
+                  description='Compétences Interpersonnelles'
+                  startContent={<FaHandshake />}
+                  onClick={() => router.push("#")}
+                >
+                  Soft Kills
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className='hidden sm:flex ' justify='center'>
-        <Dropdown>
-          <NavbarItem isActive={path.includes("#")}>
-            <DropdownTrigger>
-              <Button
-                disableRipple
-                className={` ${
-                  path.includes("#")
-                    ? "font-bold text-base data-[hover=true]:bg-transparent"
-                    : "p-0 text-base data-[hover=true]:bg-transparent hover:text-gray-600"
-                }`}
-                endContent={<FiChevronDown />}
-                radius='sm'
-                variant='light'
-              >
-                Nos thématiques
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu
-            aria-label='Item_3'
-            className='w-[340px]'
-            itemClasses={{
-              base: "gap-4",
-            }}
-          >
-            <DropdownItem
-              key='di1'
-              description='Vision Stratégique'
-              startContent={<FaChessBoard />}
-              onClick={() => router.push("#")}
-            >
-              Stratégie d&apos;entreprise
-            </DropdownItem>
-            <DropdownItem
-              key='di2'
-              description='IA Innovante'
-              startContent={<FaRobot />}
-              onClick={() => router.push("#")}
-            >
-              Intelligence Artificielle
-            </DropdownItem>
-            <DropdownItem
-              key='di3'
-              description='Manufacture Numérique'
-              startContent={<FaIndustry />}
-              onClick={() => router.push("#")}
-            >
-              Excellence Industrielle 4.0
-            </DropdownItem>
-            <DropdownItem
-              key='di4'
-              description='Gestion des Talents'
-              startContent={<FaUsersCog />}
-              onClick={() => router.push("#")}
-            >
-              Optimisation des Ressources Humaines
-            </DropdownItem>
-            <DropdownItem
-              key='di5'
-              description='Leadership Performant'
-              startContent={<FaUserTie />}
-              onClick={() => router.push("#")}
-            >
-              Efficacité Manageriale
-            </DropdownItem>
-            <DropdownItem
-              key='di6'
-              description='Croissance des Ventes'
-              startContent={<FaChartLine />}
-              onClick={() => router.push("#")}
-            >
-              Performance Commerciale
-            </DropdownItem>
-            <DropdownItem
-              key='di7'
-              description='Stratégie en Ligne'
-              startContent={<FaGlobe />}
-              onClick={() => router.push("#")}
-            >
-              Marketing Digital
-            </DropdownItem>
-            <DropdownItem
-              key='di8'
-              description='Normes Environnementales'
-              startContent={<FaLeaf />}
-              onClick={() => router.push("#")}
-            >
-              Qualité et environnement
-            </DropdownItem>
-            <DropdownItem
-              key='di9'
-              description='Compétences Interpersonnelles'
-              startContent={<FaHandshake />}
-              onClick={() => router.push("#")}
-            >
-              Soft Kills
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+      {/* <NavbarContent className='hidden sm:flex' justify='start'>
         <NavbarItem isActive={path.includes("/equipe")}>
           <Link href='/equipe' aria-current='page' color='foreground'>
             Equipe
@@ -196,8 +213,9 @@ export function Top() {
             Références
           </Link>
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify='end'>
+      </NavbarContent> */}
+
+      <NavbarContent className='hidden sm:flex' justify='end'>
         <NavbarItem isActive={path.includes("/contact")}>
           <Link href='/contact' aria-current='page' color='foreground'>
             Contact
@@ -207,26 +225,43 @@ export function Top() {
           <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
+
       <NavbarMenu className='mt-8'>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={"foreground"}
-              // color={
-              //   index === 2
-              //     ? "primary"
-              //     : index === menuItems.length - 1
-              //     ? "danger"
-              //     : "foreground"
-              // }
-              className='w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2 '
-              href={item.path}
-              size='lg'
-            >
-              {item.name}
-            </Link>
+            {index === 1 && (
+              <Link
+                color='primary'
+                className='hover:cursor-default font-bold ml-2'
+                size='lg'
+              >
+                {item.name}
+              </Link>
+            )}
+            {index >= 2 && index <= 10 && (
+              <Link
+                color='foreground'
+                className='w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2 ml-4'
+                href={item.path}
+                size='lg'
+              >
+                <div className='mr-2'>{item.icon}</div>
+                {item.name}
+              </Link>
+            )}
+            {(index === 0 || index === 11) && (
+              <Link
+                color='foreground'
+                className='w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2'
+                href={item.path}
+                size='lg'
+              >
+                {item.name}
+              </Link>
+            )}
           </NavbarMenuItem>
         ))}
+        <ThemeSwitcher />
       </NavbarMenu>
     </Navbar>
   );
