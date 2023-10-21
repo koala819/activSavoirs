@@ -26,8 +26,8 @@ export default function RootLayout({
             <div className=' flex flex-col h-screen'>
               <Top />
               <main className='flex-1'>
-                <div className='w-full lg:w-8/12 px-4 mx-auto mt-6'>
-                  <div className='flex flex-col min-w-0 break-words w-full mb-6rounded-lg bg-gray-50 dark:bg-slate-800 border-0'>
+                <div>
+                  <div>
                     <GoogleAnalytics />
                     {children}
                   </div>
