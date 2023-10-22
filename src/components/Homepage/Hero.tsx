@@ -12,8 +12,7 @@ import {
 import ReactPlayer from "react-player";
 import femme from "../../../public/images/Femme.png";
 import dataDock from "../../../public/images/dataDock.png";
-import { HeroTitle } from "../atoms/HeroTitle";
-import { Text } from "../atoms/Text";
+import { Article } from "../molecules/Article";
 import { Stars } from "../molecules/Stars";
 import { WhiteBox } from "../atoms/WhiteBox";
 
@@ -23,23 +22,14 @@ export function Hero({ page }: { page: any }) {
   return (
     <>
       <section className='md:flex mt-8 p-8 md:space-x-8 space-y-8 md:space-y-0'>
-        <article className='w-full md:w-1/2 p-4'>
-          <HeroTitle title='activateur de Compétences' />
-          <Text
-            text='Développer l’agilité et la flexibilité de votre entreprise par la
-            montée en compétences de vos collaborateurs'
-            className='title mb-8 mt-4'
-          />
-          <Text
-            text='Nos actions de formation à forte valeur ajoutée ont pour objectifs
-            de contribuer à l’efficacité et à la compétitivité de votre
-            entreprise.'
-            className='text-description mb-10'
-          />
-          <Button variant='solid' className='black-button'>
-            Nous contacter
-          </Button>
-        </article>
+        <Article
+          heroTitle='activateur de Compétences'
+          title='Développer l’agilité et la flexibilité de votre entreprise par la
+    montée en compétences de vos collaborateurs'
+          description='Nos actions de formation à forte valeur ajoutée ont pour objectifs
+          de contribuer à l’efficacité et à la compétitivité de votre
+          entreprise.'
+        />
         <aside className='flex w-full md:w-1/2 justify-center items-center'>
           <div className='bg-[#D1E4DD] w-2/3 sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/3 relative h-[400px] rounded-xl'>
             <sup
