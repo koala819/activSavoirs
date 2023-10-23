@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.black-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding-inline: theme("padding.8");
+}
+
+.proposition-tag {
+  background-color: theme("colors.gray.300");
+  border-top-left-radius: theme("borderRadius.xl");
+  border-top-right-radius: theme("borderRadius.xl");
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: theme("padding.4");
+  size: theme("fontSize.sm");
+  width: 25%;
+}
+
+.title {
+  font-weight: theme("fontWeight.black");
+}
+
+.text-description {
+  color: theme("colors.gray.500");
+  font-style: italic;
+}
+
+.white-box-nb-txt {
+  font-weight: theme("fontWeight.extrabold");
+}
+
+.white-box-txt {
+  color: theme("colors.gray.500");
+}
+
+/* For mobile phones: */
+@media screen and (max-width: 640px) {
+  .black-button {
+    padding-inline: theme("padding.0");
+  }
+
+  .proposition-tag {
+    width: 80%;
+  }
+
+  .text-description {
+    font-size: theme("fontSize.xs");
+  }
+
+  .white-box-nb-txt {
+    font-size: theme("fontSize.xs");
+  }
+
+  .white-box-txt {
+    font-size: theme("fontSize.xs");
+  }
+}
+
+/* For sm screens: */
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .proposition-tag {
+    width: 35%;
+  }
+}
+
+/* For md screens: */
+@media screen and (min-width: 768px) {
+  .proposition-tag {
+    width: 60%;
+  }
+
+  .text-description {
+    font-size: theme("fontSize.xl");
+  }
+
+  .title {
+    font-size: theme("fontSize.3xl");
+  }
+
+  .white-box-nb-txt {
+    font-size: theme("fontSize.sm");
+  }
+
+  .white-box-txt {
+    font-size: theme("fontSize.sm");
+  }
+}
+
+/* For lg screens: */
+@media screen and (min-width: 1024px) {
+  .proposition-tag {
+    width: 40%;
+  }
+}
+
+/* For xl screens:  */
+@media screen and (min-width: 1280px) {
+  .proposition-tag {
+    width: 35%;
+  }
+
+  .white-box-nb-txt {
+    font-size: theme("fontSize.lg");
+  }
+
+  .white-box-txt {
+    font-size: theme("fontSize.lg");
+  }
+}

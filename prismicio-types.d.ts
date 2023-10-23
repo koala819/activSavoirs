@@ -224,6 +224,123 @@ interface EquipeDocumentData {
 export type EquipeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<EquipeDocumentData>, "equipe", Lang>;
 
+type EvalsDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Evals documents
+ */
+interface EvalsDocumentData {
+  /**
+   * Logo field in *Evals*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: evals.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Prénom field in *Evals*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: evals.prenom
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  prenom: prismic.KeyTextField;
+
+  /**
+   * Date field in *Evals*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: evals.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Avis field in *Evals*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: evals.avis
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  avis: prismic.RichTextField;
+
+  /**
+   * Note field in *Evals*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: min 0 / max 5
+   * - **API ID Path**: evals.note
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  note: prismic.NumberField;
+
+  /**
+   * Slice Zone field in *Evals*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: evals.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<EvalsDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *Evals*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: evals.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Evals*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: evals.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Evals*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: evals.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Evals document from Prismic
+ *
+ * - **API ID**: `evals`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type EvalsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<EvalsDocumentData>, "evals", Lang>;
+
 type ReferencesDocumentDataSlicesSlice = never;
 
 /**
@@ -337,6 +454,7 @@ export type ReferencesDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | AccueilDocument
   | EquipeDocument
+  | EvalsDocument
   | ReferencesDocument;
 
 /**
@@ -955,6 +1073,9 @@ declare module "@prismicio/client" {
       EquipeDocument,
       EquipeDocumentData,
       EquipeDocumentDataSlicesSlice,
+      EvalsDocument,
+      EvalsDocumentData,
+      EvalsDocumentDataSlicesSlice,
       ReferencesDocument,
       ReferencesDocumentData,
       ReferencesDocumentDataSlicesSlice,
