@@ -7,10 +7,10 @@ export default async function Page() {
   const client = createClient();
   const page = await client.getSingle("accueil").catch(() => notFound());
   return (
-    <>
+    <div>
       <Hero page={page} />
       <Proposition />
       <Services />
-    </>
+    </div>
   );
 }
