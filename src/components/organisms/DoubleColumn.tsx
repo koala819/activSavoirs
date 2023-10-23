@@ -10,7 +10,7 @@ export function DoubleColumn({
       <aside className='flex flex-col space-y-10 p-4 w-full md:w-1/2'>
         {left}
       </aside>
-      <aside className='flex w-full md:w-1/2 justify-center items-center'>
+      <aside className='flex flex-col space-y-10 p-4 w-full md:w-1/2'>
         {right}
       </aside>
     </section>

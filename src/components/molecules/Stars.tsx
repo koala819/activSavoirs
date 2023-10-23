@@ -1,6 +1,6 @@
 "use client";
 import { PiStarDuotone, PiStarHalfDuotone } from "react-icons/pi";
-import { Text } from "../atoms/Text";
+import { Text } from "@/src/components/atoms/Text";
 
 export function Stars({
   beforeStars,

@@ -10,6 +10,10 @@ export interface RefProp {
 }
 [];
 
+export type ServiceComponents = {
+  [key: string]: JSX.Element;
+};
+
 export interface TeamProp {
   domaines_de_competences: RichTextField;
   nom: KeyTextField;

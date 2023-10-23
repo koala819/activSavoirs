@@ -18,6 +18,8 @@
   flex-direction: column;
   font-weight: bold;
   padding: theme("padding.4");
+  size: theme("fontSize.sm");
+  width: 25%;
 }
 
 .title {
@@ -43,6 +45,10 @@
     padding-inline: theme("padding.0");
   }
 
+  .proposition-tag {
+    width: 80%;
+  }
+
   .text-description {
     font-size: theme("fontSize.xs");
   }
@@ -57,7 +63,18 @@
 }
 
 /* For sm screens: */
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .proposition-tag {
+    width: 35%;
+  }
+}
+
+/* For md screens: */
 @media screen and (min-width: 768px) {
+  .proposition-tag {
+    width: 60%;
+  }
+
   .text-description {
     font-size: theme("fontSize.xl");
   }
@@ -75,18 +92,23 @@
   }
 }
 
-/* For md screens: */
+/* For lg screens: */
 @media screen and (min-width: 1024px) {
-  /* .title {
-    font-size: theme("fontSize.2xl");
-  } */
+  .proposition-tag {
+    width: 40%;
+  }
 }
 
 /* For xl screens:  */
 @media screen and (min-width: 1280px) {
+  .proposition-tag {
+    width: 35%;
+  }
+
   .white-box-nb-txt {
     font-size: theme("fontSize.lg");
   }
+
   .white-box-txt {
     font-size: theme("fontSize.lg");
   }

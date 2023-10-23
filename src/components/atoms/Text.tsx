@@ -2,7 +2,7 @@ export function Text({
   text,
   className,
 }: {
-  text: string;
+  text: string | null;
   className?: string;
 }) {
   return <p className={className}>{text}</p>;

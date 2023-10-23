@@ -1,4 +1,4 @@
-import { Text } from "../atoms/Text";
+import { Text } from "@/src/components/atoms/Text";
 
 export function WhiteBox({
   number,
