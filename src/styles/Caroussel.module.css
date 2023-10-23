@@ -12,7 +12,7 @@
 
 .logoSlider {
   display: flex;
-  animation: slideshow 35s infinite linear;
+  animation: slideshow 1024s infinite linear;
 }
 
 @keyframes slideshow {
