@@ -11,7 +11,7 @@ export function Stars({
 }) {
   return (
     <div className='flex space-x-4 items-center'>
-      <Text text={beforeStars} />
+      <Text text={beforeStars} className='text-xs sm:text-base' />
       <div className='flex'>
         <PiStarDuotone size={24} className='text-yellow-400' />
         <PiStarDuotone size={24} className='text-yellow-400' />
@@ -19,7 +19,7 @@ export function Stars({
         <PiStarHalfDuotone size={24} className='text-yellow-400' />
         <PiStarDuotone size={24} className='text-gray-300' />
       </div>
-      <Text text={afterStars} />
+      <Text text={afterStars} className='text-xs sm:text-base' />
     </div>
   );
 }
