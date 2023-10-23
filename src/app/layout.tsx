@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Top } from "@/src/components/Top";
 import { Footer } from "@/src/components/Footer";
 import { Providers } from "./providers";
-import GoogleAnalytics from "@/src/components/GoogleAnalytics";
+import GoogleAnalytics from "@/src/components/util/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -17,7 +17,7 @@ import {
 } from "@nextui-org/react";
 import { FiChevronDown } from "react-icons/fi";
 import { usePathname } from "next/navigation";
-// import { ThemeSwitcher } from "@/src/components/ThemeSwitcher";
+// import { ThemeSwitcher } from "@/src/components/util/ThemeSwitcher";
 import Image from "next/image";
 import whitelogo from "../../public/images/logo.png";
 import blackLogo from "../../public/images/logoDM.png";
@@ -203,7 +203,7 @@ export function Top() {
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex' justify='end'>
-        <NavbarItem isActive={path.includes("/contact")}>
+        <NavbarItem isActive={path.includes("/equipe")}>
           <Link
             href='/equipe'
             aria-current='page'

@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/PrismicFormat.jsx",
+    "components/util/PrismicFormat.jsx",
     "postcss.config.js"
   ],
   "exclude": ["node_modules"]
