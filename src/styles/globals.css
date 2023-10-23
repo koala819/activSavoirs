@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 .black-button {
-  background-color: theme("colors.black");
-  font-weight: theme("fontWeight.bold");
-  /* padding: theme("sm:px-8"); */
-  color: theme("colors.white");
+  background-color: black;
+  color: white;
+  font-weight: bold;
   padding-inline: theme("padding.8");
+}
+
+.proposition-tag {
+  background-color: theme("colors.gray.300");
+  border-top-left-radius: theme("borderRadius.xl");
+  border-top-right-radius: theme("borderRadius.xl");
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: theme("padding.4");
 }
 
 .title {

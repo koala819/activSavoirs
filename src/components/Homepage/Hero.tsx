@@ -7,7 +7,7 @@ import { YouTube } from "../molecules/YouTube";
 
 export function Hero({ page }: { page: any }) {
   return (
-    <div>
+    <>
       <DoubleColumn
         left={
           <>
@@ -34,6 +34,6 @@ montée en compétences de vos collaborateurs'
           afterStars='4.9/5 avis sur plus de 800'
         />
       </footer>
-    </div>
+    </>
   );
 }
