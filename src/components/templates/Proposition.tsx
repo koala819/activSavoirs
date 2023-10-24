@@ -13,6 +13,7 @@ export async function Proposition() {
   return (
     <>
       <DoubleColumn
+        className='mt-8'
         left={
           <Article
             title='Savoir définir et actionner vos besoins de compétences actuels et à venir.'
@@ -29,8 +30,9 @@ export async function Proposition() {
           </section>
         }
       />
-
-      <CarouselRef references={references.results} />
+      <div className='py-8'>
+        <CarouselRef references={references.results} />
+      </div>
     </>
   );
 }

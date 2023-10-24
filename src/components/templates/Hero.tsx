@@ -8,6 +8,7 @@ export function Hero({ page }: { page: any }) {
   return (
     <>
       <DoubleColumn
+        className='md:mt-8'
         left={
           <Article
             overline='activateur de Compétences'
@@ -21,7 +22,7 @@ montée en compétences de vos collaborateurs'
         }
         right={<YouTube video={page} />}
       />
-      <footer className='flex justify-center'>
+      <footer className='flex justify-center mt-4 sm:mt-0'>
         <Stars
           beforeStars='Excellent'
           afterStars='4.9/5 avis sur plus de 800'

@@ -117,11 +117,7 @@ export function Evals({ evals }: { evals: any }) {
             return null;
           }
 
-          return (
-            <div key={index} className='flex items-center justify-center'>
-              <Eval evaluation={evaluation} />
-            </div>
-          );
+          return <Eval evaluation={evaluation} key={index} />;
         })}
       </div>
     </>

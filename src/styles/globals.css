@@ -58,6 +58,10 @@
     font-size: theme("fontSize.xs");
   }
 
+  .title {
+    text-align: center;
+  }
+
   .white-box-nb-txt {
     font-size: theme("fontSize.xs");
   }

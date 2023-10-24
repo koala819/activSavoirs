@@ -22,10 +22,12 @@ export function Article({
         <Text text={overline} className='text-xs sm:text-base uppercase' />
       ) : null}
       {image ? <Image src={image?.src.src} alt={image.alt} /> : null}
-      <Text text={title} className='title mb-8 mt-4' />
+      <Text text={title} className='title md:mb-8 mt-4' />
       <Text text={description} className='text-description' />
       {button.display ? (
-        <Button text={button.text} className='black-button' link='/contact' />
+        <div className='flex justify-center md:justify-start'>
+          <Button text={button.text} className='black-button' link='/contact' />
+        </div>
       ) : null}
     </>
   );
