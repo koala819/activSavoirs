@@ -1,5 +1,6 @@
 "use client";
-import { Button, Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
+import { Button } from "@/src/components/atoms/Button";
 import { Text } from "@/src/components/atoms/Text";
 
 export function Article({
@@ -24,11 +25,7 @@ export function Article({
       <Text text={title} className='title mb-8 mt-4' />
       <Text text={description} className='text-description' />
       {button.display ? (
-        <div>
-          <Button variant='solid' className='black-button'>
-            {button.text}
-          </Button>
-        </div>
+        <Button text={button.text} className='black-button' link='/contact' />
       ) : null}
     </>
   );

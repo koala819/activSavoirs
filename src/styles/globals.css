@@ -26,6 +26,11 @@
   font-weight: theme("fontWeight.black");
 }
 
+.step-description {
+  color: theme("colors.gray.500");
+  font-style: italic;
+}
+
 .text-description {
   color: theme("colors.gray.500");
   font-style: italic;
@@ -42,7 +47,7 @@
 /* For mobile phones: */
 @media screen and (max-width: 640px) {
   .black-button {
-    padding-inline: theme("padding.0");
+    padding-inline: theme("padding.4");
   }
 
   .proposition-tag {
@@ -103,6 +108,10 @@
 @media screen and (min-width: 1280px) {
   .proposition-tag {
     width: 35%;
+  }
+
+  .step-description {
+    font-size: theme("fontSize.xl");
   }
 
   .white-box-nb-txt {
