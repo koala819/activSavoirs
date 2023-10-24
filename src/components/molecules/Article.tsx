@@ -11,7 +11,7 @@ export function Article({
   title,
 }: {
   button: { display: boolean; text?: string };
-  description: string;
+  description?: string;
   image?: { src: { src: string; height: number; width: number }; alt: string };
   overline?: string;
   title: string;
@@ -23,7 +23,9 @@ export function Article({
       ) : null}
       {image ? <Image src={image?.src.src} alt={image.alt} /> : null}
       <Text text={title} className='title md:mb-8 mt-4' />
-      <Text text={description} className='text-description' />
+      {description ? (
+        <Text text={description} className='text-description' />
+      ) : null}
       {button.display ? (
         <div className='flex justify-center md:justify-start'>
           <Button text={button.text} className='black-button' link='/contact' />
