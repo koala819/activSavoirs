@@ -248,7 +248,7 @@ export function Top() {
                 {item.name}
               </Link>
             )}
-            {(index === 0 || index === 11) && (
+            {(index === 0 || index >= 11) && (
               <Link
                 color='foreground'
                 className='w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2'
