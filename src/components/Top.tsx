@@ -24,6 +24,7 @@ import blackLogo from "../../public/images/logoDM.png";
 import { thematiques } from "@/src/lib/thematiques";
 import { menuItems } from "@/src/types/models";
 import { FiChevronDown } from "react-icons/fi";
+import { colorVariants } from "@/src/lib/colorVariants";
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,18 +45,6 @@ export function Top() {
     { name: "Equipe pédagogique", path: "/equipe" },
     { name: "Contact", path: "/contact" },
   ];
-
-  const colorVariants: { [key: string]: string } = {
-    "Stratégie d'entreprise": "bg-[#C7B4FF]",
-    "Intelligence Artificielle": "bg-[#FF9C64]",
-    "Excellence Industrielle 4.0": "bg-[#FFEA9E]",
-    "Optimisation des Ressources Humaines": "bg-[#B9C0FF]",
-    "Efficacité Manageriale": "bg-[#D994FA]",
-    "Performance Commerciale": "bg-[#E3FF92]",
-    "Marketing Digital": "bg-[#FFB9E7]",
-    "Qualité et environnement": "bg-[#81D6A8]",
-    "Soft Kills": "bg-[#D1E4E2]",
-  };
 
   return (
     <Navbar
@@ -116,7 +105,7 @@ export function Top() {
                   return (
                     <DropdownItem
                       key={thematique.name}
-                      color='primary'
+                      color={"undefined" as any}
                       variant='shadow'
                       className={`${
                         colorVariants[thematique.name]
