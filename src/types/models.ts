@@ -1,5 +1,11 @@
 import { ImageField, KeyTextField, RichTextField } from "@prismicio/types";
 
+export interface menuItems {
+  name: string;
+  path?: string;
+  icon?: any;
+}
+
 export interface RefProp {
   data: {
     website: any;

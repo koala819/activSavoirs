@@ -17,10 +17,11 @@ import {
 } from "@nextui-org/react";
 import { FiChevronDown } from "react-icons/fi";
 import { usePathname } from "next/navigation";
-// import { ThemeSwitcher } from "@/src/components/util/ThemeSwitcher";
+import { thematiques } from "@/src/lib/thematiques";
 import Image from "next/image";
 import whitelogo from "../../public/images/logo.png";
 import blackLogo from "../../public/images/logoDM.png";
+import { menuItems } from "@/src/types/models";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import {
@@ -43,22 +44,14 @@ export function Top() {
 
   const logo = resolvedTheme === "dark" ? blackLogo : whitelogo;
 
-  const menuItems = [
+  const menuItems: menuItems[] = [
     { name: "Accueil", path: "/" },
     { name: "Nos Thématiques" },
-    { name: "Stratégie d'entreprise", path: "#", icon: <FaChessBoard /> },
-    { name: "Intelligence Artificielle", path: "#", icon: <FaRobot /> },
-    { name: "Excellence Industrielle 4.0", path: "#", icon: <FaIndustry /> },
-    {
-      name: "Optimisation des Ressources Humaines",
-      path: "#",
-      icon: <FaUsersCog />,
-    },
-    { name: "Efficacité Manageriale", path: "#", icon: <FaUserTie /> },
-    { name: "Performance Commerciale", path: "#", icon: <FaChartLine /> },
-    { name: "Marketing Digital", path: "#", icon: <FaGlobe /> },
-    { name: "Qualité et environnement", path: "#", icon: <FaLeaf /> },
-    { name: "Soft Kills", path: "#", icon: <FaHandshake /> },
+    ...thematiques.map((item) => ({
+      name: item.name,
+      path: item.path,
+      icon: item.icon,
+    })),
     { name: "Equipe pédagogique", path: "/equipe" },
     { name: "Contact", path: "/contact" },
   ];
@@ -225,7 +218,7 @@ export function Top() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className='mt-8'>
+      <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             {index === 1 && (
