@@ -18,7 +18,7 @@ export function Footer() {
         <section className='flex justify-center md:basis-1/2'>
           <DoubleColumn
             sectionClassName='md:flex'
-            leftClassName='flex justify-center'
+            leftClassName='flex justify-center md:block'
             left={<Image src={logo} alt='Logo Activ Savoirs' height={60} />}
             right={
               <>
