@@ -22,11 +22,7 @@ export function Article({
         <Text text={overline} className='text-xs sm:text-base uppercase' />
       ) : null}
       {image ? <Image src={image?.src.src} alt={image.alt} /> : null}
-      <Text
-        text={title}
-        className='title'
-        // className='title md:mb-8 mt-4'
-      />
+      <Text text={title} className='title' />
       {description ? (
         <Text text={description} className='text-description' />
       ) : null}

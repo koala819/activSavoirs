@@ -6,6 +6,8 @@ import { Services } from "@/src/components/templates/Services";
 import { Steps } from "@/src/components/templates/Steps";
 import { Rating } from "@/src/components/templates/Rating";
 import { Article } from "@/src/components/molecules/Article";
+import { Thematique } from "@/src/components/atoms/Thematique";
+import { thematiques } from "@/src/lib/thematiques";
 
 export default async function Page() {
   const client = createClient();
@@ -17,6 +19,14 @@ export default async function Page() {
   return (
     <div>
       <Hero page={page} />
+      {thematiques.map((thematique, index) => (
+        <Thematique
+          key={index}
+          title={thematique.name}
+          icon={thematique.icon}
+        />
+      ))}
+
       <Proposition />
       <Services />
       <Steps />
