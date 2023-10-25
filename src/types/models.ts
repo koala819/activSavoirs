@@ -6,6 +6,8 @@ export interface menuItems {
   icon?: any;
 }
 
+export type Params = { uid: string };
+
 export interface RefProp {
   data: {
     website: any;
@@ -30,5 +32,3 @@ export interface TeamProp {
   [key: string]: any;
 }
 [];
-
-export type Params = { uid: string };

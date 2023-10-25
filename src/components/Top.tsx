@@ -15,26 +15,15 @@ import {
   DropdownMenu,
   Button,
 } from "@nextui-org/react";
-import { FiChevronDown } from "react-icons/fi";
 import { usePathname } from "next/navigation";
-import { thematiques } from "@/src/lib/thematiques";
 import Image from "next/image";
-import whitelogo from "../../public/images/logo.png";
-import blackLogo from "../../public/images/logoDM.png";
-import { menuItems } from "@/src/types/models";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
-import {
-  FaChartLine,
-  FaChessBoard,
-  FaGlobe,
-  FaHandshake,
-  FaIndustry,
-  FaLeaf,
-  FaRobot,
-  FaUserTie,
-  FaUsersCog,
-} from "react-icons/fa";
+import whitelogo from "../../public/images/logo.png";
+import blackLogo from "../../public/images/logoDM.png";
+import { thematiques } from "@/src/lib/thematiques";
+import { menuItems } from "@/src/types/models";
+import { FiChevronDown } from "react-icons/fi";
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,6 +44,18 @@ export function Top() {
     { name: "Equipe pédagogique", path: "/equipe" },
     { name: "Contact", path: "/contact" },
   ];
+
+  const colorVariants: { [key: string]: string } = {
+    "Stratégie d'entreprise": "bg-[#C7B4FF]",
+    "Intelligence Artificielle": "bg-[#FF9C64]",
+    "Excellence Industrielle 4.0": "bg-[#FFEA9E]",
+    "Optimisation des Ressources Humaines": "bg-[#B9C0FF]",
+    "Efficacité Manageriale": "bg-[#D994FA]",
+    "Performance Commerciale": "bg-[#E3FF92]",
+    "Marketing Digital": "bg-[#FFB9E7]",
+    "Qualité et environnement": "bg-[#81D6A8]",
+    "Soft Kills": "bg-[#D1E4E2]",
+  };
 
   return (
     <Navbar
@@ -93,7 +94,7 @@ export function Top() {
           </Link>
           <div className='hidden sm:block'>
             <Dropdown>
-              <NavbarItem isActive={path.includes("#")}>
+              <NavbarItem isActive={path.includes("/thematiques")}>
                 <DropdownTrigger>
                   <Button
                     disableRipple
@@ -106,89 +107,28 @@ export function Top() {
                     radius='sm'
                     variant='light'
                   >
-                    Nos thématiques
+                    <span className='text-base'>Nos thématiques</span>
                   </Button>
                 </DropdownTrigger>
               </NavbarItem>
-              <DropdownMenu
-                aria-label='Item_3'
-                className='w-[340px]'
-                itemClasses={{
-                  base: "gap-4",
+              <DropdownMenu aria-label='Item_3' items={thematiques}>
+                {(thematique: any) => {
+                  return (
+                    <DropdownItem
+                      key={thematique.name}
+                      color='primary'
+                      variant='shadow'
+                      className={`${
+                        colorVariants[thematique.name]
+                      } p-4 space-x-4`}
+                      description={thematique.description}
+                      startContent={thematique.icon}
+                      onClick={() => router.push(thematique.path || "#")}
+                    >
+                      {thematique.name}
+                    </DropdownItem>
+                  );
                 }}
-              >
-                <DropdownItem
-                  key='di1'
-                  description='Vision Stratégique'
-                  startContent={<FaChessBoard />}
-                  onClick={() => router.push("#")}
-                >
-                  Stratégie d&apos;entreprise
-                </DropdownItem>
-                <DropdownItem
-                  key='di2'
-                  description='IA Innovante'
-                  startContent={<FaRobot />}
-                  onClick={() => router.push("#")}
-                >
-                  Intelligence Artificielle
-                </DropdownItem>
-                <DropdownItem
-                  key='di3'
-                  description='Manufacture Numérique'
-                  startContent={<FaIndustry />}
-                  onClick={() => router.push("#")}
-                >
-                  Excellence Industrielle 4.0
-                </DropdownItem>
-                <DropdownItem
-                  key='di4'
-                  description='Gestion des Talents'
-                  startContent={<FaUsersCog />}
-                  onClick={() => router.push("#")}
-                >
-                  Optimisation des Ressources Humaines
-                </DropdownItem>
-                <DropdownItem
-                  key='di5'
-                  description='Leadership Performant'
-                  startContent={<FaUserTie />}
-                  onClick={() => router.push("#")}
-                >
-                  Efficacité Manageriale
-                </DropdownItem>
-                <DropdownItem
-                  key='di6'
-                  description='Croissance des Ventes'
-                  startContent={<FaChartLine />}
-                  onClick={() => router.push("#")}
-                >
-                  Performance Commerciale
-                </DropdownItem>
-                <DropdownItem
-                  key='di7'
-                  description='Stratégie en Ligne'
-                  startContent={<FaGlobe />}
-                  onClick={() => router.push("#")}
-                >
-                  Marketing Digital
-                </DropdownItem>
-                <DropdownItem
-                  key='di8'
-                  description='Normes Environnementales'
-                  startContent={<FaLeaf />}
-                  onClick={() => router.push("#")}
-                >
-                  Qualité et environnement
-                </DropdownItem>
-                <DropdownItem
-                  key='di9'
-                  description='Compétences Interpersonnelles'
-                  startContent={<FaHandshake />}
-                  onClick={() => router.push("#")}
-                >
-                  Soft Kills
-                </DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </div>
