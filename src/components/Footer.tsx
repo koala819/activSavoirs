@@ -2,130 +2,122 @@
 import { LuCopyleft } from "react-icons/lu";
 import { BsYoutube } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { FiInstagram } from "react-icons/fi";
 import Link from "next/link";
 import logo from "../../public/images/logoFooter.png";
+import { Article } from "@/src/components/molecules/Article";
+import { FooterColumn } from "@/src/components/molecules/FooterColumn";
+import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
+
 import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className='text-gray-900 bg-gray-200 dark:bg-slate-700 dark:text-slate-300'>
-      <div className='grid sm:grid-cols-3 sm:gap-12 lg:grid-cols-4 lg:gap-4 space-y-8 mb-16'>
-        <section className='flex justify-center items-center mt-8'>
-          <div className='text-center'>
-            <div className='flex title-font font-medium items-center justify-center'>
-              <Image src={logo} alt='Some text' height={60} />
-              <span className='ml-3 text-xl'>Activ Savoirs</span>
-            </div>
-            <span>Activateur de compétences</span>
-            <span className='inline-flex sm:ml-auto sm:mt-0 pt-4 justify-center sm:justify-start space-x-8'>
-              <Link
-                href='#'
-                target='_blank'
-                className='text-gray-500 dark:text-gray-200 dark:hover:text-blue-500'
-              >
-                <BsYoutube size={30} />
-              </Link>
+    <footer className='bg-[#141414] text-white pt-8'>
+      <div className='space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12'>
+        <section className='flex justify-center md:basis-1/2'>
+          <DoubleColumn
+            sectionClassName='md:flex'
+            leftClassName='flex justify-center'
+            left={<Image src={logo} alt='Logo Activ Savoirs' height={60} />}
+            right={
+              <>
+                <Article
+                  title='Activ Savoirs'
+                  description='Activateur de compétences'
+                  button={{ display: false }}
+                />
+                <section className='flex space-x-4 items-center'>
+                  <Link
+                    href='#'
+                    target='_blank'
+                    className='text-gray-500 hover:text-red-500 flex items-center'
+                  >
+                    <BsYoutube size={32} />
+                  </Link>
 
-              <Link
-                href='#'
-                target='_blank'
-                className='ml-3 text-gray-500 dark:text-gray-200 dark:hover:text-yellow-500'
-              >
-                <BsLinkedin size={24} />
-              </Link>
-            </span>
-          </div>
+                  <Link
+                    href='#'
+                    target='_blank'
+                    className='text-gray-500 hover:text-blue-500'
+                  >
+                    <BsLinkedin size={22} />
+                  </Link>
+                  <Link
+                    href='#'
+                    target='_blank'
+                    className='text-gray-500 hover:text-rose-500'
+                  >
+                    <FiInstagram size={28} />
+                  </Link>
+                </section>
+              </>
+            }
+          />
         </section>
-
-        <section className='flex justify-center items-center'>
-          <nav className='flex flex-col items-center sm:items-start'>
-            <h2 className='title-font font-medium tracking-widest text-xl mb-3 uppercase'>
-              Service
-            </h2>
-            <Link
-              href='#'
-              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
-            >
-              Sourcing
-            </Link>
-            <Link
-              href='#'
-              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
-            >
-              Events
-            </Link>
-          </nav>
+        <section className='md:basis-1/4 flex justify-center'>
+          <FooterColumn
+            title='service'
+            items={[
+              { text: "thématiques", link: "#" },
+              { text: "sourcing", link: "#" },
+              { text: "events", link: "#" },
+            ]}
+          />
         </section>
-
-        <section className='flex justify-center items-center'>
-          <nav className='flex flex-col items-center sm:items-start'>
-            <h2 className='title-font font-medium tracking-widest text-xl mb-3 uppercase'>
-              Entreprise
-            </h2>
-
-            <Link
-              href='/references'
-              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
-            >
-              Références
-            </Link>
-            <Link
-              href='/equipe'
-              className='text-gray-600 hover:underline dark:text-zinc-300 capitalize'
-            >
-              equipe
-            </Link>
-          </nav>
+        <section className='md:basis-1/4 flex justify-center'>
+          <FooterColumn
+            title='entreprise'
+            items={[
+              { text: "A propos de nous", link: "#" },
+              { text: "références", link: "/references" },
+              { text: "clients", link: "#" },
+            ]}
+          />
         </section>
-
-        <section className='flex justify-center items-center'>
-          <nav className='flex flex-col items-center sm:items-start'>
-            <h2 className='title-font font-medium tracking-widest text-xl mb-3 uppercase'>
-              Contact
-            </h2>
-
-            <span className='text-gray-600 hover:underline dark:text-zinc-300'>
-              contact@activsavoirs.com
-            </span>
-            <span className='text-gray-600 hover:underline dark:text-zinc-300'>
-              +33 61 23 45 67
-            </span>
-          </nav>
+        <section className='md:basis-1/4 flex justify-center'>
+          <FooterColumn
+            title='contact'
+            items={[
+              {
+                text: "contact@activ-savoirs.com",
+                link: "mailto:contact@activ-savoirs.com",
+              },
+              { text: "+33 1 47 47 47", link: "tel:+331474747" },
+            ]}
+          />
         </section>
       </div>
-      <div className='bg-gray-100 dark:bg-black'>
-        <div className='container mx-auto py-4 px-5 flex flex-wrap flex-row'>
-          <div className='flex text-gray-500 items-center space-x-2 dark:text-gray-200'>
-            <p className='flex'>
-              2023 with
-              <Link
-                href='https://fr.wikipedia.org/wiki/Copyleft'
-                target='_blank'
-                className='flex hover:font-bold'
-              >
-                <span className='ml-2'>Copyleft licence</span>
-                <LuCopyleft />
-              </Link>
-            </p>
-            <p className='ml-2'>
-              by{" "}
-              <Link
-                href='https://www.dix31.com'
-                target='_blank'
-                className='hover:font-bold'
-              >
-                DIX31.com
-              </Link>
-            </p>
-          </div>
-          <div className='ml-auto'>
-            <p className='text-gray-500 items-center space-x-2 dark:text-gray-200'>
-              Design by{" "}
-              <Link href='' target='_blank' className='hover:font-bold'>
-                Mounir
-              </Link>
-            </p>
-          </div>
+      <div className='bg-[#47464D]'>
+        <div className='py-4 flex flex-col md:flex-row space-y-2 md:space-y-0'>
+          <aside className='flex w-full md:w-1/2 justify-center md:ml-auto text-sm tracking-widest'>
+            2023 with
+            <Link
+              href='https://fr.wikipedia.org/wiki/Copyleft'
+              target='_blank'
+              className='flex mx-1 hover:underline'
+            >
+              Copyleft license
+              <LuCopyleft />
+            </Link>
+            <Link
+              href='https://www.dix31.com'
+              target='_blank'
+              className='mx-1 hover:underline'
+            >
+              DIX31.com
+            </Link>
+          </aside>
+          <aside className='flex w-full md:w-1/2  justify-center md:ml-auto text-sm tracking-widest'>
+            Design by
+            <Link
+              href='https://www.linkedin.com/in/mounirhcini/'
+              target='_blank'
+              className='ml-1 hover:underline'
+            >
+              Mounir
+            </Link>
+          </aside>
         </div>
       </div>
     </footer>

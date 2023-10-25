@@ -75,7 +75,7 @@ export default function Page() {
         className='container px-5 py-24 mx-auto flex'
       >
         <div className='lg:w-1/3 md:w-1/2 bg-white dark:bg-gray-600 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
-          <h2 className='text-gray-900 dark:text-gray-200 text-lg font-medium title-font text-center pb-2 mb-2'>
+          <h2 className='text-gray-900 dark:text-gray-200 text-lg font-medium text-center pb-2 mb-2'>
             {!hideForm ? "Contactez moi" : "Merci"}
           </h2>
           {!hideForm && (

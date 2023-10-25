@@ -1,20 +1,20 @@
 export function DoubleColumn({
   left,
   right,
-  className,
+  sectionClassName,
+  leftClassName,
+  rightClassName,
 }: {
   left: React.ReactNode;
   right?: React.ReactNode;
-  className?: string;
+  sectionClassName?: string;
+  leftClassName?: string;
+  rightClassName?: string;
 }) {
   return (
-    <section className={`md:flex sm:p-8 md:space-x-8 space-y-0 ${className}`}>
-      <aside className='flex flex-col space-y-10 p-4 w-full md:w-1/2'>
-        {left}
-      </aside>
-      <aside className='flex flex-col space-y-10 p-4 w-full md:w-1/2 '>
-        {right}
-      </aside>
+    <section className={sectionClassName}>
+      <aside className={leftClassName}>{left}</aside>
+      <aside className={rightClassName}>{right}</aside>
     </section>
   );
 }

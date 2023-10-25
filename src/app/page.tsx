@@ -21,7 +21,7 @@ export default async function Page() {
       <Services />
       <Steps />
       <Rating evals={evals.results} />
-      <footer className='flex flex-col items-center mb-24'>
+      <footer className='flex flex-col items-center mb-24 space-y-16'>
         <Article
           title='Parce que les savoirs sont une source d’épanouissement et de réalisation professionnel, développer les compétences de vos collaborateurs ! '
           button={{ display: true, text: "Nous contacter" }}

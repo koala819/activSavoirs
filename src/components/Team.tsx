@@ -25,7 +25,7 @@ export function Team({ team }: { team: TeamProp[] }) {
               </div>
               <div className='sm:w-1/2'>
                 <div className='flex-grow sm:pl-8'>
-                  <h2 className='title-font font-medium text-lg text-gray-900 dark:text-gray-100'>
+                  <h2 className='font-medium text-lg text-gray-900 dark:text-gray-100'>
                     {member.prenom} {member.nom}
                   </h2>
                   <h3 className='text-gray-500 mb-3 dark:text-gray-300'>

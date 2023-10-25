@@ -8,7 +8,9 @@ export function Hero({ page }: { page: any }) {
   return (
     <>
       <DoubleColumn
-        className='md:mt-8'
+        sectionClassName='dble-clmn-section space-y-0'
+        leftClassName='dble-clmn-aside space-y-10'
+        rightClassName='dble-clmn-aside space-y-10'
         left={
           <Article
             overline='activateur de Compétences'

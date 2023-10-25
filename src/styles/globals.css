@@ -1,12 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .black-button {
   background-color: black;
   color: white;
   font-weight: bold;
   padding-inline: theme("padding.8");
+}
+
+.dble-clmn-aside {
+  display: flex;
+  flex-direction: column;
+  padding: theme("padding.4");
+  width: theme("width.1/2");
+}
+
+.dble-clmn-section {
+  display: flex;
+  padding: theme("padding.8");
 }
 
 .proposition-tag {
@@ -50,6 +61,14 @@
     padding-inline: theme("padding.4");
   }
 
+  .dble-clmn-aside {
+    width: theme("width.full");
+  }
+
+  .dble-clmn-section {
+    display: block;
+  }
+
   .proposition-tag {
     width: 80%;
   }
@@ -73,6 +92,14 @@
 
 /* For sm screens: */
 @media screen and (min-width: 640px) and (max-width: 768px) {
+  .dble-clmn-aside {
+    width: theme("width.full");
+  }
+
+  .dble-clmn-section {
+    display: block;
+  }
+
   .proposition-tag {
     width: 35%;
   }

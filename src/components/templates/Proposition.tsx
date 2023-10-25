@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { createClient } from "@/prismicio";
 import { Article } from "@/src/components/molecules/Article";
 import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
-import { CarouselRef } from "@/src/components/Caroussel";
+import { CarouselRef } from "@/src/components/templates/Caroussel";
 
 export async function Proposition() {
   const client = createClient();
@@ -13,7 +13,9 @@ export async function Proposition() {
   return (
     <>
       <DoubleColumn
-        className='mt-8'
+        sectionClassName='dble-clmn-section'
+        leftClassName='dble-clmn-aside space-y-10'
+        rightClassName='dble-clmn-aside space-y-10'
         left={
           <Article
             title='Savoir définir et actionner vos besoins de compétences actuels et à venir.'

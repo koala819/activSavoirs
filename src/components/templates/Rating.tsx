@@ -7,6 +7,9 @@ export function Rating({ evals }: any) {
   return (
     <section className='mb-12'>
       <DoubleColumn
+        sectionClassName='dble-clmn-section'
+        leftClassName='dble-clmn-aside space-y-10'
+        rightClassName='dble-clmn-aside space-y-10'
         left={
           <Text
             text='Un véritable savoir-faire pédagogique plébiscité par nos clients et stagiaires'

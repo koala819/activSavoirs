@@ -1,5 +1,5 @@
 import { createClient } from "@/prismicio";
-import { Evals } from "@/src/components/Evals";
+import { Evals } from "@/src/components/templates/Evals";
 import { notFound } from "next/navigation";
 
 export default async function Page() {
@@ -11,7 +11,7 @@ export default async function Page() {
   return (
     <div className='text-gray-600 dark:text-gray-100 body-font mb-12 p-4'>
       <header className='flex flex-col text-center w-full mb-20'>
-        <h1 className='text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest dark:text-gray-100'>
+        <h1 className='text-2xl font-medium mb-4 text-gray-900 tracking-widest dark:text-gray-100'>
           Wall of love
         </h1>
         <p>Découvrez les potins que mes clients diffusent sur moi 😀 !</p>

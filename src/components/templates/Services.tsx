@@ -35,6 +35,9 @@ export function Services() {
   return (
     <>
       <DoubleColumn
+        sectionClassName='dble-clmn-section'
+        leftClassName='dble-clmn-aside space-y-10'
+        rightClassName='dble-clmn-aside space-y-10'
         left={<ServicesMenu chooseSection={chooseSection} />}
         right={<DisplayService section={section} />}
       />
