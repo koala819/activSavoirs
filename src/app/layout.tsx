@@ -21,21 +21,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang='fr'>
-      <body className={`${inter.className}`}>
+      <body className={` ${inter.className}`}>
         <Providers>
-          {/* <div className='min-h-screen min-w-screen'> */}
-          {/* <div
-            className=' flex flex-col h-screen'
-            > */}
+          {/* <div className='min-h-screen min-w-screen'>
+            <div className=' flex flex-col h-screen'> */}
           <Top />
-          <main className='flex-1'>
-            <GoogleAnalytics />
-            {children}
-            <Analytics />
-          </main>
+          {/* <main
+          className='flex-1'
+          > */}
+          <GoogleAnalytics />
+          {children}
+          <Analytics />
+          {/* </main> */}
           <Footer />
-          {/* </div> */}
-          {/* </div> */}
+          {/* </div>
+          </div> */}
         </Providers>
       </body>
     </html>

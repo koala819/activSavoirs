@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className='bg-[#141414] text-white pt-8'>
+    <footer className='bg-[#141414] text-white pt-8 w-full'>
       <div className='space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12'>
         <section className='flex justify-center md:basis-1/2'>
           <DoubleColumn

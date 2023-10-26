@@ -16,6 +16,7 @@
     "@prismicio/next": "^1.3.6",
     "@prismicio/react": "^2.7.3",
     "@prismicio/types": "^0.2.8",
+    "@react-spring/parallax": "^9.7.3",
     "@vercel/analytics": "^1.1.1",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
