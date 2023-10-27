@@ -77,7 +77,7 @@ export function Evals({ evals }: { evals: any }) {
             return tag.name === ref.tags[0];
           });
 
-          const Icon = tag?.icon;
+          const Icon: any = tag?.icon;
 
           const tagClickHandler = () => {
             setSelectedTag(ref);

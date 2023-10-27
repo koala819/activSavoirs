@@ -23,19 +23,17 @@ export default function RootLayout({
     <html lang='fr'>
       <body className={` ${inter.className}`}>
         <Providers>
-          {/* <div className='min-h-screen min-w-screen'>
-            <div className=' flex flex-col h-screen'> */}
+          {/* <div className='min-h-screen min-w-screen overflow-hidden'> */}
+          {/* <div className=' flex flex-col h-screen overflow-hidden'> */}
           <Top />
-          {/* <main
-          className='flex-1'
-          > */}
+          {/* <main className='flex-1 bg-blue-400 overflow-hidden'> */}
           <GoogleAnalytics />
           {children}
           <Analytics />
           {/* </main> */}
           <Footer />
-          {/* </div>
-          </div> */}
+          {/* </div> */}
+          {/* </div> */}
         </Providers>
       </body>
     </html>

@@ -1,15 +1,17 @@
-import { notFound } from "next/navigation";
-import { createClient } from "@/prismicio";
+// "use client";
+// import { notFound } from "next/navigation";
+// import { createClient } from "@/prismicio";
 import { Article } from "@/src/components/molecules/Article";
 import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
-import { CarouselRef } from "@/src/components/templates/Caroussel";
+// import { CarouselRef } from "@/src/components/templates/Caroussel";
 
-export async function Proposition() {
-  const client = createClient();
+export function Proposition() {
+  // const client = createClient();
 
-  const references = await client
-    .getByType("references", { pageSize: 1000, page: 1 })
-    .catch(() => notFound());
+  // const references = await client
+  //   .getByType("references", { pageSize: 1000, page: 1 })
+  //   .catch(() => notFound());
+
   return (
     <>
       <DoubleColumn
@@ -32,9 +34,9 @@ export async function Proposition() {
           </section>
         }
       />
-      <div className='py-8'>
+      {/* <div className='py-8'>
         <CarouselRef references={references.results} />
-      </div>
+      </div> */}
     </>
   );
 }

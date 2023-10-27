@@ -10,14 +10,14 @@ import { Thematiques } from "@/src/components/templates/Thematiques";
 
 export default async function Page() {
   const client = createClient();
-  const page = await client.getSingle("accueil").catch(() => notFound());
+  const accueil = await client.getSingle("accueil").catch(() => notFound());
   const evals = await client
     .getByType("evals", { pageSize: 3, page: 1 })
     .catch(() => notFound());
 
   return (
-    <div>
-      <Hero page={page} />
+    <>
+      <Hero accueil={accueil} />
       <Thematiques />
       <Proposition />
       <Services />
@@ -29,6 +29,6 @@ export default async function Page() {
           button={{ display: true, text: "Nous contacter" }}
         />
       </footer>
-    </div>
+    </>
   );
 }
