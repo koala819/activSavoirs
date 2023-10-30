@@ -5,7 +5,7 @@ import { Proposition } from "@/src/components/templates/Proposition";
 import { Services } from "@/src/components/templates/Services";
 import { Steps } from "@/src/components/templates/Steps";
 import { Rating } from "@/src/components/templates/Rating";
-import { Article } from "@/src/components/molecules/Article";
+import { CTA } from "@/src/components/templates/CTA";
 import { Thematiques } from "@/src/components/templates/Thematiques";
 
 export default async function Page() {
@@ -14,21 +14,19 @@ export default async function Page() {
   const evals = await client
     .getByType("evals", { pageSize: 3, page: 1 })
     .catch(() => notFound());
+  const references = await client
+    .getByType("references", { pageSize: 1000, page: 1 })
+    .catch(() => notFound());
 
   return (
-    <>
+    <div className='flex flex-col items-center justify-center '>
       <Hero accueil={accueil} />
       <Thematiques />
-      <Proposition />
+      <Proposition nosRef={references.results} />
       <Services />
       <Steps />
       <Rating evals={evals.results} />
-      <footer className='flex flex-col items-center mb-24 space-y-16'>
-        <Article
-          title='Parce que les savoirs sont une source d’épanouissement et de réalisation professionnel, développer les compétences de vos collaborateurs ! '
-          button={{ display: true, text: "Nous contacter" }}
-        />
-      </footer>
-    </>
+      <CTA />
+    </div>
   );
 }
