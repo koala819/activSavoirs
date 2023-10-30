@@ -13,12 +13,15 @@
   display: flex;
   flex-direction: column;
   padding: theme("padding.4");
-  width: theme("width.1/2");
+  width: theme("width.full");
 }
 
 .dble-clmn-section {
+  align-items: center;
   display: flex;
+  justify-content: center;
   padding: theme("padding.8");
+  width: 100%;
 }
 
 .proposition-tag {

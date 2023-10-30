@@ -12,9 +12,13 @@ export function DoubleColumn({
   rightClassName?: string;
 }) {
   return (
-    <section className={sectionClassName}>
-      <aside className={leftClassName}>{left}</aside>
-      <aside className={rightClassName}>{right}</aside>
-    </section>
+    <div className={sectionClassName}>
+      <aside className='flex-1 flex justify-center'>
+        <section className={leftClassName}>{left}</section>
+      </aside>
+      <aside className='flex-1 flex justify-center'>
+        <section className={rightClassName}>{right}</section>
+      </aside>
+    </div>
   );
 }
