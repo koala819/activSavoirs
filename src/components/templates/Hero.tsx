@@ -3,13 +3,9 @@ import { Article } from "@/src/components/molecules/Article";
 import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
 import { Stars } from "@/src/components/molecules/Stars";
 import { YouTube } from "@/src/components/molecules/YouTube";
-// import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 export function Hero({ accueil }: { accueil: any }) {
   return (
-    // <ParallaxBanner className='aspect-[2/1]'>
-    //   <ParallaxBannerLayer speed={80} scale={[0, 1, "easeOutBack"]}>
-    //     <div className='absolute inset-0 flex items-center justify-center'>
-    <div>
+    <section className='w-full'>
       <DoubleColumn
         sectionClassName='dble-clmn-section space-y-0'
         leftClassName='dble-clmn-aside space-y-10'
@@ -33,9 +29,6 @@ montée en compétences de vos collaborateurs'
           afterStars='4.9/5 avis sur plus de 800'
         />
       </footer>
-    </div>
-    //     </div>
-    //   </ParallaxBannerLayer>
-    // </ParallaxBanner>
+    </section>
   );
 }

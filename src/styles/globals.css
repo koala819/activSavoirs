@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-gradient-left {
+  background-image: conic-gradient(
+    from -90deg at 110% 100%,
+    #fff 0deg,
+    #ebecf0 90deg,
+    #ebecf0 1turn
+  );
+}
+.bg-gradient-right {
+  background-image: conic-gradient(
+    from 90deg at -10% 100%,
+    #bcc1cd 0deg,
+    #bcc1cd 90deg,
+    #fff 1turn
+  );
+}
+
 .black-button {
   background-color: black;
   color: white;
