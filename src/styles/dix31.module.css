@@ -1,0 +1,229 @@
+@keyframes appearAndDraw {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scaleY(0.1) scaleX(0.1);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  30% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  40% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  60% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  70% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  80% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  90% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes drawFrame {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes highlightText {
+  0% {
+    background-color: transparent;
+    color: #000;
+  }
+  100% {
+    background-color: #ffff00;
+    color: #000;
+  }
+}
+
+@keyframes moveBrush {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-50%);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveFrame {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes reveal1 {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes reveal2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes hideBrackets {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Appliquer les animations aux éléments HTML */
+.animationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.hide {
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.element1 {
+  animation: appearAndDraw 1s ease-in-out forwards;
+}
+
+@keyframes drawBrush {
+  0% {
+    width: 0;
+    height: 0;
+    transform: rotate(45deg);
+  }
+  100% {
+    width: 40px;
+    height: 20px;
+    transform: rotate(45deg);
+  }
+}
+
+.element2 {
+  animation: drawBrush 1s linear forwards;
+}
+
+.element3 {
+  animation: highlightText 1s linear forwards;
+  animation-delay: 3s;
+}
+
+.element4 {
+  animation: reveal1 1s ease-in-out forwards;
+  animation-delay: 4s;
+}
+
+.element5 {
+  animation: moveFrame 1s ease-in-out forwards;
+  animation-delay: 4s;
+}
+
+.element6 {
+  animation: reveal2 1s ease-in-out forwards;
+  animation-delay: 5s;
+}
+
+.element7 {
+  animation: hideBrackets 1s ease-in-out forwards;
+  animation-delay: 6s;
+}
+
+.element8 {
+  animation: moveBrush 3s linear forwards;
+  animation-delay: 6s;
+}
+
+.brush {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  font-size: 14px; /* Taille de la flèche */
+  transform: rotate(180deg); /* Inverser la flèche */
+  margin-top: 10px; /* Ajuster la position verticale */
+  border-bottom: 20px solid #000; /* Couleur du triangle */
+}
+/* Vous pouvez continuer à ajouter des éléments et des animations comme nécessaires */
+
+/* Animation backInDown */
+.backInDown-appear {
+  transform: translateY(-100%);
+}
+
+.backInDown-appear-active {
+  transform: translateY(0);
+  transition: transform 1s;
+}
+
+/* Animation bounce */
+.bounce-appear {
+  transform: scale(0);
+}
+
+.bounce-appear-active {
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+/* Autres styles CSS pour les éléments */
