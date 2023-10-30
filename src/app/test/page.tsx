@@ -1,9 +1,9 @@
+"use client";
 import { Test } from "@/src/components/templates/Test";
+// import { Thematiques } from "@/src/components/templates/Thematiques";
+// import { Proposition } from "@/src/components/templates/Proposition";
+// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-export default async function Page() {
-  return (
-    <div className='h-screen overflow-y-hidden '>
-      <Test />
-    </div>
-  );
+export default function Page() {
+  return <Test />;
 }
