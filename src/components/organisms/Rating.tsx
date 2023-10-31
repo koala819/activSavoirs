@@ -2,7 +2,7 @@
 import { Eval } from "@/src/components/atoms/Eval";
 import { Text } from "@/src/components/atoms/Text";
 import { RatingLink } from "@/src/components/atoms/RatingLink";
-import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
+import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 
 export function Rating({ evals }: any) {
   return (

@@ -2,13 +2,13 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { CTA } from "@/src/components/templates/CTA";
-import { Hero } from "@/src/components/templates/Hero";
-import { Proposition } from "@/src/components/templates/Proposition";
-import { Rating } from "@/src/components/templates/Rating";
-import { Services } from "@/src/components/templates/Services";
-import { Steps } from "@/src/components/templates/Steps";
-import { Thematiques } from "@/src/components/templates/Thematiques";
+import { CTA } from "@/src/components/molecules/CTA";
+import { Hero } from "@/src/components/organisms/Hero";
+import { Proposition } from "@/src/components/organisms/Proposition";
+import { Rating } from "@/src/components/organisms/Rating";
+import { Services } from "@/src/components/organisms/Services";
+import { Steps } from "@/src/components/molecules/Steps";
+import { Thematiques } from "@/src/components/molecules/Thematiques";
 
 export function Homepage({
   accueil,

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
+import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 import { Events } from "@/src/components/organisms/Events";
 import { Formation } from "@/src/components/organisms/Formation";
 import { Mentoring } from "@/src/components/organisms/Mentoring";

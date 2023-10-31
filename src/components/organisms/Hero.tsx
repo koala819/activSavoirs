@@ -1,6 +1,6 @@
 "use client";
 import { Article } from "@/src/components/molecules/Article";
-import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
+import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 import { Stars } from "@/src/components/molecules/Stars";
 import { YouTube } from "@/src/components/molecules/YouTube";
 export function Hero({ accueil }: { accueil: any }) {

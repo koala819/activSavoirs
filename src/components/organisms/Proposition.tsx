@@ -1,7 +1,7 @@
 "use client";
 import { Article } from "@/src/components/molecules/Article";
-import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
-import { CarouselRef } from "@/src/components/templates/Caroussel";
+import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
+import { CarouselRef } from "@/src/components/atoms/Caroussel";
 
 export function Proposition({ nosRef }: { nosRef: any }) {
   return (

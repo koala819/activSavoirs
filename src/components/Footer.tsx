@@ -7,7 +7,7 @@ import Link from "next/link";
 import logo from "../../public/images/logoFooter.png";
 import { Article } from "@/src/components/molecules/Article";
 import { FooterColumn } from "@/src/components/molecules/FooterColumn";
-import { DoubleColumn } from "@/src/components/organisms/DoubleColumn";
+import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 
 import Image from "next/image";
 
