@@ -1,5 +1,14 @@
 import { ImageField, KeyTextField, RichTextField } from "@prismicio/types";
 
+export interface FormValues {
+  email: string;
+  firstName: string;
+  lastName: string;
+  msg: string;
+  society: string;
+  tel: string;
+}
+
 export interface menuItems {
   name: string;
   path?: string;

@@ -7,6 +7,7 @@ import { Stars } from "@/src/components/molecules/Stars";
 import { Text } from "@/src/components/atoms/Text";
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { FormValues } from "@/src/types/models";
 
 export default function Page() {
   const [value, setValue] = useState("");
@@ -20,16 +21,8 @@ export default function Page() {
     return validateEmail(value) ? false : true;
   }, [value]);
 
-  const { control, handleSubmit } = useForm();
-
-  async function handleSendMail(values: {
-    email: string;
-    firstName: string;
-    lastName: string;
-    msg: string;
-    society: string;
-    tel: string;
-  }) {
+  const { control, handleSubmit } = useForm<FormValues>();
+  const handleSendMail = async (values: FormValues) => {
     const data = {
       email: values.email,
       prenom: values.firstName,
@@ -58,7 +51,7 @@ export default function Page() {
       .catch((error: any) => {
         toast.error("Une erreur s'est produite", error);
       });
-  }
+  };
 
   return (
     <DoubleColumn
