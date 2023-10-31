@@ -22,7 +22,9 @@ export function Rating({ evals }: any) {
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 px-4 p-4 -mt-12 sm:mt-0'>
         {evals.map((evaluation: any, index: number) => (
-          <Eval evaluation={evaluation} key={index} />
+          <div key={index}>
+            <Eval evaluation={evaluation} />
+          </div>
         ))}
       </div>
       <RatingLink beforeEval={false} />

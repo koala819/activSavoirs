@@ -4,9 +4,9 @@ import { FaStar } from "react-icons/fa";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 
-export function Eval({ evaluation, key }: { evaluation: any; key: number }) {
+export function Eval({ evaluation }: { evaluation: any }) {
   return (
-    <div key={key} className='flex flex-col'>
+    <div className='flex flex-col'>
       <section className='py-4 px-2 bg-white dark:bg-slate-600 shadow-lg rounded-lg'>
         <div className='flex items-center mb-4'>
           <div className='w-full'>
