@@ -31,13 +31,9 @@ export function Homepage({
   }, []);
 
   return (
-    <main
-      className='w-full flex flex-col h-full bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:border-l-cyan-600
-    '
-    >
+    <main className='w-full flex flex-col h-full'>
       <section
         className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center'
-        // className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center'
         data-aos={animation}
       >
         <Hero accueil={accueil} />
