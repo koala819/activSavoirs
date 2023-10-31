@@ -4,7 +4,7 @@ import { Text } from "@/src/components/atoms/Text";
 
 export function CTA() {
   return (
-    <section className='w-full'>
+    <section className='w-full py-8 px-2'>
       <div className='flex flex-col items-center space-y-8'>
         <Text
           text='Parce que les savoirs sont une source d’épanouissement et de réalisation professionnel, développer les compétences de vos collaborateurs ! '

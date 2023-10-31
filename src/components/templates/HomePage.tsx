@@ -31,51 +31,55 @@ export function Homepage({
   }, []);
 
   return (
-    <main className='w-full flex flex-col h-full'>
+    <main
+      className='w-full flex flex-col h-full bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:border-l-cyan-600
+    '
+    >
       <section
-        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center'
+        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center'
+        // className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center'
         data-aos={animation}
       >
         <Hero accueil={accueil} />
       </section>
 
       <section
-        className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center w-full overflow-hidden'
+        className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Proposition nosRef={references.results} />
       </section>
 
       <section
-        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center w-full overflow-hidden'
+        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Services />
       </section>
 
       <section
-        className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center w-full overflow-hidden'
+        className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Steps />
       </section>
 
       <section
-        className='bg-[#2845AD] border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center w-full overflow-hidden'
+        className='bg-[#2845AD] border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Thematiques />
       </section>
 
       <section
-        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center w-full overflow-hidden'
+        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Rating evals={evals.results} />
       </section>
 
       <section
-        className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 h-screen flex items-center w-full overflow-hidden'
+        className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <CTA />
