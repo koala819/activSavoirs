@@ -7,7 +7,7 @@ export default async function Page() {
   const page = await client.getByType("equipe").catch(() => notFound());
 
   return (
-    <section className='flex items-center justify-center w-full text-gray-600 dark:text-gray-100 body-font  px-5 py-24'>
+    <section className='flex items-center justify-center w-full text-gray-600 dark:text-gray-100 body-font px-5 py-24'>
       <div className='container'>
         <feTile className='flex flex-col text-center w-full mb-20'>
           <h1 className='text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest dark:text-gray-100'>
@@ -23,7 +23,7 @@ export default async function Page() {
           </div>
         </feTile>
         {page && page.results && page.results.length > 0 ? (
-          <div className='grid grid-cols-1 xl:grid-cols-3 gap-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
             {page.results.map((item) => {
               return (
                 <div

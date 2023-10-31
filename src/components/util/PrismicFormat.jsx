@@ -1,5 +1,5 @@
 export function PrismicFormat({ blocRichText }) {
-  console.log("blocRichText", blocRichText);
+  // console.log("blocRichText", blocRichText);
   return blocRichText.map((blocTxt, id) => {
     if (blocTxt) {
       let text = "";

@@ -30,7 +30,7 @@ export function Team({ team }: { team: TeamProp[] }) {
         return (
           <section
             key={key}
-            className='rounded-lg bg-white dark:bg-gray-900 shadow-md p-2 w-full hover:cursor-pointer'
+            className='rounded-lg bg-white dark:bg-gray-900 shadow-md p-2 w-full hover:cursor-pointer flex md:flex-col'
             onClick={() => displayModal(member)}
           >
             <picture className='w-full sm:flex items-center justify-center'>
@@ -41,34 +41,36 @@ export function Team({ team }: { team: TeamProp[] }) {
               />
             </picture>
 
-            <text className='w-full p-4 text-center'>
-              <h2 className='font-medium text-lg text-gray-900 dark:text-gray-100'>
-                {member.prenom}
-              </h2>
-              {member.titre && member.titre.length >= 66 && (
-                <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-[11px]'>
-                  {member.titre}
-                </h3>
-              )}
-              {member.titre &&
-                member.titre.length > 50 &&
-                member.titre.length < 54 && (
-                  <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-sm'>
+            <text className='w-full p-4 text-center flex items-center'>
+              <div className='w-full'>
+                <h2 className='font-medium text-lg text-gray-900 dark:text-gray-100'>
+                  {member.prenom}
+                </h2>
+                {member.titre && member.titre.length >= 66 && (
+                  <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-base md:text-[11px]'>
                     {member.titre}
                   </h3>
                 )}
-              {member.titre &&
-                member.titre.length >= 54 &&
-                member.titre.length < 66 && (
-                  <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-xs'>
+                {member.titre &&
+                  member.titre.length > 50 &&
+                  member.titre.length < 54 && (
+                    <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-base md:text-sm'>
+                      {member.titre}
+                    </h3>
+                  )}
+                {member.titre &&
+                  member.titre.length >= 54 &&
+                  member.titre.length < 66 && (
+                    <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-base md:text-xs'>
+                      {member.titre}
+                    </h3>
+                  )}
+                {member.titre && member.titre.length < 50 && (
+                  <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-base'>
                     {member.titre}
                   </h3>
                 )}
-              {member.titre && member.titre.length < 50 && (
-                <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-base'>
-                  {member.titre}
-                </h3>
-              )}
+              </div>
             </text>
           </section>
         );

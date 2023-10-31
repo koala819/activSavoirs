@@ -30,9 +30,7 @@
     ".next/types/**/*.ts",
     "components/util/PrismicFormat.jsx",
     "postcss.config.js",
-    "src/lib/thematiques.js",
-    "src/components/templates/Test.jsx",
-    "src/components/templates/Evals.jsx"
+    "src/lib/thematiques.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -7,8 +7,8 @@ import Image from "next/image";
 // import { CSSTransition } from "react-transition-group"; // Importez CSSTransition
 
 export function Test() {
-  const path = anime.path(logoDIX);
-  console.log("path", path);
+  // const path = anime.path(logoDIX);
+  // console.log("path", path);
 
   function animation() {
     anime({
