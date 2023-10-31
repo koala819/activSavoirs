@@ -1,64 +1,128 @@
 "use client";
-import { Image } from "@nextui-org/react";
 import { TeamProp } from "@/src/types/models";
+import { Text } from "./atoms/Text";
+import {
+  Modal,
+  Image,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 import { PrismicFormat } from "@/src/components/util/PrismicFormat";
-import { Accordion, AccordionItem } from "@nextui-org/react";
-import { GiMoebiusStar } from "react-icons/gi";
-import { BsFillSunFill } from "react-icons/bs";
+import { useState } from "react";
+import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 
 export function Team({ team }: { team: TeamProp[] }) {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [member, setMember] = useState<any>();
+
+  function displayModal(member: any) {
+    setMember(member);
+    onOpen();
+  }
+
   return (
-    <div className='w-full'>
+    <>
       {team.map((member: any, key: any) => {
         return (
           <section
             key={key}
-            className='p-4 rounded-lg bg-white dark:bg-gray-900 shadow-md'
+            className='rounded-lg bg-white dark:bg-gray-900 shadow-md p-2 w-full hover:cursor-pointer'
+            onClick={() => displayModal(member)}
           >
-            <div className='w-full sm:flex items-center justify-center'>
-              <div className='sm:w-1/2 flex items-center justify-center'>
-                <Image
-                  alt='team'
-                  className='flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4'
-                  src={member.photo.url || ""}
-                />
-              </div>
-              <div className='sm:w-1/2'>
-                <div className='flex-grow sm:pl-8'>
-                  <h2 className='font-medium text-lg text-gray-900 dark:text-gray-100'>
-                    {member.prenom} {member.nom}
-                  </h2>
-                  <h3 className='text-gray-500 mb-3 dark:text-gray-300'>
+            <picture className='w-full sm:flex items-center justify-center'>
+              <Image
+                alt='team'
+                className='flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4'
+                src={member.photo.url || ""}
+              />
+            </picture>
+
+            <text className='w-full p-4 text-center'>
+              <h2 className='font-medium text-lg text-gray-900 dark:text-gray-100'>
+                {member.prenom}
+              </h2>
+              {member.titre && member.titre.length >= 66 && (
+                <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-[11px]'>
+                  {member.titre}
+                </h3>
+              )}
+              {member.titre &&
+                member.titre.length > 50 &&
+                member.titre.length < 54 && (
+                  <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-sm'>
                     {member.titre}
                   </h3>
-                  <div className='text-md mb-3'>
-                    <Accordion>
-                      <AccordionItem
-                        key='1'
-                        aria-label='Son parcours'
-                        indicator={<GiMoebiusStar />}
-                        title='Son parcours'
-                      >
-                        <PrismicFormat blocRichText={member.parcours} />
-                      </AccordionItem>
-                      <AccordionItem
-                        key='2'
-                        aria-label='Domaines de compétences'
-                        indicator={<BsFillSunFill />}
-                        title='Domaines de compétences'
-                      >
-                        <PrismicFormat
-                          blocRichText={member.domaines_de_competences}
-                        />
-                      </AccordionItem>
-                    </Accordion>
-                  </div>
-                </div>
-              </div>
-            </div>
+                )}
+              {member.titre &&
+                member.titre.length >= 54 &&
+                member.titre.length < 66 && (
+                  <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-xs'>
+                    {member.titre}
+                  </h3>
+                )}
+              {member.titre && member.titre.length < 50 && (
+                <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-base'>
+                  {member.titre}
+                </h3>
+              )}
+            </text>
           </section>
         );
       })}
-    </div>
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        size='5xl'
+        scrollBehavior={"inside"}
+        hideCloseButton={true}
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className='flex flex-col gap-1'>
+                <Text text={member.prenom} className='title' />
+                <h3 className='text-gray-500 mb-3 dark:text-gray-300 text-base'>
+                  {member.titre}
+                </h3>
+              </ModalHeader>
+              <ModalBody>
+                <DoubleColumn
+                  sectionClassName='dble-clmn-section space-y-0'
+                  leftClassName='dble-clmn-aside'
+                  rightClassName='dble-clmn-aside'
+                  left={
+                    <div className='flex items-center justify-center'>
+                      <Image
+                        src={member.photo.url || ""}
+                        alt={member.photo.alt}
+                      />
+                    </div>
+                  }
+                  right={
+                    <>
+                      <Text text='Son parcours' className='title' />
+                      <PrismicFormat blocRichText={member.parcours} />
+                      <Text text='Domaines de compétences' className='title' />
+                      <PrismicFormat
+                        blocRichText={member.domaines_de_competences}
+                      />
+                    </>
+                  }
+                />
+              </ModalBody>
+              <ModalFooter>
+                <Button color='danger' onPress={onClose}>
+                  Fermer
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </>
   );
 }
