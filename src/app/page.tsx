@@ -1,6 +1,6 @@
 import { createClient } from "@/prismicio";
 import { notFound } from "next/navigation";
-import { Homepage } from "../components/templates/HomePage";
+import { Homepage } from "@/src/components/templates/HomePage";
 export default async function Page() {
   const client = createClient();
   const accueil = await client.getSingle("accueil").catch(() => notFound());
