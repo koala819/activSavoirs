@@ -1,24 +1,19 @@
 export function Li({
   text,
-  chooseSection,
-  selected,
+  isSelected,
   onClick,
 }: {
   text: string;
-  chooseSection: any;
-  selected: any;
+  isSelected: boolean;
   onClick: any;
 }) {
-  const shortText = text.split(" ")[0];
-
   return (
     <li
       className={`hover:cursor-pointer text-lg capitalize ${
-        selected ? "underline hover:cursor-auto" : "no-underline"
+        isSelected ? "underline hover:cursor-auto" : "no-underline"
       }`}
       onClick={() => {
-        chooseSection(shortText);
-        onClick(shortText);
+        onClick(text);
       }}
     >
       {text}

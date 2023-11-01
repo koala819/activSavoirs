@@ -6,7 +6,7 @@ import { CTA } from "@/src/components/molecules/CTA";
 import { Hero } from "@/src/components/organisms/Hero";
 import { Proposition } from "@/src/components/organisms/Proposition";
 import { Rating } from "@/src/components/organisms/Rating";
-import { Services } from "@/src/components/organisms/Services";
+import { ColumnSwitcher } from "@/src/components/organisms/ColumnSwitcher";
 import { Steps } from "@/src/components/molecules/Steps";
 import { Thematiques } from "@/src/components/molecules/Thematiques";
 
@@ -19,6 +19,13 @@ export function Homepage({
   references: any;
   evals: any;
 }) {
+  const nosServices = [
+    { text: "sourcing" },
+    { text: "formation sur mesure" },
+    { text: "mentoring" },
+    { text: "events" },
+  ];
+
   const animation = "zoom-in";
 
   useEffect(() => {
@@ -50,7 +57,7 @@ export function Homepage({
         className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
-        <Services />
+        <ColumnSwitcher leftData={nosServices} />
       </section>
 
       <section

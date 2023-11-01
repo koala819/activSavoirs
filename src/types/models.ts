@@ -1,5 +1,9 @@
 import { ImageField, KeyTextField, RichTextField } from "@prismicio/types";
 
+export interface displayComponents {
+  [key: string]: JSX.Element;
+}
+
 export interface FormValues {
   email: string;
   firstName: string;
@@ -26,10 +30,6 @@ export interface RefProp {
   };
 }
 [];
-
-export type ServiceComponents = {
-  [key: string]: JSX.Element;
-};
 
 export interface TeamProp {
   domaines_de_competences: RichTextField;
