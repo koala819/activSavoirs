@@ -13,7 +13,11 @@ export function Thematiques({ evaluations }: any) {
     { text: "avis" },
   ];
 
-  const theme = ["efficaciteManageriale", "excellenceIndustrielle"];
+  const theme = [
+    "efficaciteManageriale",
+    "excellenceIndustrielle",
+    "softKills",
+  ];
 
   console.log("theme", theme[0]);
 

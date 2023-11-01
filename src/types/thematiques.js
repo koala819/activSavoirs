@@ -2,7 +2,7 @@ import {
   // FaChartLine,
   // FaChessBoard,
   // FaGlobe,
-  // FaHandshake,
+  FaHandshake,
   FaIndustry,
   // FaLeaf,
   // FaRobot,
@@ -18,7 +18,7 @@ export const thematiques = {
     path: "#",
     picture: {
       src: "images/efficaciteManageriale.png",
-      alt: "Bannière éfficacité Manageriale",
+      alt: "Bannière Efficacité Manageriale",
     },
     results: {
       text: "Après avoir suivi la formation sur l'efficacité managériale, les participants sont mieux équipés pour prendre des décisions éclairées, améliorer la communication interne, résoudre les conflits, et motiver leurs équipes. La formation renforce leurs compétences en leadership et les prépare à relever les défis de la gestion avec succès.",
@@ -58,7 +58,7 @@ export const thematiques = {
     path: "#",
     picture: {
       src: "images/excellenceIndustrielle.png",
-      alt: "Bannière excellence Industrielle",
+      alt: "Bannière Excellence Industrielle",
     },
     results: {
       text: "La formation en excellence industrielle conduit à une amélioration significative de l'efficacité opérationnelle, la réduction des coûts et l'augmentation de la qualité des produits. Les participants apprennent à optimiser les processus, à minimiser les déchets et à mettre en œuvre des pratiques de gestion efficaces pour atteindre une excellence opérationnelle durable.",
@@ -86,5 +86,46 @@ export const thematiques = {
       { text: "La réduction de consommation de matière ou d’énergie" },
     ],
     title: "Excellence Industrielle 4.0",
+  },
+  softKills: {
+    advices: { tag: "Piges et prospection téléphonique" },
+    description: "Compétences Interpersonnelles",
+    icon: <FaHandshake size={20} />,
+    path: "#",
+    picture: {
+      src: "images/softKills.png",
+      alt: "Bannière Soft Kills",
+    },
+    results: {
+      text: 'La formation sur les compétences "soft skills" améliore la communication, la résolution de conflits, le leadership, et renforce la collaboration dans l\'environnement de travail. Cela se traduit par des relations interpersonnelles plus harmonieuses, une meilleure productivité, et une équipe plus engagée et efficace, favorisant ainsi la réussite organisationnelle.',
+    },
+    supports: [
+      { text: "Présentation PowerPoint" },
+      { text: "Études de cas" },
+      { text: "Jeux de rôle" },
+      { text: "Vidéos de formation" },
+    ],
+    thematiques: [
+      {
+        text: "L’autonomie ",
+      },
+
+      { text: "La capacité d'adaptation" },
+      {
+        text: "La résolution de problèmes complexes",
+      },
+      { text: "L’esprit critique (constructive)" },
+      { text: "La créativité" },
+      { text: "L’esprit d’équipe" },
+      {
+        text: "Les intelligences: émotionnelle, relationnelle et situationnelle",
+      },
+      { text: "Le jugement et la prise de décision" },
+      { text: "Le sens du service" },
+      { text: "La négociation" },
+      { text: "La flexibilité" },
+      { text: "La communication de conquête" },
+    ],
+    title: "Soft Kills",
   },
 };
