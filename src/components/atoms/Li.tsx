@@ -9,8 +9,10 @@ export function Li({
 }) {
   return (
     <li
-      className={`hover:cursor-pointer text-lg capitalize ${
-        isSelected ? "underline hover:cursor-auto" : "no-underline"
+      className={`capitalize ${
+        isSelected
+          ? "hover:cursor-default text-3xl text-blue-bg font-extrabold"
+          : "hover:cursor-pointer text-lg font-bold"
       }`}
       onClick={() => {
         onClick(text);

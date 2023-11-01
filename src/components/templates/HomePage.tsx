@@ -57,7 +57,12 @@ export function Homepage({
         className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
-        <ColumnSwitcher leftData={nosServices} />
+        <ColumnSwitcher
+          leftData={nosServices}
+          displayTitle={true}
+          initialValue='sourcing'
+          listType='list-disc'
+        />
       </section>
 
       <section
