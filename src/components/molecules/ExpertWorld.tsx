@@ -15,7 +15,7 @@ export function ExpertWorld({ expertWorld }: any) {
             className='rounded-full'
           />
 
-          <article className='absolute -top-4 -right-4 bg-[#2845AD] rounded-full flex items-center justify-center text-white w-12 h-12'>
+          <article className='absolute -top-4 -right-4 bg-blue-bg rounded-full flex items-center justify-center text-white w-12 h-12'>
             <BiSolidQuoteRight />
           </article>
         </div>

@@ -9,6 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "blue-bg": "#2845AD",
+        "black-bg": "#141414",
         "navbar-bg": "#F0F0F0",
         "dark-navbar-bg": "#1f2937",
         "step-one-bg": "#d2e4d6",

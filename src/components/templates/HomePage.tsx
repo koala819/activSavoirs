@@ -61,7 +61,7 @@ export function Homepage({
       </section>
 
       <section
-        className='bg-[#2845AD] border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen flex items-center w-full overflow-hidden'
+        className='bg-blue-bg border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Thematiques />
