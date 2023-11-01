@@ -7,7 +7,7 @@ import {
   // FaLeaf,
   // FaRobot,
   FaUserTie,
-  // FaUsersCog,
+  FaUsersCog,
 } from "react-icons/fa";
 
 export const thematiques = {
@@ -86,6 +86,50 @@ export const thematiques = {
       { text: "La réduction de consommation de matière ou d’énergie" },
     ],
     title: "Excellence Industrielle 4.0",
+  },
+  optimisationRH: {
+    advices: {
+      tag: "Maîtriser les fondamentaux du management d'une direction régionale",
+    },
+    description: "Gestion des Talents",
+    icon: <FaUsersCog size={20} />,
+    path: "#",
+    picture: {
+      src: "images/optimisationRH.png",
+      alt: "Bannière Optimisation RH",
+    },
+    results: {
+      text: "La formation en optimisation des ressources humaines (RH) conduit à une gestion plus stratégique des talents, à une amélioration de la rétention des employés et à des processus RH plus efficaces. Cela se traduit par une main-d'œuvre plus motivée et productive, une réduction des coûts de recrutement, et une meilleure adaptabilité aux besoins de l'entreprise.",
+    },
+    supports: [
+      { text: "Présentation PowerPoint" },
+      { text: "Études de cas" },
+      { text: "Jeux de rôle" },
+      { text: "Vidéos de formation" },
+    ],
+    thematiques: [
+      {
+        text: "Bonification des conditions de vie au travail (MQVT Management de la qualité de vie au travail)",
+      },
+
+      {
+        text: "Développement du sens au travail et diminution de l’éco anxiété",
+      },
+      {
+        text: "Renforcement de l’enthousiasme",
+      },
+      { text: "La définition et le partage de valeurs collaboratives" },
+      { text: "Projet collaboratif" },
+      { text: "La gestion de crise et de conflits" },
+      {
+        text: "L’audit social",
+      },
+      { text: "L’audit de compétences" },
+      { text: "L’étude et la définition des nouveaux besoins de compétences" },
+      { text: "Baisse de l’exposition à des situations dangereuses" },
+      { text: "Optimisation du port d’EPI" },
+    ],
+    title: "Optimisation des Ressources Humaines",
   },
   softKills: {
     advices: { tag: "Piges et prospection téléphonique" },

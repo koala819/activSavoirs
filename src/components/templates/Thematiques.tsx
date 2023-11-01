@@ -17,9 +17,8 @@ export function Thematiques({ evaluations }: any) {
     "efficaciteManageriale",
     "excellenceIndustrielle",
     "softKills",
+    "optimisationRH",
   ];
-
-  console.log("theme", theme[0]);
 
   function handlePrevious() {
     if (index === 0) {
