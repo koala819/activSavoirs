@@ -33,7 +33,7 @@ export function Homepage({
   return (
     <main className='w-full flex flex-col h-full'>
       <section
-        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center'
+        className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen lg:h-screen'
         data-aos={animation}
       >
         <Hero accueil={accueil} />

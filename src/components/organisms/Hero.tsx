@@ -1,11 +1,12 @@
 "use client";
 import { Article } from "@/src/components/molecules/Article";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
+import { ExpertWorld } from "@/src/components/molecules/ExpertWorld";
 import { Stars } from "@/src/components/molecules/Stars";
 import { YouTube } from "@/src/components/molecules/YouTube";
 export function Hero({ accueil }: { accueil: any }) {
   return (
-    <section className='w-full'>
+    <section className='w-full h-full flex flex-col justify-center items-center'>
       <DoubleColumn
         sectionClassName='dble-clmn-section space-y-0'
         leftClassName='dble-clmn-aside space-y-10'
@@ -23,12 +24,13 @@ montée en compétences de vos collaborateurs'
         }
         right={<YouTube video={accueil} />}
       />
-      <footer className='flex justify-center mt-4 sm:mt-0'>
+      <picture className='flex justify-center my-4 sm:mt-0'>
         <Stars
           beforeStars='Excellent'
           afterStars='4.9/5 avis sur plus de 800'
         />
-      </footer>
+      </picture>
+      <ExpertWorld expertWorld={accueil} />
     </section>
   );
 }
