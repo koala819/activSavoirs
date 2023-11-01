@@ -1,6 +1,6 @@
 import {
   // FaChartLine,
-  // FaChessBoard,
+  FaChessBoard,
   // FaGlobe,
   FaHandshake,
   FaIndustry,
@@ -171,5 +171,45 @@ export const thematiques = {
       { text: "La communication de conquête" },
     ],
     title: "Soft Kills",
+  },
+  strategieEntreprise: {
+    advices: { tag: "Développer ses compétences achat" },
+    description: "Vision Stratégique",
+    icon: <FaChessBoard size={20} />,
+    path: "#",
+    picture: {
+      src: "images/strategieEntreprise.png",
+      alt: "Bannière Stratégie Entreprise",
+    },
+    results: {
+      text: "La formation en stratégie d'entreprise renforce la prise de décision, l'alignement organisationnel et la vision globale. Elle permet d'élaborer et de mettre en œuvre des stratégies efficaces, d'optimiser les ressources et de saisir les opportunités de marché. Résultat : une entreprise plus compétitive, agile et orientée vers la réussite à long terme.",
+    },
+    supports: [
+      { text: "Présentation PowerPoint" },
+      { text: "Études de cas" },
+      { text: "Jeux de rôle" },
+      { text: "Vidéos de formation" },
+    ],
+    thematiques: [
+      {
+        text: "Elaboration et/ou actualisation du plan stratégique d’entreprise",
+      },
+
+      { text: "Politique de développement" },
+      {
+        text: "Politique de R&D",
+      },
+      { text: "Politique financière" },
+      { text: "Politique industrielle" },
+      { text: "Politique RH" },
+      {
+        text: "Structuration du management stratégique",
+      },
+      { text: "Mise en place et/ou optimisation du COMEX" },
+      { text: "Mise en place et/ou optimisation du CODIR" },
+      { text: "Dynamique et intelligence collective" },
+      { text: "Management de transition" },
+    ],
+    title: "Stratégie d'entreprise",
   },
 };

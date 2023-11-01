@@ -18,6 +18,7 @@ export function Thematiques({ evaluations }: any) {
     "excellenceIndustrielle",
     "softKills",
     "optimisationRH",
+    "strategieEntreprise",
   ];
 
   function handlePrevious() {
