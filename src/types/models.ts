@@ -31,6 +31,29 @@ export interface RefProp {
 }
 [];
 
+export interface SelectedType {
+  advices: {
+    tag: string;
+  };
+  description: string;
+  icon: any;
+  path: string;
+  picture: {
+    src: string;
+    alt: string;
+  };
+  results: {
+    text: string;
+  };
+  supports: {
+    text: string;
+  }[];
+  thematiques: {
+    text: string;
+  }[];
+  title: string;
+}
+
 export interface TeamProp {
   domaines_de_competences: RichTextField;
   nom: KeyTextField;

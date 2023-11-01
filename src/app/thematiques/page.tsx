@@ -1,6 +1,6 @@
 import { createClient } from "@/prismicio";
 import { notFound } from "next/navigation";
-import { EfficaciteManageriale } from "@/src/components/templates/EfficaciteManageriale";
+import { Thematiques } from "@/src/components/templates/Thematiques";
 import { thematiques } from "@/src/types/thematiques";
 
 export default async function Page() {
@@ -20,12 +20,6 @@ export default async function Page() {
   });
 
   // console.log("displayEvals", displayEvals);
-  const menu = [
-    { text: "thématiques abordées" },
-    { text: "supports" },
-    { text: "résultats" },
-    { text: "avis" },
-  ];
 
-  return <EfficaciteManageriale menu={menu} evals={displayEvals} />;
+  return <Thematiques evaluations={displayEvals} />;
 }

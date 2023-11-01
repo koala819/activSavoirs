@@ -2,32 +2,31 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
 import { ColumnSwitcher } from "@/src/components/organisms/ColumnSwitcher";
-import { thematiques } from "@/src/types/thematiques";
 import { Text } from "@/src/components/atoms/Text";
+import { SelectedType } from "@/src/types/models";
 
-export function EfficaciteManageriale({
+export function ThematiqueFormation({
   menu,
   evals,
+  selected,
 }: {
   menu: { text: string }[];
   evals: any;
+  selected: SelectedType;
 }) {
   return (
     <div className='flex flex-col w-full'>
       <picture className='flex justify-center'>
-        {React.cloneElement(thematiques.efficaciteManageriale.icon, {
+        {React.cloneElement(selected.icon, {
           size: 50,
         })}
       </picture>
-      <Text
-        text={thematiques.efficaciteManageriale.title}
-        className='title text-center'
-      />
+      <Text text={selected.title} className='title text-center' />
       <picture className='flex justify-center '>
         <Image
           loading='eager'
-          src={thematiques.efficaciteManageriale.picture.src}
-          alt={thematiques.efficaciteManageriale.picture.alt}
+          src={selected.picture.src}
+          alt={selected.picture.alt}
           width={3000}
           height={80}
         />
@@ -37,7 +36,7 @@ export function EfficaciteManageriale({
         leftData={menu}
         initialValue='thématiques'
         listType='list-none'
-        theme={thematiques.efficaciteManageriale}
+        theme={selected}
         evals={evals}
       />
     </div>
