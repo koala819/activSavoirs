@@ -4,7 +4,7 @@ import { BsYoutube } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { FiInstagram } from "react-icons/fi";
 import Link from "next/link";
-import logo from "../../public/images/logoFooter.png";
+import logo from "@/public/images/logoFooter.png";
 import { Article } from "@/src/components/molecules/Article";
 import { FooterColumn } from "@/src/components/molecules/FooterColumn";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
@@ -13,59 +13,66 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className='bg-[#141414] text-white pt-8 w-full'>
-      <div className='space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12'>
-        <section className='flex justify-center md:basis-1/2'>
+    <footer className='bg-black-bg text-white pt-8 w-full'>
+      <nav className='space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12'>
+        <aside className='flex justify-center md:basis-1/2'>
           <DoubleColumn
-            sectionClassName='md:flex'
-            leftClassName='flex justify-center md:block'
-            left={<Image src={logo} alt='Logo Activ Savoirs' height={60} />}
+            sectionClassName='md:flex w-full'
+            leftClassName='w-full'
+            rightClassName='flex justify-center'
+            left={
+              <picture className='w-full flex justify-center md:justify-end'>
+                <Image src={logo} alt='Logo Activ Savoirs' height={80} />
+              </picture>
+            }
             right={
-              <>
+              <div className='flex flex-col items-center md:items-start'>
                 <Article
                   title='Activ Savoirs'
+                  classNameTitle='md:text-xl lg:text-3xl'
                   description='Activateur de compétences'
+                  classNameDescription='md:text-xs lg:text-md xl:text-xl'
                   button={{ display: false }}
                 />
-                <section className='flex space-x-4 items-center'>
+                <picture className='flex space-x-4 items-center mt-2'>
                   <Link
-                    href='#'
+                    href='https://www.youtube.com/@reseauabp2026'
                     target='_blank'
-                    className='text-gray-500 hover:text-red-500 flex items-center'
+                    className='text-gray-500 hover:text-red-500 flex items-center bg-white rounded-2xl p-2'
                   >
                     <BsYoutube size={32} />
                   </Link>
 
                   <Link
-                    href='#'
+                    href='https://www.linkedin.com/in/vincent-declercq-685494151'
                     target='_blank'
-                    className='text-gray-500 hover:text-blue-500'
+                    className='text-gray-500 hover:text-blue-500 flex items-center justify-center bg-white rounded-2xl p-2 w-12 h-12'
                   >
                     <BsLinkedin size={22} />
                   </Link>
                   <Link
                     href='#'
                     target='_blank'
-                    className='text-gray-500 hover:text-rose-500'
+                    className='text-gray-500 hover:text-rose-500 flex items-center justify-center bg-white rounded-2xl p-2 w-12 h-12'
                   >
                     <FiInstagram size={28} />
                   </Link>
-                </section>
-              </>
+                </picture>
+              </div>
             }
           />
-        </section>
-        <section className='md:basis-1/4 flex justify-center'>
+        </aside>
+        <aside className='md:basis-1/4 flex justify-center'>
           <FooterColumn
             title='service'
             items={[
-              { text: "thématiques", link: "#" },
+              { text: "thématiques", link: "/thematiques" },
               { text: "sourcing", link: "#" },
               { text: "events", link: "#" },
             ]}
           />
-        </section>
-        <section className='md:basis-1/4 flex justify-center'>
+        </aside>
+        <aside className='md:basis-1/4 flex justify-center'>
           <FooterColumn
             title='entreprise'
             items={[
@@ -74,8 +81,8 @@ export function Footer() {
               { text: "clients", link: "#" },
             ]}
           />
-        </section>
-        <section className='md:basis-1/4 flex justify-center'>
+        </aside>
+        <aside className='md:basis-1/4 flex justify-center'>
           <FooterColumn
             title='contact'
             items={[
@@ -83,12 +90,12 @@ export function Footer() {
                 text: "contact@activ-savoirs.com",
                 link: "mailto:contact@activ-savoirs.com",
               },
-              { text: "+33 1 47 47 47", link: "tel:+331474747" },
+              { text: "+33 6 07 18 23", link: "tel:+33607831823" },
             ]}
           />
-        </section>
-      </div>
-      <div className='bg-[#47464D]'>
+        </aside>
+      </nav>
+      <legend className='bg-[#47464D]'>
         <div className='py-4 flex flex-col md:flex-row space-y-2 md:space-y-0'>
           <aside className='flex w-full md:w-1/2 justify-center md:ml-auto text-sm tracking-widest'>
             2023 with
@@ -119,7 +126,7 @@ export function Footer() {
             </Link>
           </aside>
         </div>
-      </div>
+      </legend>
     </footer>
   );
 }
