@@ -10,8 +10,8 @@ import {
 import ReactPlayer from "react-player";
 import { FaPlay } from "react-icons/fa";
 import Image from "next/image";
-import dataDock from "../../../public/images/dataDock.png";
-import femme from "../../../public/images/Femme.png";
+import dataDock from "@/public/images/dataDock.png";
+import femme from "@/public/images/Femme.png";
 import { WhiteBox } from "@/src/components/atoms/WhiteBox";
 
 export function YouTube({ video }: { video: any }) {

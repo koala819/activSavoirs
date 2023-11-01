@@ -1,7 +1,7 @@
 "use client";
 import anime from "animejs";
 import { useEffect } from "react";
-import logoDIX from "../../../public/images/DixStep1.svg";
+import logoDIX from "@/public/images/DixStep1.svg";
 import Image from "next/image";
 // import styles from "@/src/styles/dix31.module.css";
 // import { CSSTransition } from "react-transition-group"; // Importez CSSTransition

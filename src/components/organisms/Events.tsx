@@ -1,6 +1,6 @@
 "use client";
 import { Article } from "@/src/components/molecules/Article";
-import events from "../../../public/images/Events.png";
+import events from "@/public/images/Events.png";
 
 export function Events() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 import { Article } from "@/src/components/molecules/Article";
-import sourcing from "../../../public/images/Sourcing.png";
+import sourcing from "@/public/images/Sourcing.png";
 
 export function Sourcing() {
   return (

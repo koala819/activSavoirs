@@ -1,6 +1,6 @@
 "use client";
 import { Article } from "@/src/components/molecules/Article";
-import mentoring from "../../../public/images/Mentoring.png";
+import mentoring from "@/public/images/Mentoring.png";
 
 export function Mentoring() {
   return (

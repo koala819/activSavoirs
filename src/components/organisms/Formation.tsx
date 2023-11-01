@@ -1,6 +1,6 @@
 "use client";
 import { Article } from "@/src/components/molecules/Article";
-import formation from "../../../public/images/Formation.png";
+import formation from "@/public/images/Formation.png";
 
 export function Formation() {
   return (
