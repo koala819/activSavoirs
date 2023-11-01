@@ -5,7 +5,7 @@ import {
   FaHandshake,
   FaIndustry,
   // FaLeaf,
-  // FaRobot,
+  FaRobot,
   FaUserTie,
   FaUsersCog,
 } from "react-icons/fa";
@@ -86,6 +86,40 @@ export const thematiques = {
       { text: "La réduction de consommation de matière ou d’énergie" },
     ],
     title: "Excellence Industrielle 4.0",
+  },
+  intelligenceArtificielle: {
+    advices: { tag: "Savoir vendre avec efficacité le mandat exclusif" },
+    description: "IA Innovante",
+    icon: <FaRobot size={20} />,
+    path: "#",
+    picture: {
+      src: "images/intelligenceArtificielle.png",
+      alt: "Bannière Intelligence Artificielle",
+    },
+    results: {
+      text: "La formation en intelligence artificielle (IA) permet aux participants d'acquérir des compétences en IA, de comprendre ses applications, et de mettre en œuvre des solutions IA. Cela favorise l'innovation, l'automatisation des processus, l'analyse de données avancée, et améliore la prise de décision, ce qui stimule la compétitivité et la croissance de l'entreprise.",
+    },
+    supports: [
+      { text: "Présentation PowerPoint" },
+      { text: "Études de cas" },
+      { text: "Jeux de rôle" },
+      { text: "Vidéos de formation" },
+    ],
+    thematiques: [
+      { text: "La programmation" },
+      { text: "Le machine learning & la modélisation" },
+      {
+        text: "Le Big Data",
+      },
+      { text: "La robotique" },
+      { text: "Le Cloud Computing" },
+      { text: "L'apprentissage profond et les réseaux neuronaux" },
+      { text: "L'automatisation des processus et des tâches" },
+      { text: "L'éthique de l'intelligence artificielle" },
+      { text: "L'analyse de données avancée et prédictive" },
+      { text: "L'intégration de l'IA dans l'entreprise" },
+    ],
+    title: "Intelligence Artificielle",
   },
   optimisationRH: {
     advices: {

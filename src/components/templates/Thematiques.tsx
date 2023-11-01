@@ -19,6 +19,7 @@ export function Thematiques({ evaluations }: any) {
     "softKills",
     "optimisationRH",
     "strategieEntreprise",
+    "intelligenceArtificielle",
   ];
 
   function handlePrevious() {
