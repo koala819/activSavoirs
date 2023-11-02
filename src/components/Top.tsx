@@ -39,7 +39,7 @@ export function Top() {
     { name: "Nos Thématiques" },
     ...thematiques.map((item) => ({
       name: item.title,
-      path: item.path,
+      path: `/thematiques/${thematiques.indexOf(item)}`,
       icon: item.icon,
     })),
     { name: "Equipe pédagogique", path: "/equipe" },

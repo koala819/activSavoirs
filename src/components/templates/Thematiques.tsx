@@ -3,9 +3,13 @@ import { useState } from "react";
 import { ThematiqueFormation } from "@/src/components/organisms/ThematiqueFormation";
 import { thematiques } from "@/src/types/thematiques";
 import { Button } from "@nextui-org/react";
+import { usePathname } from "next/navigation";
 
 export function Thematiques({ evaluations }: any) {
-  const [indexTheme, setIndexTheme] = useState(0);
+  const path = usePathname();
+  const index = path.split("/thematiques/")[1];
+
+  const [indexTheme, setIndexTheme] = useState<number>(parseInt(index) || 0);
 
   const menu = [
     { text: "thématiques abordées" },

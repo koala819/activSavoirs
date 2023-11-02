@@ -22,6 +22,7 @@ export function Thematiques() {
               key={index}
               title={thematique.title}
               icon={thematique.icon}
+              path={thematique.path}
             />
           ))}
         </picture>
