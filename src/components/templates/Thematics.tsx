@@ -4,6 +4,7 @@ import { Thematic } from "@/src/components/organisms/Thematic";
 import { thematics } from "@/src/types/thematics";
 import { Button } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
+import { GrPrevious, GrNext } from "react-icons/gr";
 
 export function Thematics({ evaluations }: any) {
   const path = usePathname();
@@ -49,9 +50,14 @@ export function Thematics({ evaluations }: any) {
   // console.log("displayEvals", displayEvals);
 
   return (
-    <div className='flex'>
-      <aside>
-        <Button color='default' variant='light' onClick={handlePrevious}>
+    <div className='flex bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:border-l-cyan-600'>
+      <aside className='absolute mt-20 md:mt-24 md:ml-32 z-50'>
+        <Button
+          color='default'
+          variant='light'
+          onClick={handlePrevious}
+          startContent={<GrPrevious />}
+        >
           Precedent
         </Button>
       </aside>
@@ -60,8 +66,13 @@ export function Thematics({ evaluations }: any) {
         evals={displayEvals}
         selected={thematics[indexTheme]}
       />
-      <aside>
-        <Button color='default' variant='light' onClick={handleNext}>
+      <aside className='absolute mt-20 md:mt-24 md:pr-32 w-full flex justify-end'>
+        <Button
+          color='default'
+          variant='light'
+          onClick={handleNext}
+          endContent={<GrNext />}
+        >
           Suivant
         </Button>
       </aside>
