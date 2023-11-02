@@ -1,6 +1,9 @@
 export const mailContact = (
-  firstName: string,
+  prenom: string,
+  nom: string,
   message: string,
+  societe: string,
+  telephone: string,
   email: string
 ) => {
   return `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -186,7 +189,7 @@ export const mailContact = (
       <tr>
         <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="right">
             
-                <h1 style="margin: 0px; line-height: 140%; text-align: right; word-wrap: break-word; font-size: 22px; font-weight: 400;">${firstName}</h1>
+                <h1 style="margin: 0px; line-height: 140%; text-align: right; word-wrap: break-word; font-size: 22px; font-weight: 400;">${prenom} ${nom}</h1>
             
         </td>
       </tr>
@@ -199,7 +202,9 @@ export const mailContact = (
         <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
           
     <div style="font-size: 14px; line-height: 140%; text-align: right; word-wrap: break-word;">
-      <p style="line-height: 140%;">${email}</p>
+      <p style="line-height: 140%;">Société : ${societe}</p>
+      <p style="line-height: 140%;">Tel : ${telephone}</p>
+      <p style="line-height: 140%;">Email : ${email}</p>
     </div>
   
         </td>

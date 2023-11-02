@@ -31,7 +31,6 @@ export default function Page() {
       societe: values.society,
       telephone: values.tel,
     };
-    console.log("data", data);
 
     const options = {
       method: "POST",

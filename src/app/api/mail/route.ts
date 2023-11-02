@@ -32,14 +32,19 @@ export async function POST(req: Request): Promise<Response> {
       tls: { rejectUnauthorized: false },
     });
     const mailOptions = {
-      from: "contact@dix31.com",
-      to: "contact@dix31.com",
-      bcc: "x.genolhac@gmail.com",
-      subject: `📧 ${body.firstName} m'a écrit`,
-      text: `${body.message}.<br> Adresse mail ${body.email} pour répondre.`,
-      html: mailContact(body.firstName, body.message, body.email),
+      from: "contact@activ-savoirs.com",
+      to: "contact@activ-savoirs.com",
+      subject: `📧 ${body.prenom} ${body.nom} nous a écrit`,
+      text: `Message: ${body.message}.<br> Société ${body.societe}<br> Téléphone ${body.telephone}<br> Adresse mail ${body.email} pour répondre.`,
+      html: mailContact(
+        body.prenom,
+        body.nom,
+        body.message,
+        body.societe,
+        body.telephone,
+        body.email
+      ),
     };
-
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({
