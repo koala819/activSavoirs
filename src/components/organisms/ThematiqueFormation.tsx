@@ -25,7 +25,7 @@ export function ThematiqueFormation({
       <picture className='flex justify-center '>
         <Image
           loading='eager'
-          src={selected.picture.src}
+          src={`/${selected.picture.src}`}
           alt={selected.picture.alt}
           width={3000}
           height={80}
