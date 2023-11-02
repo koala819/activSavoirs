@@ -10,12 +10,11 @@ import {
   FaUsersCog,
 } from "react-icons/fa";
 import { Thematique } from "@/src/types/models";
-
+import { tags } from "@/src/types/tags";
 
 export const thematiques: Thematique[] = [
-
   {
-    advices: { tag: "Savoir optimiser son efficacité commerciale" },
+    advices: { tag: tags[5].name || "" },
     description: "Leadership Performant",
     icon: <FaUserTie size={20} />,
     path: "#",
@@ -55,7 +54,7 @@ export const thematiques: Thematique[] = [
     title: "Efficacité Managériale",
   },
   {
-    advices: { tag: "Maîtriser la prospection immobilière de terrain" },
+    advices: { tag: tags[1].name || "" },
     description: "Manufacture Numérique",
     icon: <FaIndustry size={20} />,
     path: "#",
@@ -91,7 +90,7 @@ export const thematiques: Thematique[] = [
     title: "Excellence Industrielle 4.0",
   },
   {
-    advices: { tag: "Savoir vendre avec efficacité le mandat exclusif" },
+    advices: { tag: tags[3].name || "" },
     description: "IA Innovante",
     icon: <FaRobot size={20} />,
     path: "#",
@@ -125,9 +124,7 @@ export const thematiques: Thematique[] = [
     title: "Intelligence Artificielle",
   },
   {
-    advices: {
-      tag: "Maîtriser les fondamentaux du management d'une direction régionale",
-    },
+    advices: { tag: tags[4].name || "" },
     description: "Gestion des Talents",
     icon: <FaUsersCog size={20} />,
     path: "#",
@@ -171,9 +168,7 @@ export const thematiques: Thematique[] = [
     title: "Optimisation des Ressources Humaines",
   },
   {
-    advices: {
-      tag: "La performance commerciale",
-    },
+    advices: { tag: tags[7].name || "" },
     description: "Croissance des Ventes",
     icon: <FaChartLine size={20} />,
     path: "#",
@@ -215,9 +210,7 @@ export const thematiques: Thematique[] = [
     title: "Performance Commerciale",
   },
   {
-    advices: {
-      tag: "Les fondamentaux de la performance commerciale",
-    },
+    advices: { tag: tags[6].name || "" },
     description: "Normes Environnementales",
     icon: <FaLeaf size={20} />,
     path: "#",
@@ -258,7 +251,7 @@ export const thematiques: Thematique[] = [
     title: "Qualité et Environnement",
   },
   {
-    advices: { tag: "Piges et prospection téléphonique" },
+    advices: { tag: tags[2].name || "" },
     description: "Compétences Interpersonnelles",
     icon: <FaHandshake size={20} />,
     path: "#",
@@ -299,7 +292,7 @@ export const thematiques: Thematique[] = [
     title: "Soft Kills",
   },
   {
-    advices: { tag: "Développer ses compétences achat" },
+    advices: { tag: tags[0].name || "" },
     description: "Vision Stratégique",
     icon: <FaChessBoard size={20} />,
     path: "#",
@@ -339,7 +332,7 @@ export const thematiques: Thematique[] = [
     title: "Stratégie d'Entreprise",
   },
   {
-    advices: { tag: "Savoir développer son efficacité commerciale" },
+    advices: { tag: tags[8].name || "" },
     description: "Stratégie en ligne",
     icon: <FaGlobe size={20} />,
     path: "#",
