@@ -1,5 +1,5 @@
 import { createClient } from "@/prismicio";
-import { Team } from "@/src/components/Team";
+import { Team } from "@/src/components/templates/Team";
 import { notFound } from "next/navigation";
 
 export default async function Page() {

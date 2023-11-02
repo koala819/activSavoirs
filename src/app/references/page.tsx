@@ -1,5 +1,5 @@
 import { createClient } from "@/prismicio";
-import { References } from "@/src/components/References";
+import { References } from "@/src/components/templates/References";
 import { notFound } from "next/navigation";
 
 export default async function Page() {

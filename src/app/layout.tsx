@@ -2,7 +2,7 @@ import "@/src/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { Top } from "@/src/components/Top";
+import { Top } from "@/src/components/templates/Top";
 import { Footer } from "@/src/components/templates/Footer";
 import { Providers } from "./providers";
 import GoogleAnalytics from "@/src/components/util/GoogleAnalytics";
