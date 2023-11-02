@@ -333,4 +333,42 @@ export const thematiques = {
     ],
     title: "Stratégie d'entreprise",
   },
+  webMarketing: {
+    advices: { tag: "Savoir développer son efficacité commerciale" },
+    description: "Stratégie en ligne",
+    icon: <FaGlobe size={20} />,
+    path: "#",
+    picture: {
+      src: "images/webMarketing.png",
+      alt: "Bannière Web Marketing",
+    },
+    results: {
+      text: "La formation en web marketing améliore la compréhension des stratégies en ligne, de l'optimisation des moteurs de recherche (SEO), du marketing sur les réseaux sociaux, et de la publicité en ligne. Cela se traduit par une augmentation du trafic Web, une meilleure visibilité en ligne, un engagement accru des clients, et des taux de conversion améliorés.",
+    },
+    supports: [
+      { text: "Présentation PowerPoint" },
+      { text: "Études de cas" },
+      { text: "Jeux de rôle" },
+      { text: "Vidéos de formation" },
+    ],
+    thematiques: [
+      {
+        text: "Définir sa stratégie Web marketing",
+      },
+
+      { text: "Optimiser le référencement de son site web" },
+      {
+        text: "L’e-mailing au service des actions commerciales",
+      },
+      { text: "L’écriture web au service de la performance numérique" },
+      { text: "Médias sociaux : Engager les clients via les plateformes" },
+      { text: "Analyse de données : Mesurer les résultats des campagnes" },
+      {
+        text: "Création de contenu : Générer du contenu pertinent",
+      },
+      { text: "Marketing d'influence : Collaborer avec les influenceurs" },
+      { text: "Publicité ciblée : Atteindre des audiences spécifiques" },
+    ],
+    title: "Web Marketing",
+  },
 };

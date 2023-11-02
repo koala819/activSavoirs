@@ -22,6 +22,7 @@ export function Thematiques({ evaluations }: any) {
     "intelligenceArtificielle",
     "qualiteEnvironnement",
     "performanceCommerciale",
+    "webMarketing",
   ];
 
   function handlePrevious() {
