@@ -9,18 +9,19 @@ export default async function Page() {
     .catch(() => notFound());
 
   return (
-    <div className='text-gray-600 dark:text-gray-100 body-font mb-12 p-4'>
-      <header className='flex flex-col text-center w-full mb-20'>
-        <h1 className='text-2xl font-medium mb-4 text-gray-900 tracking-widest dark:text-gray-100'>
-          Wall of love
+    <div className='text-gray-600 dark:text-gray-100 body-font'>
+      <header className='flex flex-col text-center w-full py-12 border-b-2 border-black'>
+        <h1 className='text-4xl text-gray-900 tracking-widest font-extrabold '>
+          Nos références
         </h1>
-        <p>Découvrez les potins que mes clients diffusent sur moi 😀 !</p>
       </header>
-      {evals && evals.results && evals.results.length > 0 ? (
-        <Reviews evals={evals.results} />
-      ) : (
-        notFound()
-      )}
+      <section className='px-4 bg-slate-100 py-8'>
+        {evals && evals.results && evals.results.length > 0 ? (
+          <Reviews evals={evals.results} />
+        ) : (
+          notFound()
+        )}
+      </section>
     </div>
   );
 }

@@ -42,7 +42,11 @@ export function Reviews({ evals }: { evals: any }) {
               variant='faded'
               color={ref.tags[0] === undefined ? "danger" : "primary"}
               onClick={tagClickHandler}
-              className='hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-blue-500 text-xs sm:text-sm mr-4'
+              className={
+                selectedTag?.tags[0] === ref.tags[0]
+                  ? "bg-blue-500 border-blue-500 text-white cursor-default  mr-4"
+                  : "hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-blue-500 text-xs sm:text-sm mr-4"
+              }
             >
               {ref.tags[0] === undefined ? "UNDEFINED" : ref.tags[0]}
             </Chip>
