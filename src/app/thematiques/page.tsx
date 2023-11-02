@@ -9,17 +9,17 @@ export default async function Page() {
     .getByType("evals", { pageSize: 1000, page: 1 })
     .catch(() => notFound());
 
-  const tagToFilter = thematiques.efficaciteManageriale?.advices?.tag;
-  const evalsWithTag = evals.results.filter((evaluation) => {
-    return evaluation.tags[0] === tagToFilter;
-  });
+  // const tagToFilter = thematiques.efficaciteManageriale?.advices?.tag;
+  // const evalsWithTag = evals.results.filter((evaluation) => {
+  //   return evaluation.tags[0] === tagToFilter;
+  // });
 
-  const displayEvals: any[] = [];
-  evalsWithTag.map((evaluation) => {
-    displayEvals.push(evaluation);
-  });
+  // const displayEvals: any[] = [];
+  // evalsWithTag.map((evaluation) => {
+  //   displayEvals.push(evaluation);
+  // });
 
   // console.log("displayEvals", displayEvals);
 
-  return <Thematiques evaluations={displayEvals} />;
+  return <Thematiques evaluations={evals} />;
 }

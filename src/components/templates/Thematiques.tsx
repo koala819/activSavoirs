@@ -13,17 +13,7 @@ export function Thematiques({ evaluations }: any) {
     { text: "avis" },
   ];
 
-  const theme = [
-    "efficaciteManageriale",
-    "excellenceIndustrielle",
-    "softKills",
-    "optimisationRH",
-    "strategieEntreprise",
-    "intelligenceArtificielle",
-    "qualiteEnvironnement",
-    "performanceCommerciale",
-    "webMarketing",
-  ];
+  const theme = thematiques.map((thematique) => thematique.title);
 
   function handlePrevious() {
     if (index === 0) {
@@ -51,7 +41,7 @@ export function Thematiques({ evaluations }: any) {
       <ThematiqueFormation
         menu={menu}
         evals={evaluations}
-        selected={thematiques[theme[index] as keyof typeof thematiques]}
+        selected={thematiques[index]}
       />
       <aside>
         <Button color='default' variant='light' onClick={handleNext}>
