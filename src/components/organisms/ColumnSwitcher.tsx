@@ -6,6 +6,7 @@ import { DisplayRightSwitch } from "@/src/components/atoms/DisplayRightSwitch";
 
 export function ColumnSwitcher({
   leftData,
+  displayBorderLeftSwitch = false,
   displayTitle,
   evals,
   initialValue,
@@ -13,6 +14,7 @@ export function ColumnSwitcher({
   theme,
 }: {
   displayTitle?: boolean;
+  displayBorderLeftSwitch?: boolean;
   evals?: any;
   initialValue?: string;
   leftData: { text: string }[];
@@ -30,10 +32,12 @@ export function ColumnSwitcher({
   }
 
   return (
-    <section className='w-full'>
+    <section className='w-full flex justify-center'>
       <DoubleColumn
-        sectionClassName='dble-clmn-section'
-        leftClassName='dble-clmn-aside space-y-10'
+        sectionClassName='sm:flex sm:w-11/12'
+        leftClassName={`${
+          displayBorderLeftSwitch ? "md:border-r-2 md:border-black md:my-4" : ""
+        } dble-clmn-aside space-y-10`}
         rightClassName='dble-clmn-aside space-y-10'
         left={
           <DisplayLeftSwitch

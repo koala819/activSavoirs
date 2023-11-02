@@ -41,6 +41,7 @@ export function Thematic({
         </div>
       </picture>
       <ColumnSwitcher
+        displayBorderLeftSwitch
         leftData={menu}
         initialValue='thématiques'
         listType='list-none'

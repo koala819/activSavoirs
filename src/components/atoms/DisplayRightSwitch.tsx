@@ -30,7 +30,6 @@ export function DisplayRightSwitch({
     supports: <Supports supports={theme?.supports || []} />,
     résultats: <Resultats resultat={theme?.results.text || ""} />,
     avis: <Advice evals={evals} />,
-    // avis: <Advice avis={theme?.avis.tag || ""} />,
   };
   const display = displayComponents[section];
 

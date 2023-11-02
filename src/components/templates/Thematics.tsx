@@ -50,7 +50,7 @@ export function Thematics({ evaluations }: any) {
   // console.log("displayEvals", displayEvals);
 
   return (
-    <div className='flex bg-blue-500 sm:bg-red-400 md:bg-green-400 lg:bg-yellow-500 xl:bg-orange-500 2xl:border-l-cyan-600'>
+    <div className='flex'>
       <aside className='absolute mt-20 md:mt-24 md:ml-32 z-50'>
         <Button
           color='default'

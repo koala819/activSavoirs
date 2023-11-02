@@ -11,7 +11,7 @@ export function Li({
     <li
       className={`capitalize ${
         isSelected
-          ? "hover:cursor-default text-3xl text-blue-bg font-extrabold"
+          ? "hover:cursor-default text-2xl md:text-3xl text-blue-bg font-extrabold"
           : "hover:cursor-pointer text-lg font-bold"
       }`}
       onClick={() => {
