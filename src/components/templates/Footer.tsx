@@ -5,6 +5,8 @@ import { BsLinkedin } from "react-icons/bs";
 import { FiInstagram } from "react-icons/fi";
 import Link from "next/link";
 import logo from "@/public/images/logoFooter.png";
+import dix31 from "@/public/images/DIX31.png";
+// import dix32 from "@/public/images/@t.gif";
 import { Article } from "@/src/components/molecules/Article";
 import { FooterColumn } from "@/src/components/molecules/FooterColumn";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
@@ -67,8 +69,8 @@ export function Footer() {
             title='service'
             items={[
               { text: "thématiques", link: "/thematiques" },
-              { text: "sourcing", link: "#" },
-              { text: "events", link: "#" },
+              // { text: "sourcing", link: "#" },
+              // { text: "events", link: "#" },
             ]}
           />
         </aside>
@@ -76,9 +78,9 @@ export function Footer() {
           <FooterColumn
             title='entreprise'
             items={[
-              { text: "A propos de nous", link: "#" },
+              { text: "Equipe", link: "/equipe" },
               { text: "références", link: "/references" },
-              { text: "clients", link: "#" },
+              { text: "Avis Clients", link: "/evaluations" },
             ]}
           />
         </aside>
@@ -90,7 +92,7 @@ export function Footer() {
                 text: "contact@activ-savoirs.com",
                 link: "mailto:contact@activ-savoirs.com",
               },
-              { text: "+33 6 07 18 23", link: "tel:+33607831823" },
+              { text: "+33 6 07 83 18 23", link: "tel:+33607831823" },
             ]}
           />
         </aside>
@@ -98,7 +100,23 @@ export function Footer() {
       <legend className='bg-[#47464D]'>
         <div className='py-4 flex flex-col md:flex-row space-y-2 md:space-y-0'>
           <aside className='flex w-full md:w-1/2 justify-center md:ml-auto text-sm tracking-widest'>
-            2023 with
+            2023 Created by
+            <Link
+              href='https://www.dix31.com'
+              target='_blank'
+              className='mx-1 hover:underline'
+            >
+              {/* DIX31.com */}
+              <picture className='w-full flex justify-center md:justify-end text-white pr-1'>
+                <Image
+                  src={dix31}
+                  alt='Logo DIX31.com'
+                  height={15}
+                  className='text-white'
+                />
+              </picture>
+            </Link>
+            with
             <Link
               href='https://fr.wikipedia.org/wiki/Copyleft'
               target='_blank'
@@ -106,13 +124,6 @@ export function Footer() {
             >
               Copyleft license
               <LuCopyleft />
-            </Link>
-            <Link
-              href='https://www.dix31.com'
-              target='_blank'
-              className='mx-1 hover:underline'
-            >
-              DIX31.com
             </Link>
           </aside>
           <aside className='flex w-full md:w-1/2  justify-center md:ml-auto text-sm tracking-widest'>
