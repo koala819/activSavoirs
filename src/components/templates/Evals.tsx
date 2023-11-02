@@ -1,19 +1,8 @@
 "use client";
 import { Chip } from "@nextui-org/react";
 import { useState } from "react";
-import {
-  FaChartBar,
-  FaChartLine,
-  FaCubes,
-  FaBookDead,
-  FaFileContract,
-  FaHome,
-  FaLightbulb,
-  FaPhone,
-  FaShoppingCart,
-  FaTrophy,
-  FaUsers,
-} from "react-icons/fa";
+import { FaCubes } from "react-icons/fa";
+import { tags } from "@/src/types/tags";
 import { Eval } from "@/src/components/atoms/Eval";
 
 export function Evals({ evals }: { evals: any }) {
@@ -26,43 +15,6 @@ export function Evals({ evals }: { evals: any }) {
       evals.findIndex((item: any) => item.tags[0] === currentTag) === index;
     return isUnique;
   });
-
-  const tags = [
-    { name: "Développer ses compétences achat", icon: FaShoppingCart },
-    {
-      name: "Maîtriser la prospection immobilière de terrain",
-      icon: FaHome,
-    },
-    { name: "Piges et prospection téléphonique", icon: FaPhone },
-    {
-      name: "Savoir vendre avec efficacité le mandat exclusif",
-      icon: FaFileContract,
-    },
-    {
-      name: "Maîtriser les fondamentaux du management d'une direction régionale",
-      icon: FaUsers,
-    },
-    {
-      name: "Savoir optimiser son efficacité commerciale",
-      icon: FaChartLine,
-    },
-    {
-      name: "Les fondamentaux de la performance commerciale",
-      icon: FaTrophy,
-    },
-    {
-      name: "La performance commerciale",
-      icon: FaChartBar,
-    },
-    {
-      name: "Savoir développer son efficacité commerciale",
-      icon: FaLightbulb,
-    },
-    {
-      name: undefined,
-      icon: FaBookDead,
-    },
-  ];
 
   return (
     <>
