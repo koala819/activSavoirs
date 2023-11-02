@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import whitelogo from "@/public/images/logo.png";
 import blackLogo from "@/public/images/logoFooter.png";
-import { thematiques } from "@/src/lib/thematiques";
+import { thematiques } from "@/src/types/thematiques";
 import { menuItems } from "@/src/types/models";
 import { FiChevronDown } from "react-icons/fi";
 import { colorVariants } from "@/src/lib/colorVariants";
@@ -38,7 +38,7 @@ export function Top() {
     { name: "Accueil", path: "/" },
     { name: "Nos Thématiques" },
     ...thematiques.map((item) => ({
-      name: item.name,
+      name: item.title,
       path: item.path,
       icon: item.icon,
     })),
@@ -104,17 +104,17 @@ export function Top() {
                 {(thematique: any) => {
                   return (
                     <DropdownItem
-                      key={thematique.name}
+                      key={thematique.title}
                       color={"undefined" as any}
                       variant='shadow'
                       className={`${
-                        colorVariants[thematique.name]
+                        colorVariants[thematique.title]
                       } p-4 space-x-4`}
                       description={thematique.description}
                       startContent={thematique.icon}
                       onClick={() => router.push(thematique.path || "#")}
                     >
-                      {thematique.name}
+                      {thematique.title}
                     </DropdownItem>
                   );
                 }}

@@ -10,8 +10,8 @@ import {
   FaUsersCog,
 } from "react-icons/fa";
 
-export const thematiques = {
-  efficaciteManageriale: {
+export const thematiques = [
+  {
     advices: { tag: "Savoir optimiser son efficacité commerciale" },
     description: "Leadership Performant",
     icon: <FaUserTie size={20} />,
@@ -51,7 +51,7 @@ export const thematiques = {
     ],
     title: "Efficacité Managériale",
   },
-  excellenceIndustrielle: {
+  {
     advices: { tag: "Maîtriser la prospection immobilière de terrain" },
     description: "Manufacture Numérique",
     icon: <FaIndustry size={20} />,
@@ -87,7 +87,7 @@ export const thematiques = {
     ],
     title: "Excellence Industrielle 4.0",
   },
-  intelligenceArtificielle: {
+  {
     advices: { tag: "Savoir vendre avec efficacité le mandat exclusif" },
     description: "IA Innovante",
     icon: <FaRobot size={20} />,
@@ -121,7 +121,7 @@ export const thematiques = {
     ],
     title: "Intelligence Artificielle",
   },
-  optimisationRH: {
+  {
     advices: {
       tag: "Maîtriser les fondamentaux du management d'une direction régionale",
     },
@@ -159,13 +159,15 @@ export const thematiques = {
         text: "L’audit social",
       },
       { text: "L’audit de compétences" },
-      { text: "L’étude et la définition des nouveaux besoins de compétences" },
+      {
+        text: "L’étude et la définition des nouveaux besoins de compétences",
+      },
       { text: "Baisse de l’exposition à des situations dangereuses" },
       { text: "Optimisation du port d’EPI" },
     ],
     title: "Optimisation des Ressources Humaines",
   },
-  performanceCommerciale: {
+  {
     advices: {
       tag: "La performance commerciale",
     },
@@ -209,7 +211,7 @@ export const thematiques = {
     ],
     title: "Performance Commerciale",
   },
-  qualiteEnvironnement: {
+  {
     advices: {
       tag: "Les fondamentaux de la performance commerciale",
     },
@@ -252,7 +254,7 @@ export const thematiques = {
     ],
     title: "Qualité et Environnement",
   },
-  softKills: {
+  {
     advices: { tag: "Piges et prospection téléphonique" },
     description: "Compétences Interpersonnelles",
     icon: <FaHandshake size={20} />,
@@ -293,7 +295,7 @@ export const thematiques = {
     ],
     title: "Soft Kills",
   },
-  strategieEntreprise: {
+  {
     advices: { tag: "Développer ses compétences achat" },
     description: "Vision Stratégique",
     icon: <FaChessBoard size={20} />,
@@ -331,9 +333,9 @@ export const thematiques = {
       { text: "Dynamique et intelligence collective" },
       { text: "Management de transition" },
     ],
-    title: "Stratégie d'entreprise",
+    title: "Stratégie d'Entreprise",
   },
-  webMarketing: {
+  {
     advices: { tag: "Savoir développer son efficacité commerciale" },
     description: "Stratégie en ligne",
     icon: <FaGlobe size={20} />,
@@ -371,4 +373,4 @@ export const thematiques = {
     ],
     title: "Web Marketing",
   },
-};
+];
