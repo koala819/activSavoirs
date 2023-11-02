@@ -20,6 +20,7 @@ export function Thematiques({ evaluations }: any) {
     "optimisationRH",
     "strategieEntreprise",
     "intelligenceArtificielle",
+    "qualiteEnvironnement",
   ];
 
   function handlePrevious() {

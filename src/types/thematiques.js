@@ -4,7 +4,7 @@ import {
   // FaGlobe,
   FaHandshake,
   FaIndustry,
-  // FaLeaf,
+  FaLeaf,
   FaRobot,
   FaUserTie,
   FaUsersCog,
@@ -164,6 +164,49 @@ export const thematiques = {
       { text: "Optimisation du port d’EPI" },
     ],
     title: "Optimisation des Ressources Humaines",
+  },
+  qualiteEnvironnement: {
+    advices: {
+      tag: "Les fondamentaux de la performance commerciale",
+    },
+    description: "Normes Environnementales",
+    icon: <FaLeaf size={20} />,
+    path: "#",
+    picture: {
+      src: "images/qualiteEnvironnement.png",
+      alt: "Bannière Qualite Environnement",
+    },
+    results: {
+      text: "La formation sur la qualité et l'environnement conduit à une meilleure conformité aux normes de qualité et de durabilité. Cela se traduit par une réduction des déchets, des coûts, et des risques environnementaux. Les employés deviennent des agents de changement pour des pratiques plus respectueuses de l'environnement, améliorant ainsi la réputation de l'entreprise.",
+    },
+    supports: [
+      { text: "Présentation PowerPoint" },
+      { text: "Études de cas" },
+      { text: "Jeux de rôle" },
+      { text: "Vidéos de formation" },
+    ],
+    thematiques: [
+      {
+        text: "Le niveau d’exigence zéro défaut",
+      },
+
+      {
+        text: "Les lunettes et tablettes connectées",
+      },
+      {
+        text: "L’anticipation des dérives de production",
+      },
+      { text: "La diminution du taux de retour" },
+      { text: "L’automatisation des contrôles qualités des produits finis" },
+      { text: "L’amélioration continue de la qualité du produit" },
+      {
+        text: "L’intégration de solutions connectées pour développer les apports aux enjeux RSE",
+      },
+      {
+        text: "L’optimisation de la rationalisation de l’utilisation des matières premières et des ressources de l’usine (eau, énergie, etc.)",
+      },
+    ],
+    title: "Qualité et Environnement",
   },
   softKills: {
     advices: { tag: "Piges et prospection téléphonique" },
