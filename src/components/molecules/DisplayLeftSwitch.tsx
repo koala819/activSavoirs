@@ -17,7 +17,6 @@ export function DisplayLeftSwitch({
   listType?: string;
 }) {
   const [selectedItem, setSelectedItem] = useState<string>(initialValue || "");
-  // const [displayTitle, setHideTitle] = useState<boolean>(true);
 
   const handleLiClick = (text: any) => {
     chooseSection(text.split(" ")[0]);

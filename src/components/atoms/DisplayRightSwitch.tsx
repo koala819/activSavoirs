@@ -16,7 +16,6 @@ export function DisplayRightSwitch({
   evals?: any;
   section: string;
   theme?: {
-    // avis: { tag: string };
     results: { text: string };
     supports: { text: string }[];
     thematics: { text: string }[];
@@ -27,7 +26,7 @@ export function DisplayRightSwitch({
     formation: <Training />,
     mentoring: <Mentoring />,
     sourcing: <Sourcing />,
-    thématics: <ThematicList thematiques={theme?.thematics || []} />,
+    thématiques: <ThematicList thematiques={theme?.thematics || []} />,
     supports: <Supports supports={theme?.supports || []} />,
     résultats: <Resultats resultat={theme?.results.text || ""} />,
     avis: <Advice evals={evals} />,

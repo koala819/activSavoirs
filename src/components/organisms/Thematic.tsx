@@ -34,7 +34,7 @@ export function Thematic({
 
       <ColumnSwitcher
         leftData={menu}
-        initialValue='thématics'
+        initialValue='thématiques'
         listType='list-none'
         theme={selected}
         evals={evals}

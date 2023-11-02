@@ -17,7 +17,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[5].name || "" },
     description: "Leadership Performant",
     icon: <FaUserTie size={20} />,
-    path: "/thematics/0",
+    path: "/thematiques/0",
     picture: {
       src: "images/efficaciteManageriale.png",
       alt: "Bannière Efficacité Manageriale",
@@ -57,7 +57,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[1].name || "" },
     description: "Manufacture Numérique",
     icon: <FaIndustry size={20} />,
-    path: "/thematics/1",
+    path: "/thematiques/1",
     picture: {
       src: "images/excellenceIndustrielle.png",
       alt: "Bannière Excellence Industrielle",
@@ -93,7 +93,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[3].name || "" },
     description: "IA Innovante",
     icon: <FaRobot size={20} />,
-    path: "/thematics/2",
+    path: "/thematiques/2",
     picture: {
       src: "images/intelligenceArtificielle.png",
       alt: "Bannière Intelligence Artificielle",
@@ -127,7 +127,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[4].name || "" },
     description: "Gestion des Talents",
     icon: <FaUsersCog size={20} />,
-    path: "/thematics/3",
+    path: "/thematiques/3",
     picture: {
       src: "images/optimisationRH.png",
       alt: "Bannière Optimisation RH",
@@ -171,7 +171,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[7].name || "" },
     description: "Croissance des Ventes",
     icon: <FaChartLine size={20} />,
-    path: "/thematics/4",
+    path: "/thematiques/4",
     picture: {
       src: "images/performanceCommerciale.png",
       alt: "Bannière Performance Commerciale",
@@ -213,7 +213,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[6].name || "" },
     description: "Normes Environnementales",
     icon: <FaLeaf size={20} />,
-    path: "/thematics/5",
+    path: "/thematiques/5",
     picture: {
       src: "images/qualiteEnvironnement.png",
       alt: "Bannière Qualite Environnement",
@@ -254,7 +254,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[2].name || "" },
     description: "Compétences Interpersonnelles",
     icon: <FaHandshake size={20} />,
-    path: "/thematics/6",
+    path: "/thematiques/6",
     picture: {
       src: "images/softKills.png",
       alt: "Bannière Soft Kills",
@@ -295,7 +295,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[0].name || "" },
     description: "Vision Stratégique",
     icon: <FaChessBoard size={20} />,
-    path: "/thematics/7",
+    path: "/thematiques/7",
     picture: {
       src: "images/strategieEntreprise.png",
       alt: "Bannière Stratégie Entreprise",
@@ -335,7 +335,7 @@ export const thematics: Thematique[] = [
     advices: { tag: tags[8].name || "" },
     description: "Stratégie en ligne",
     icon: <FaGlobe size={20} />,
-    path: "/thematics/8",
+    path: "/thematiques/8",
     picture: {
       src: "images/webMarketing.png",
       alt: "Bannière Web Marketing",

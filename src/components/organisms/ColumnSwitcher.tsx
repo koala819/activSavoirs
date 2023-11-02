@@ -18,7 +18,6 @@ export function ColumnSwitcher({
   leftData: { text: string }[];
   listType: string;
   theme?: {
-    // advices: { tag: string };
     results: { text: string };
     supports: { text: string }[];
     thematics: { text: string }[];
