@@ -9,8 +9,11 @@ import {
   FaUserTie,
   FaUsersCog,
 } from "react-icons/fa";
+import { Thematique } from "@/src/types/models";
 
-export const thematiques = [
+
+export const thematiques: Thematique[] = [
+
   {
     advices: { tag: "Savoir optimiser son efficacité commerciale" },
     description: "Leadership Performant",

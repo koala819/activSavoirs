@@ -64,3 +64,20 @@ export interface TeamProp {
   [key: string]: any;
 }
 [];
+
+export interface Thematique {
+  advices: { tag: string };
+  description: string;
+  icon: JSX.Element;
+  path: string;
+  picture: {
+    src: string;
+    alt: string;
+  };
+  results: {
+    text: string;
+  };
+  supports: { text: string }[];
+  thematiques: { text: string }[];
+  title: string;
+}
