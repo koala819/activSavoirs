@@ -1,7 +1,7 @@
 import {
-  // FaChartLine,
+  FaChartLine,
   FaChessBoard,
-  // FaGlobe,
+  FaGlobe,
   FaHandshake,
   FaIndustry,
   FaLeaf,
@@ -164,6 +164,50 @@ export const thematiques = {
       { text: "Optimisation du port d’EPI" },
     ],
     title: "Optimisation des Ressources Humaines",
+  },
+  performanceCommerciale: {
+    advices: {
+      tag: "La performance commerciale",
+    },
+    description: "Croissance des Ventes",
+    icon: <FaChartLine size={20} />,
+    path: "#",
+    picture: {
+      src: "images/performanceCommerciale.png",
+      alt: "Bannière Performance Commerciale",
+    },
+    results: {
+      text: "La formation en performance commerciale renforce les compétences en vente, la connaissance des produits et la communication. Les participants voient une augmentation des ventes, une fidélisation client améliorée, et une meilleure performance des équipes de vente. Cela se traduit par une croissance des revenus et une plus grande compétitivité sur le marché.",
+    },
+    supports: [
+      { text: "Présentation PowerPoint" },
+      { text: "Études de cas" },
+      { text: "Jeux de rôle" },
+      { text: "Vidéos de formation" },
+    ],
+    thematiques: [
+      {
+        text: "La communication commerciale",
+      },
+
+      {
+        text: "La prospection (physique, téléphonique et numérique)",
+      },
+      {
+        text: "La PNL au service du savoir être commercial",
+      },
+      { text: "Les étapes essentielles de la vente" },
+      { text: "La méthode de l’anti-vente" },
+      { text: "Le questionnement productif" },
+      {
+        text: "L’écoute active",
+      },
+      { text: "Les méthodes de négociations " },
+      { text: "Les techniques de conclusions" },
+      { text: "Le développement du prix de vente moyen" },
+      { text: "L’amélioration de la récurrence commerciale" },
+    ],
+    title: "Performance Commerciale",
   },
   qualiteEnvironnement: {
     advices: {
