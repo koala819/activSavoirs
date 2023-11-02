@@ -3,7 +3,7 @@ import React from "react";
 import { Image } from "@nextui-org/react";
 import { ColumnSwitcher } from "@/src/components/organisms/ColumnSwitcher";
 import { Text } from "@/src/components/atoms/Text";
-import { SelectedType } from "@/src/types/models";
+import { Thematique } from "@/src/types/models";
 
 export function ThematiqueFormation({
   menu,
@@ -12,7 +12,7 @@ export function ThematiqueFormation({
 }: {
   menu: { text: string }[];
   evals: any;
-  selected: SelectedType;
+  selected: Thematique;
 }) {
   return (
     <div className='flex flex-col w-full'>

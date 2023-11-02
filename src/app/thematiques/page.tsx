@@ -1,7 +1,7 @@
 import { createClient } from "@/prismicio";
 import { notFound } from "next/navigation";
 import { Thematiques } from "@/src/components/templates/Thematiques";
-import { thematiques } from "@/src/types/thematiques";
+// import { thematiques } from "@/src/types/thematiques";
 
 export default async function Page() {
   const client = createClient();

@@ -1,6 +1,6 @@
 "use client";
 import { Thematique } from "@/src/components/atoms/Thematique";
-import { thematiques } from "@/src/lib/thematiques";
+import { thematiques } from "@/src/types/thematiques";
 import { Text } from "@/src/components/atoms/Text";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export function Thematiques() {
           {thematiques.map((thematique, index) => (
             <Thematique
               key={index}
-              title={thematique.name}
+              title={thematique.title}
               icon={thematique.icon}
             />
           ))}
