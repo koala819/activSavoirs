@@ -107,7 +107,7 @@ export function Footer() {
               className='mx-1 hover:underline'
             >
               {/* DIX31.com */}
-              <picture className='w-full flex justify-center md:justify-end text-white pr-1'>
+              <picture className='w-full flex justify-center md:justify-end text-white pr-1 mt-1'>
                 <Image
                   src={dix31}
                   alt='Logo DIX31.com'
