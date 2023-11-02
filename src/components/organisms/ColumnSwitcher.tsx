@@ -21,7 +21,7 @@ export function ColumnSwitcher({
     // advices: { tag: string };
     results: { text: string };
     supports: { text: string }[];
-    thematiques: { text: string }[];
+    thematics: { text: string }[];
   };
 }) {
   const [section, setSection] = useState(initialValue || "");

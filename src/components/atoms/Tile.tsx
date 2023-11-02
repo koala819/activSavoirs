@@ -2,7 +2,7 @@ import { Text } from "@/src/components/atoms/Text";
 import { colorVariants } from "@/src/lib/colorVariants";
 import Link from "next/link";
 
-export function Thematique({
+export function Tile({
   icon,
   path,
   title,

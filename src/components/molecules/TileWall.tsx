@@ -1,6 +1,6 @@
 "use client";
-import { Thematique } from "@/src/components/atoms/Thematique";
-import { thematiques } from "@/src/types/thematiques";
+import { Tile } from "@/src/components/atoms/Tile";
+import { thematics } from "@/src/types/thematics";
 import { Text } from "@/src/components/atoms/Text";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import CTA from "@/public/images/CTA_logo.jpeg";
 import SOP from "@/public/images/SOP_logo.jpeg";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 
-export function Thematiques() {
+export function TileWall() {
   return (
     <section className='w-full'>
       <Text
@@ -17,12 +17,12 @@ export function Thematiques() {
       />
       <div className='flex flex-col justify-center items-center'>
         <picture className='grid sm:grid-cols-3 gap-x-4 gap-y-4 pt-8 px-20 sm:px-8'>
-          {thematiques.map((thematique, index) => (
-            <Thematique
+          {thematics.map((thematic, index) => (
+            <Tile
               key={index}
-              title={thematique.title}
-              icon={thematique.icon}
-              path={thematique.path}
+              title={thematic.title}
+              icon={thematic.icon}
+              path={thematic.path}
             />
           ))}
         </picture>

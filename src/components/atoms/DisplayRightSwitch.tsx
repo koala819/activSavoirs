@@ -1,12 +1,12 @@
 import { Events } from "@/src/components/organisms/Events";
-import { Formation } from "@/src/components/organisms/Formation";
+import { Training } from "@/src/components/organisms/Training";
 import { Mentoring } from "@/src/components/organisms/Mentoring";
 import { Sourcing } from "@/src/components/organisms/Sourcing";
 import { displayComponents } from "@/src/types/models";
-import { NoName } from "@/src/components/atoms/NoName";
+import { ThematicList } from "@/src/components/atoms/ThematicList";
 import { Supports } from "@/src/components/atoms/Supports";
 import { Resultats } from "@/src/components/atoms/Resultats";
-import { Avis } from "@/src/components/atoms/Avis";
+import { Advice } from "@/src/components/atoms/Advice";
 
 export function DisplayRightSwitch({
   evals,
@@ -19,19 +19,19 @@ export function DisplayRightSwitch({
     // avis: { tag: string };
     results: { text: string };
     supports: { text: string }[];
-    thematiques: { text: string }[];
+    thematics: { text: string }[];
   };
 }) {
   const displayComponents: displayComponents = {
     events: <Events />,
-    formation: <Formation />,
+    formation: <Training />,
     mentoring: <Mentoring />,
     sourcing: <Sourcing />,
-    thématiques: <NoName thematiques={theme?.thematiques || []} />,
+    thématics: <ThematicList thematiques={theme?.thematics || []} />,
     supports: <Supports supports={theme?.supports || []} />,
     résultats: <Resultats resultat={theme?.results.text || ""} />,
-    avis: <Avis evals={evals} />,
-    // avis: <Avis avis={theme?.avis.tag || ""} />,
+    avis: <Advice evals={evals} />,
+    // avis: <Advice avis={theme?.avis.tag || ""} />,
   };
   const display = displayComponents[section];
 

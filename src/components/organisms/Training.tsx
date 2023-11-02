@@ -2,7 +2,7 @@
 import { Article } from "@/src/components/molecules/Article";
 import formation from "@/public/images/Formation.png";
 
-export function Formation() {
+export function Training() {
   return (
     <Article
       image={{ src: formation, alt: "formation picture" }}

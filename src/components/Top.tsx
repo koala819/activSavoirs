@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import whitelogo from "@/public/images/logo.png";
 import blackLogo from "@/public/images/logoFooter.png";
-import { thematiques } from "@/src/types/thematiques";
+import { thematics } from "@/src/types/thematics";
 import { menuItems } from "@/src/types/models";
 import { FiChevronDown } from "react-icons/fi";
 import { colorVariants } from "@/src/lib/colorVariants";
@@ -37,9 +37,9 @@ export function Top() {
   const menuItems: menuItems[] = [
     { name: "Accueil", path: "/" },
     { name: "Nos Thématiques" },
-    ...thematiques.map((item) => ({
+    ...thematics.map((item) => ({
       name: item.title,
-      path: `/thematiques/${thematiques.indexOf(item)}`,
+      path: `/thematiques/${thematics.indexOf(item)}`,
       icon: item.icon,
     })),
     { name: "Equipe pédagogique", path: "/equipe" },
@@ -100,7 +100,7 @@ export function Top() {
                   </Button>
                 </DropdownTrigger>
               </NavbarItem>
-              <DropdownMenu aria-label='Item_3' items={thematiques}>
+              <DropdownMenu aria-label='Item_3' items={thematics}>
                 {(thematique: any) => {
                   return (
                     <DropdownItem

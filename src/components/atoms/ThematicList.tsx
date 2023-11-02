@@ -1,4 +1,8 @@
-export function NoName({ thematiques }: { thematiques: { text: string }[] }) {
+export function ThematicList({
+  thematiques,
+}: {
+  thematiques: { text: string }[];
+}) {
   return (
     <ul>
       {thematiques.map((thematique: { text: any }) => (

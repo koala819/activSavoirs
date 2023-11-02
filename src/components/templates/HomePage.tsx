@@ -4,11 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { CTA } from "@/src/components/molecules/CTA";
 import { Hero } from "@/src/components/organisms/Hero";
-import { Proposition } from "@/src/components/organisms/Proposition";
+import { Motion } from "@/src/components/organisms/Motion";
 import { Rating } from "@/src/components/organisms/Rating";
 import { ColumnSwitcher } from "@/src/components/organisms/ColumnSwitcher";
-import { Steps } from "@/src/components/molecules/Steps";
-import { Thematiques } from "@/src/components/molecules/Thematiques";
+import { Steps } from "@/src/components/organisms/Steps";
+import { TileWall } from "@/src/components/molecules/TileWall";
 
 export function Homepage({
   accueil,
@@ -50,7 +50,7 @@ export function Homepage({
         className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
-        <Proposition nosRef={references.results} />
+        <Motion nosRef={references.results} />
       </section>
 
       <section
@@ -76,7 +76,7 @@ export function Homepage({
         className='bg-blue-bg border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
-        <Thematiques />
+        <TileWall />
       </section>
 
       <section

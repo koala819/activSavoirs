@@ -1,5 +1,5 @@
 "use client";
-import { Eval } from "@/src/components/atoms/Eval";
+import { Review } from "@/src/components/atoms/Review";
 import { Text } from "@/src/components/atoms/Text";
 import { RatingLink } from "@/src/components/atoms/RatingLink";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
@@ -23,7 +23,7 @@ export function Rating({ evals }: any) {
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 px-4 p-4 -mt-12 sm:mt-0'>
         {evals.map((evaluation: any, index: number) => (
           <div key={index}>
-            <Eval evaluation={evaluation} />
+            <Review evaluation={evaluation} />
           </div>
         ))}
       </div>

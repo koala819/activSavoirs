@@ -1,5 +1,5 @@
 import { createClient } from "@/prismicio";
-import { Evals } from "@/src/components/templates/Evals";
+import { Reviews } from "@/src/components/templates/Reviews";
 import { notFound } from "next/navigation";
 
 export default async function Page() {
@@ -17,7 +17,7 @@ export default async function Page() {
         <p>Découvrez les potins que mes clients diffusent sur moi 😀 !</p>
       </header>
       {evals && evals.results && evals.results.length > 0 ? (
-        <Evals evals={evals.results} />
+        <Reviews evals={evals.results} />
       ) : (
         notFound()
       )}

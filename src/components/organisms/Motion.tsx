@@ -3,7 +3,7 @@ import { Article } from "@/src/components/molecules/Article";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 import { CarouselRef } from "@/src/components/atoms/Caroussel";
 
-export function Proposition({ nosRef }: { nosRef: any }) {
+export function Motion({ nosRef }: { nosRef: any }) {
   return (
     <section className='w-full'>
       <DoubleColumn

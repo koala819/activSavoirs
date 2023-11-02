@@ -5,7 +5,7 @@ import { ColumnSwitcher } from "@/src/components/organisms/ColumnSwitcher";
 import { Text } from "@/src/components/atoms/Text";
 import { Thematique } from "@/src/types/models";
 
-export function ThematiqueFormation({
+export function Thematic({
   menu,
   evals,
   selected,
@@ -34,7 +34,7 @@ export function ThematiqueFormation({
 
       <ColumnSwitcher
         leftData={menu}
-        initialValue='thématiques'
+        initialValue='thématics'
         listType='list-none'
         theme={selected}
         evals={evals}

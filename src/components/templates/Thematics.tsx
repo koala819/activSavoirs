@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import { ThematiqueFormation } from "@/src/components/organisms/ThematiqueFormation";
-import { thematiques } from "@/src/types/thematiques";
+import { Thematic } from "@/src/components/organisms/Thematic";
+import { thematics } from "@/src/types/thematics";
 import { Button } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 
-export function Thematiques({ evaluations }: any) {
+export function Thematics({ evaluations }: any) {
   const path = usePathname();
   const index = path.split("/thematiques/")[1];
 
@@ -18,7 +18,7 @@ export function Thematiques({ evaluations }: any) {
     { text: "avis" },
   ];
 
-  const themes = thematiques.map((thematique) => thematique.title);
+  const themes = thematics.map((thematique) => thematique.title);
 
   function handlePrevious() {
     if (indexTheme === 0) {
@@ -36,7 +36,7 @@ export function Thematiques({ evaluations }: any) {
     }
   }
 
-  const tagToFilter = thematiques[indexTheme].advices?.tag;
+  const tagToFilter = thematics[indexTheme].advices?.tag;
   const evalsWithTag = evaluations.results.filter((evaluation: any) => {
     return evaluation.tags[0] === tagToFilter;
   });
@@ -55,10 +55,10 @@ export function Thematiques({ evaluations }: any) {
           Precedent
         </Button>
       </aside>
-      <ThematiqueFormation
+      <Thematic
         menu={menu}
         evals={displayEvals}
-        selected={thematiques[indexTheme]}
+        selected={thematics[indexTheme]}
       />
       <aside>
         <Button color='default' variant='light' onClick={handleNext}>

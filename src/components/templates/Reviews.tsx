@@ -3,9 +3,9 @@ import { Chip } from "@nextui-org/react";
 import { useState } from "react";
 import { FaCubes } from "react-icons/fa";
 import { tags } from "@/src/types/tags";
-import { Eval } from "@/src/components/atoms/Eval";
+import { Review } from "@/src/components/atoms/Review";
 
-export function Evals({ evals }: { evals: any }) {
+export function Reviews({ evals }: { evals: any }) {
   const [selectedTag, setSelectedTag] = useState<any | null>(null);
   // console.log("selectedTag", selectedTag?.tags[0]);
 
@@ -69,7 +69,7 @@ export function Evals({ evals }: { evals: any }) {
             return null;
           }
 
-          return <Eval evaluation={evaluation} key={index} />;
+          return <Review evaluation={evaluation} key={index} />;
         })}
       </div>
     </>
