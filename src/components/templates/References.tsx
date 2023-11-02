@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardHeader, CardFooter, Image } from "@nextui-org/react";
+import { Card, Image } from "@nextui-org/react";
 import { RefProp } from "@/src/types/models";
 
 export function References({ references }: { references: RefProp[] }) {
@@ -10,11 +10,11 @@ export function References({ references }: { references: RefProp[] }) {
     return 0;
   });
 
-  function capitalizeFirstLetter(title: string) {
-    if (!title) return title;
+  // function capitalizeFirstLetter(title: string) {
+  //   if (!title) return title;
 
-    return title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
-  }
+  //   return title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
+  // }
 
   return (
     <div className='gap-6 grid grid-cols-12'>
@@ -26,14 +26,14 @@ export function References({ references }: { references: RefProp[] }) {
           onPress={() => window.open(ref.data.website.url || "", "_blank")}
           className='w-full h-[300px] col-span-12 sm:col-span-3'
         >
-          <CardHeader className='absolute z-10 flex-col'>
+          {/* <CardHeader className='absolute z-10 flex-col'>
             <h4
               className='text-black dark:text-white font-medium text-2xl lowercase'
               style={{ textTransform: "capitalize" }}
             >
               {capitalizeFirstLetter(`${ref.data.titre}`)}
             </h4>
-          </CardHeader>
+          </CardHeader> */}
 
           <div className='flex items-center justify-center h-full'>
             <Image
@@ -43,11 +43,11 @@ export function References({ references }: { references: RefProp[] }) {
               src={ref.data.logo.url || ""}
             />
           </div>
-          <CardFooter className='absolute bg-black/70 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100'>
+          {/* <CardFooter className='absolute bg-black/70 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100'>
             <div>
               <p className='text-tiny text-white'>{ref.data.description}</p>
             </div>
-          </CardFooter>
+          </CardFooter> */}
         </Card>
       ))}
     </div>

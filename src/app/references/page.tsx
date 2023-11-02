@@ -9,11 +9,11 @@ export default async function Page() {
     .catch(() => notFound());
 
   return (
-    <div className='text-gray-600 dark:text-gray-100 body-font'>
+    <div className='text-gray-600 dark:text-gray-100 body-font bg-blue-bg w-full'>
       <div className='container px-5 py-24 mx-auto'>
         <div className='flex flex-col text-center w-full mb-20'>
-          <h1 className='text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest dark:text-gray-100'>
-            Nos références
+          <h1 className='text-4xl title-font mb-4 tracking-widest text-gray-100 font-extrabold'>
+            Nos clients nous font confiance
           </h1>
         </div>
         {page && page.results && page.results.length > 0 ? (
