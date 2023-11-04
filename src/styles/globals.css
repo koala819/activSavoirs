@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.logoTest {
+  opacity: 0;
+}
+
 .bg-gradient-left {
   background-image: conic-gradient(
     from -90deg at 110% 100%,
