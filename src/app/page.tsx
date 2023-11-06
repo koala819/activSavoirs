@@ -1,6 +1,7 @@
 import { createClient } from "@/prismicio";
 import { notFound } from "next/navigation";
 import { Homepage } from "@/src/components/templates/HomePage";
+import { Suspense } from "react";
 export default async function Page() {
   const client = createClient();
   const accueil = await client.getSingle("accueil").catch(() => notFound());
@@ -11,5 +12,9 @@ export default async function Page() {
     .getByType("references", { pageSize: 1000, page: 1 })
     .catch(() => notFound());
 
-  return <Homepage accueil={accueil} evals={evals} references={references} />;
+  return (
+    <Suspense fallback={<p>Chargement...</p>}>
+      <Homepage accueil={accueil} evals={evals} references={references} />
+    </Suspense>
+  );
 }

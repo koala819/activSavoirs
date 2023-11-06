@@ -6,7 +6,6 @@ import { FiInstagram } from "react-icons/fi";
 import Link from "next/link";
 import logo from "@/public/images/logoFooter.png";
 import dix31 from "@/public/images/DIX31.png";
-// import dix32 from "@/public/images/@t.gif";
 import { Article } from "@/src/components/molecules/Article";
 import { FooterColumn } from "@/src/components/molecules/FooterColumn";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
