@@ -40,8 +40,8 @@ export function TileWall() {
         </blockquote>
 
         <Text
-          text='EN PARTENARIAT AVEC'
-          className='text-white text-center text-sm mt-16'
+          text="l'ensemble de la partie oragnisationnelle peut être confiée à nos partenaires"
+          className='text-white text-center text-sm mt-16 uppercase'
         />
         <DoubleColumn
           sectionClassName='dble-clmn-section space-y-0'
