@@ -40,7 +40,7 @@ export function TileWall() {
         </blockquote>
 
         <Text
-          text="l'ensemble de la partie oragnisationnelle peut être confiée à nos partenaires"
+          text='en partenariat avec'
           className='text-white text-center text-sm mt-16 uppercase'
         />
         <DoubleColumn
