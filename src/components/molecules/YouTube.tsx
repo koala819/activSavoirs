@@ -54,7 +54,7 @@ export function YouTube({ video }: { video: any }) {
           hideCloseButton={true}
         >
           <ModalContent>
-            {(onClose) => (
+            {(onClose: any) => (
               <>
                 <ModalBody>
                   <ReactPlayer

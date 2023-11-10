@@ -4,6 +4,8 @@ import { DoubleColumn } from "@/src/components/molecules/DoubleColumn";
 import { ExpertWorld } from "@/src/components/molecules/ExpertWorld";
 import { Stars } from "@/src/components/molecules/Stars";
 import { YouTube } from "@/src/components/molecules/YouTube";
+import LazyLoad from "@/src/lib/LazyLoad";
+
 export function Hero({ accueil }: { accueil: any }) {
   return (
     <section className='w-full h-full flex flex-col justify-center items-center'>
@@ -22,7 +24,11 @@ montée en compétences de vos collaborateurs'
             button={{ display: true, text: "Nous contacter" }}
           />
         }
-        right={<YouTube video={accueil} />}
+        right={
+          <LazyLoad>
+            <YouTube video={accueil} />
+          </LazyLoad>
+        }
       />
       <picture className='flex justify-center my-4 sm:mt-0'>
         <Stars
