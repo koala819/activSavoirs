@@ -9,6 +9,7 @@ import { Rating } from "@/src/components/organisms/Rating";
 import { ColumnSwitcher } from "@/src/components/organisms/ColumnSwitcher";
 import { Steps } from "@/src/components/organisms/Steps";
 import { TileWall } from "@/src/components/molecules/TileWall";
+import LazyLoad from "@/src/lib/LazyLoad";
 
 export function Homepage({
   accueil,
@@ -39,12 +40,12 @@ export function Homepage({
 
   return (
     <main className='w-full flex flex-col h-full'>
-      <section
+      <LazyLoad
         className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen lg:h-screen'
         data-aos={animation}
       >
         <Hero accueil={accueil} />
-      </section>
+      </LazyLoad>
 
       <section
         className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'

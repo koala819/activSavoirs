@@ -2,9 +2,11 @@ import { useState, useEffect, useRef, ReactNode } from "react";
 
 const LazyLoad = ({
   children,
+  className,
   placeholder = <p>Chargement...</p>,
 }: {
   children: ReactNode;
+  className?: string;
   placeholder?: ReactNode;
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,7 +24,11 @@ const LazyLoad = ({
     }
   }, []);
 
-  return <div ref={domRef}>{isVisible ? children : placeholder}</div>;
+  return (
+    <div ref={domRef} className={className}>
+      {isVisible ? children : placeholder}
+    </div>
+  );
 };
 
 export default LazyLoad;
