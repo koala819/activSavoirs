@@ -1,5 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+  openAnalyzer: false,
+  defaultSizes: "gzip",
+});
+
+module.exports = withBundleAnalyzer({
   env: {
     CLIENT_URL: process.env.CLIENT_URL,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
@@ -16,6 +21,4 @@ const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   reactStrictMode: true,
   swcMinify: true,
-};
-
-module.exports = nextConfig;
+});
