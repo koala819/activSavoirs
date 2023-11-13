@@ -18,9 +18,19 @@ export function FourGoals({
   events?: boolean;
 }) {
   return (
-    <section className='h-full py-16 space-y-8'>
+    <section className='h-full py-16 space-y-8 flex flex-col'>
+      <div
+        className='image-container'
+        style={{ width: "fixedWidth", height: "fixedHeight" }}
+      >
+        <Image
+          src={picture}
+          alt={`${title} picture`}
+          width={1500}
+          height={500}
+        />
+      </div>
       <Article
-        image={{ src: picture, alt: `${picture} picture` }}
         title={title}
         description={description}
         button={{ display: true, text: "Contactez-nous" }}
