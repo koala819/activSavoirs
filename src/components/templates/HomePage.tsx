@@ -47,14 +47,14 @@ export function Homepage({
         <Hero accueil={accueil} />
       </LazyLoad>
 
-      <section
+      <LazyLoad
         className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Motion nosRef={references.results} />
-      </section>
+      </LazyLoad>
 
-      <section
+      <LazyLoad
         className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
@@ -64,35 +64,35 @@ export function Homepage({
           initialValue='sourcing'
           listType='list-disc'
         />
-      </section>
+      </LazyLoad>
 
-      <section
+      <LazyLoad
         className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Steps />
-      </section>
+      </LazyLoad>
 
-      <section
+      <LazyLoad
         className='bg-blue-bg border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <TileWall />
-      </section>
+      </LazyLoad>
 
-      <section
+      <LazyLoad
         className='bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <Rating evals={evals.results} />
-      </section>
+      </LazyLoad>
 
-      <section
+      <LazyLoad
         className='bg-gradient-right border-t-2 border-[#23272F] border-opacity-10 sm:h-screen flex items-center w-full overflow-hidden'
         data-aos={animation}
       >
         <CTA />
-      </section>
+      </LazyLoad>
     </main>
   );
 }
