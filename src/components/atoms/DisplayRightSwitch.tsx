@@ -1,7 +1,7 @@
 import { Events } from "@/src/components/organisms/Events";
 import { FourGoals } from "@/src/components/organisms/FourGoals";
-import { Training } from "@/src/components/organisms/Training";
 import { Mentoring } from "@/src/components/organisms/Mentoring";
+import formation from "@/public/images/Formation.png";
 import sourcing from "@/public/images/Sourcing.png";
 import { displayComponents } from "@/src/types/models";
 import { ThematicList } from "@/src/components/atoms/ThematicList";
@@ -24,7 +24,13 @@ export function DisplayRightSwitch({
 }) {
   const displayComponents: displayComponents = {
     events: <Events />,
-    formation: <Training />,
+    formation: (
+      <FourGoals
+        picture={formation}
+        title="L'ensemble de nos formations peuvent bénéficier d'un portage QUALIOPI"
+        description="L'ingénierie de chaque formation est élaborée par l'auditeur et l'expert pédagogique. Ainsi, chaque formation professionnelle continue est totalement sur-mesure. Nos partenariats vous permettent si besoin, de bénéficier d’un portage QUALIOPI pour optimiser vos investissements RH."
+      />
+    ),
     mentoring: <Mentoring />,
     sourcing: (
       <FourGoals
