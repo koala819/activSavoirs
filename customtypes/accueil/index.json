@@ -22,6 +22,14 @@
           "placeholder": ""
         }
       },
+      "expertavatar": {
+        "type": "Image",
+        "config": {
+          "label": "expertAvatar",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

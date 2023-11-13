@@ -37,6 +37,17 @@ interface AccueilDocumentData {
   video: prismic.EmbedField;
 
   /**
+   * expertAvatar field in *Accueil*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accueil.expertavatar
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  expertavatar: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Accueil*
    *
    * - **Field Type**: Slice Zone
@@ -45,8 +56,7 @@ interface AccueilDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<AccueilDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<AccueilDocumentDataSlicesSlice> /**
    * Meta Description field in *Accueil*
    *
    * - **Field Type**: Text
@@ -177,8 +187,7 @@ interface EquipeDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<EquipeDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<EquipeDocumentDataSlicesSlice> /**
    * Meta Description field in *Equipe*
    *
    * - **Field Type**: Text
@@ -294,8 +303,7 @@ interface EvalsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<EvalsDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<EvalsDocumentDataSlicesSlice> /**
    * Meta Description field in *Evals*
    *
    * - **Field Type**: Text
@@ -400,8 +408,7 @@ interface ReferencesDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<ReferencesDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<ReferencesDocumentDataSlicesSlice> /**
    * Meta Description field in *References*
    *
    * - **Field Type**: Text

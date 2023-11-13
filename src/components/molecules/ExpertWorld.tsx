@@ -8,8 +8,8 @@ export function ExpertWorld({ expertWorld }: any) {
       <aside className='col-start-1 col-end-3 md:col-end-2 flex items-center justify-center'>
         <div className='relative'>
           <Image
-            src='https://images.prismic.io/activsavoirs/7621550b-f648-4691-bc6a-e5ccb9a1d7f3_Declercq_Vincent.jpg?auto=compress,format'
-            alt='Vincent Declercq'
+            src={expertWorld.data.expertavatar.url}
+            alt={expertWorld.data.expertavatar.alt}
             width='150'
             height='150'
             className='rounded-full'
