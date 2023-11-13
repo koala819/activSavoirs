@@ -1,5 +1,5 @@
-import { Events } from "@/src/components/organisms/Events";
 import { FourGoals } from "@/src/components/organisms/FourGoals";
+import events from "@/public/images/Events.png";
 import formation from "@/public/images/Formation.png";
 import mentoring from "@/public/images/Mentoring.png";
 import sourcing from "@/public/images/Sourcing.png";
@@ -23,7 +23,17 @@ export function DisplayRightSwitch({
   };
 }) {
   const displayComponents: displayComponents = {
-    events: <Events />,
+    events: (
+      <FourGoals
+        events
+        picture={events}
+        title="Capitaliser sur la dynamique et l'intelligence collective"
+        description="Vincent Declercq, le dirigeant fondateur de Activ' Savoirs anime tous types d'événements d'entreprise : Convention – Séminaire – Incentive – Conférence
+        Les thématiques : Le management stratégique, de transition et opérationnel.
+        La performance commerciale, la dynamique et l'intelligence collective
+        Totalement sur-mesure, ces prestations sont co-construites avec le TOP Management"
+      />
+    ),
     formation: (
       <FourGoals
         picture={formation}
@@ -45,7 +55,6 @@ export function DisplayRightSwitch({
         description="Réalisation en présentiel d'un audit du contexte, du besoin, des objectifs pédagogiques et des profils des stagiaires. Lancement de l'action de sourcing sous 48 heures afin de sélectionner l'expert pédagogique le plus adapté pour optimiser l’acquisition et/ou la montée en compétences attendue."
       />
     ),
-
     thématiques: <ThematicList thematiques={theme?.thematics || []} />,
     supports: <Supports supports={theme?.supports || []} />,
     résultats: <Resultats resultat={theme?.results.text || ""} />,
