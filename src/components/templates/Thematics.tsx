@@ -14,7 +14,7 @@ export function Thematics({ evaluations }: any) {
 
   const menu = [
     { text: "thématiques abordées" },
-    { text: "supports" },
+    // { text: "supports" },
     { text: "résultats" },
     { text: "avis" },
   ];
