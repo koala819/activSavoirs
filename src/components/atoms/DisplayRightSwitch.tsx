@@ -1,7 +1,7 @@
 import { Events } from "@/src/components/organisms/Events";
 import { FourGoals } from "@/src/components/organisms/FourGoals";
-import { Mentoring } from "@/src/components/organisms/Mentoring";
 import formation from "@/public/images/Formation.png";
+import mentoring from "@/public/images/Mentoring.png";
 import sourcing from "@/public/images/Sourcing.png";
 import { displayComponents } from "@/src/types/models";
 import { ThematicList } from "@/src/components/atoms/ThematicList";
@@ -31,7 +31,13 @@ export function DisplayRightSwitch({
         description="L'ingénierie de chaque formation est élaborée par l'auditeur et l'expert pédagogique. Ainsi, chaque formation professionnelle continue est totalement sur-mesure. Nos partenariats vous permettent si besoin, de bénéficier d’un portage QUALIOPI pour optimiser vos investissements RH."
       />
     ),
-    mentoring: <Mentoring />,
+    mentoring: (
+      <FourGoals
+        picture={mentoring}
+        title="Le complément idéal d'une formation pour optimiser la montée en compétences"
+        description="L'ingénierie pédagogique sur-mesure du mentoring individualisé est élaborée avec la DRH et/ou le management du bénéficiaire. Cette action facultative a pour avantages de faciliter l'usage des nouveaux outils et méthodes transmis ainsi que d'accélérer la réalisation des objectifs."
+      />
+    ),
     sourcing: (
       <FourGoals
         picture={sourcing}
