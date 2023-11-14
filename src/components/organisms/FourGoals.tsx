@@ -38,7 +38,7 @@ export function FourGoals({
       {events && (
         <>
           <Text
-            text="l'ensemble de la partie oragnisationnelle peut être confiée à nos partenaires"
+            text="L'ensemble de la partie oragnisationnelle peut être confiée à ses partenaires"
             className=' text-center text-sm uppercase'
           />
           <DoubleColumn
