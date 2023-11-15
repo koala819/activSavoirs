@@ -4,6 +4,7 @@ import {
   FaChartLine,
   FaBookDead,
   FaFileContract,
+  FaFileExcel,
   FaHome,
   FaLightbulb,
   FaPhone,
@@ -17,6 +18,10 @@ export const tags = [
   {
     name: "Actualisation loi finances 2022",
     icon: FaBalanceScale,
+  },
+  {
+    name: "Excel: Professionnaliser son utilisation",
+    icon: FaFileExcel,
   },
   {
     name: "La performance commerciale",
