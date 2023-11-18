@@ -42,6 +42,11 @@ export interface TeamProp {
 }
 [];
 
+export interface TeamMember {
+  id: string;
+  data: TeamProp;
+}
+
 export interface Thematique {
   advices: { tag: string };
   description: string;

@@ -1,10 +1,12 @@
 import { createClient } from "@/prismicio";
 import { Team } from "@/src/components/templates/Team";
 import { notFound } from "next/navigation";
+import { sortMember } from "@/src/lib/sortMember";
 
 export default async function Page() {
   const client = createClient();
   const page = await client.getByType("equipe").catch(() => notFound());
+  const members = await sortMember({ page });
 
   return (
     <section className='flex items-center justify-center w-full text-gray-600 dark:text-gray-100 body-font px-5 py-24'>
@@ -22,9 +24,9 @@ export default async function Page() {
             </ul>
           </div>
         </feTile>
-        {page && page.results && page.results.length > 0 ? (
+        {members && members.length > 0 ? (
           <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
-            {page.results.map((item) => {
+            {members.map((item) => {
               return (
                 <div
                   key={item.id}
