@@ -58,7 +58,7 @@ export function Thematics({ evaluations }: any) {
           onClick={handlePrevious}
           startContent={<GrPrevious />}
         >
-          Precedent
+          Précédent
         </Button>
       </aside>
       <Thematic
