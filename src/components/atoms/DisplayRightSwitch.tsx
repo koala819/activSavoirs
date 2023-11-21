@@ -43,7 +43,7 @@ export function DisplayRightSwitch({
       <FourGoals
         picture={mentoring}
         title="Le complément idéal d'une formation pour optimiser la montée en compétences"
-        description="L'ingénierie pédagogique sur-mesure du mentoring individualisé est élaborée avec la DRH et/ou le management du bénéficiaire. Cette action facultative a pour avantages de faciliter l'usage des nouveaux outils et méthodes transmis ainsi que d'accélérer la réalisation des objectifs."
+        description="L'ingénierie pédagogique sur-mesure du mentoring individualisé est élaborée avec la DRH et/ou le management du bénéficiaire. Cette option a pour avantages de faciliter l'usage des nouveaux outils et méthodes transmis ainsi que d'accélérer la réalisation des objectifs."
       />
     ),
     sourcing: (
