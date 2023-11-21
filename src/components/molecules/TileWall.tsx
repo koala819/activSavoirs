@@ -29,7 +29,7 @@ export function TileWall() {
         <blockquote className='flex pt-8'>
           <Text
             text='VOUS NE TROUVEZ PAS CE QUE VOUS RECHERCHEZ ?'
-            className='text-white text-center text-sm'
+            className='text-white text-center text-md'
           />
           <Link href='/contact'>
             <Text
