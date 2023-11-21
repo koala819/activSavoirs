@@ -29,9 +29,7 @@ export function DisplayRightSwitch({
         picture={events}
         title="Capitaliser sur la dynamique et l'intelligence collective"
         description="Vincent Declercq, le dirigeant fondateur de Activ' Savoirs anime tous types d'événements d'entreprise : Convention – Séminaire – Incentive – Conférence
-        Les thématiques : Le management stratégique, de transition et opérationnel.
-        La performance commerciale, la dynamique et l'intelligence collective
-        Totalement sur-mesure, ces prestations sont co-construites avec le TOP Management"
+        Les thématiques : Le management stratégique, de transition et opérationnel. La performance commerciale, la dynamique et l'intelligence collective. Adaptées aux enjeux de votre entreprise, ces prestations sont co-construites avec le TOP Management"
       />
     ),
     formation: (
