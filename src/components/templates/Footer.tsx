@@ -52,7 +52,7 @@ export function Footer() {
                     <BsLinkedin size={22} />
                   </Link>
                   <Link
-                    href='https://www.instagram.com/activ_savoirs_officiel/'
+                    href='https://www.instagram.com/activ.savoirs/'
                     target='_blank'
                     className='text-gray-500 hover:text-rose-500 flex items-center justify-center bg-white rounded-2xl p-2 w-12 h-12'
                   >
