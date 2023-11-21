@@ -281,7 +281,7 @@ export const thematics: Thematique[] = [
       { text: "La créativité" },
       { text: "L’esprit d’équipe" },
       {
-        text: "Les intelligences: émotionnelle, relationnelle et situationnelle",
+        text: "Les intelligences : émotionnelle, relationnelle et situationnelle",
       },
       { text: "Le jugement et la prise de décision" },
       { text: "Le sens du service" },
