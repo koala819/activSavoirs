@@ -23,7 +23,7 @@ export function Steps() {
           />
           <Step
             color='bg-step-three-bg'
-            description='En présentiel ou en distanciel l’auditeur vous présentent les offres pour valider ou ajuster l’adéquation avec vos besoins pédagogiques.'
+            description='En présentiel ou en distanciel l’auditeur vous présente les offres pour valider ou ajuster l’adéquation avec vos besoins pédagogiques.'
             number='03'
             title='L’étude des offres'
           />
