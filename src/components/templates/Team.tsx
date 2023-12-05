@@ -1,6 +1,6 @@
 "use client";
 import { TeamProp } from "@/src/types/models";
-import { Text } from "../atoms/Text";
+import { Text } from "@/src/components/atoms/Text";
 import {
   Modal,
   Image,
