@@ -9,6 +9,7 @@ export function sortMember({ page }: { page: any }) {
       "Christel",
       "Sibylle",
       "Roxane",
+      "Claudine",
     ];
     const sortedFemaleTeam: TeamMember[] = page.results
       .filter((item: TeamMember) =>
