@@ -7,7 +7,7 @@ export function sortMember({ page }: { page: any }) {
       "Bérengère",
       "Elise",
       "Christel",
-      "Sibylle",
+      // "Sibylle",
       "Roxane",
       "Claudine",
     ];
