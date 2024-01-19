@@ -37,7 +37,7 @@ export function Footer() {
                 />
                 <picture className='flex space-x-4 items-center mt-2'>
                   <Link
-                    href='https://www.youtube.com/@reseauabp2026'
+                    href='https://www.youtube.com/channel/UCUxcBX3XrrqI79-KzRSjaIg'
                     target='_blank'
                     className='text-gray-500 hover:text-red-500 flex items-center bg-white rounded-2xl p-2'
                   >
