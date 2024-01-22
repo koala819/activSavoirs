@@ -1,14 +1,16 @@
-"use client";
-import { Card, Image } from "@nextui-org/react";
-import { RefProp } from "@/src/types/models";
+'use client'
 
-export function References({ references }: { references: RefProp[] }) {
+import { Card, Image } from '@nextui-org/react'
+
+import { PartnersLogo } from '@/src/types/models'
+
+export function References({ references }: { references: PartnersLogo[] }) {
   references.sort((a, b) => {
     if (a.data.titre !== null && b.data.titre !== null) {
-      return a.data.titre.localeCompare(b.data.titre);
+      return a.data.titre.localeCompare(b.data.titre)
     }
-    return 0;
-  });
+    return 0
+  })
 
   // function capitalizeFirstLetter(title: string) {
   //   if (!title) return title;
@@ -17,14 +19,14 @@ export function References({ references }: { references: RefProp[] }) {
   // }
 
   return (
-    <div className='gap-6 grid grid-cols-12'>
+    <div className="gap-6 grid grid-cols-12">
       {references.map((ref, index) => (
         <Card
           key={index}
           isPressable
           isFooterBlurred
-          onPress={() => window.open(ref.data.website.url || "", "_blank")}
-          className='w-full h-[300px] col-span-12 sm:col-span-3'
+          onPress={() => window.open(ref.data.website.url || '', '_blank')}
+          className="w-full h-[300px] col-span-12 sm:col-span-3"
         >
           {/* <CardHeader className='absolute z-10 flex-col'>
             <h4
@@ -35,12 +37,12 @@ export function References({ references }: { references: RefProp[] }) {
             </h4>
           </CardHeader> */}
 
-          <div className='flex items-center justify-center h-full'>
+          <div className="flex items-center justify-center h-full">
             <Image
               removeWrapper
-              alt='Card example background'
-              className='z-0 h-1/2 object-fill p-1'
-              src={ref.data.logo.url || ""}
+              alt="Card example background"
+              className="z-0 h-1/2 object-fill p-1"
+              src={ref.data.logo.url || ''}
             />
           </div>
           {/* <CardFooter className='absolute bg-black/70 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100'>
@@ -51,5 +53,5 @@ export function References({ references }: { references: RefProp[] }) {
         </Card>
       ))}
     </div>
-  );
+  )
 }
