@@ -1,53 +1,47 @@
-import "@/src/styles/globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { Top } from "@/src/components/templates/Top";
-import { Footer } from "@/src/components/templates/Footer";
-import { Providers } from "./providers";
-import GoogleAnalytics from "@/src/components/util/GoogleAnalytics";
+import { Analytics } from '@vercel/analytics/react'
 
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+
+import { Footer } from '@/src/components/templates/Footer'
+import { Top } from '@/src/components/templates/Top'
+import GoogleAnalytics from '@/src/components/util/GoogleAnalytics'
+
+import { Providers } from './providers'
+
+import '@/src/styles/globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Activ Savoirs",
-  description: "Centre de formations sur mesure",
-};
+  title: 'Activ Savoirs',
+  description: 'Centre de formations sur mesure',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang='fr'>
+    <html lang="fr">
       <body className={` ${inter.className}`}>
         <Providers>
-          <div
-            className='flex min-h-screen min-w-screen flex-col'
-            // className='min-h-screen min-w-screen'
-          >
-            {/* <div className='flex flex-col h-screen'> */}
-            <div
-            // className='flex h-24 w-screen'
-            >
-              <Top />
-            </div>
-            <main
-              className='flex h-auto w-auto flex-row grow'
-              // className='flex-1 bg-blue-400 flex flex-col md:overflow-auto'
-            >
-              <GoogleAnalytics />
-              {children}
-              <Analytics />
+          <div className="min-h-screen min-w-screen">
+            <Top />
+            <main className="flex-1">
+              <div className="w-full mx-auto">
+                <div className="flex flex-col min-w-0 break-words w-full mb-6rounded-lg bg-gray-50 dark:bg-slate-800 border-0">
+                  <GoogleAnalytics />
+                  {children}
+                  <Analytics />
+                </div>
+              </div>
             </main>
-            <div className='flex w-full'>
-              <Footer />
-            </div>
-            {/* </div> */}
+            <Footer />
           </div>
         </Providers>
       </body>
     </html>
-  );
+  )
 }

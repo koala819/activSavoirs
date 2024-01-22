@@ -15,7 +15,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from '@nextui-org/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FiChevronDown } from 'react-icons/fi'
 
 import Image from 'next/image'
@@ -29,7 +29,8 @@ import whitelogo from '@/public/images/logo.png'
 import { colorVariants } from '@/src/lib/colorVariants'
 
 export function Top() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
   const router = useRouter()
   const path = usePathname()
 
@@ -45,11 +46,28 @@ export function Top() {
     { name: 'Contact', path: '/contact' },
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY
+      setIsScrolled(offset > 50) // Changez '50' selon le seuil souhaité
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="pb-8 bg-navbar-bg h-[200px] sm:h-[150px] md:h-[200px]"
+      className={`${
+        isScrolled
+          ? 'h-24 flex justify-center items-center pb-1'
+          : 'h-[200px] sm:h-[150px] md:h-[200px] pb-8'
+      } w-full bg-navbar-bg sticky top-0 z-50 transition-height duration-300 `}
       classNames={{
         item: [
           'flex',
@@ -67,14 +85,18 @@ export function Top() {
         ],
       }}
     >
-      <picture className="h-[50px] sm:h-[150px] md:h-[200px] flex justify-center w-full md:w-auto ">
+      <picture
+        className={`${
+          isScrolled ? 'h-[100px]' : 'h-[50px] sm:h-[150px] md:h-[200px]'
+        } flex items-center justify-center w-full md:w-auto`}
+      >
         <Link href="/" aria-current="page">
           <Image
             src={whitelogo}
             alt="Logo Activ Savoirs"
             className="object-fill"
-            width={300}
-            height={50}
+            width={isScrolled ? 150 : 300}
+            height={20}
           />
         </Link>
         <NavbarMenuToggle
