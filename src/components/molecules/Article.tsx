@@ -1,7 +1,9 @@
-"use client";
-import { Image } from "@nextui-org/react";
-import { Button } from "@/src/components/atoms/Button";
-import { Text } from "@/src/components/atoms/Text";
+'use client'
+
+import { Image } from '@nextui-org/react'
+
+import { Button } from '@/src/components/atoms/Button'
+import { Text } from '@/src/components/atoms/Text'
 
 export function Article({
   button,
@@ -10,20 +12,23 @@ export function Article({
   image,
   overline,
   title,
-  classNameTitle,
+  classNameTitle = 'text-lg md:text-xl',
 }: {
-  button: { display: boolean; text?: string };
-  description?: string;
-  classNameDescription?: string;
-  image?: { src: { src: string; height: number; width: number }; alt: string };
-  overline?: string;
-  title: string;
-  classNameTitle?: string;
+  button: { display: boolean; text?: string }
+  description?: string
+  classNameDescription?: string
+  image?: { src: { src: string; height: number; width: number }; alt: string }
+  overline?: string
+  title: string
+  classNameTitle?: string
 }) {
   return (
     <>
       {overline ? (
-        <Text text={overline} className='text-xs sm:text-base uppercase' />
+        <Text
+          text={overline}
+          className="text-xs sm:text-sm md:text-base uppercase"
+        />
       ) : null}
       {image ? <Image src={image?.src.src} alt={image.alt} /> : null}
       <Text text={title} className={`title ${classNameTitle}`} />
@@ -34,10 +39,10 @@ export function Article({
         />
       ) : null}
       {button.display ? (
-        <div className='flex justify-center md:justify-start'>
-          <Button text={button.text} className='black-button' link='/contact' />
+        <div className="flex justify-center md:justify-start">
+          <Button text={button.text} className="black-button" link="/contact" />
         </div>
       ) : null}
     </>
-  );
+  )
 }
