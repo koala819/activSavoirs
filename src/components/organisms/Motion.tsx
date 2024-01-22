@@ -27,6 +27,9 @@ export function Motion({ nosRef }: { nosRef: any }) {
           </section>
         }
       />
+      <h2 className="title text-lg md:text-xl pl-12">
+        Ils nous ont fait confiance
+      </h2>
       <div className="py-8">
         <CarouselRef partners={nosRef} />
       </div>
