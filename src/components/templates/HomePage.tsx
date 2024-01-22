@@ -44,7 +44,7 @@ export function Homepage({
   return (
     <main className="w-full flex flex-col h-full">
       <LazyLoad
-        className="bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen lg:h-screen"
+        className="bg-gradient-left border-t-2 border-[#23272F] border-opacity-10 sm:min-h-screen "
         data-aos={animation}
       >
         <Hero accueil={accueil} />

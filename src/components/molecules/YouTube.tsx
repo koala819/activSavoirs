@@ -10,7 +10,7 @@ import dataDock from '@/public/images/dataDock.png'
 export function YouTube({ video }: { video: any }) {
   return (
     <section className="flex justify-center items-center">
-      <div className="w-2/3 sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/3 relative h-[400px] rounded-xl">
+      <div className="w-full relative h-[400px] rounded-xl">
         {/* <WhiteBox
           number={4850}
           text='Elèves formés'
@@ -33,7 +33,7 @@ export function YouTube({ video }: { video: any }) {
         <Image
           src={dataDock}
           alt="logo dataDock"
-          className="absolute -bottom-4 md:-bottom-8 -right-16 "
+          className="absolute -bottom-4 md:-bottom-8 -left-16 "
           width={50}
           height={100}
         />
