@@ -23,7 +23,8 @@ montée en compétences de vos collaborateurs"
             description="Nos actions de formation à forte valeur ajoutée ont pour objectifs
     de contribuer à l’efficacité et à la compétitivité de votre
     entreprise."
-            button={{ display: true, text: 'Nous contacter' }}
+            // button={{ display: true, text: 'Nous contacter' }}
+            button={{ display: false }}
           />
         }
         right={
